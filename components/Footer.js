@@ -8,7 +8,7 @@ const Footer = () => {
       <footer color="blue" className="font-small pt-4 mt-4 pb-4">
         <div className="footer-container">
           <div className="row text-center">
-            <div className="col-md-3 pb-2 footerLogo">
+            <div className="col-md-3 pb-2 footerLogo pr-0">
               <h3 style={{ color: "#8d54b5" }}>MILSERV</h3>
               <p style={{ color: "#8d54b5" }}>
                 Copyright <span>&copy;</span>MILSERV <br /> American Craft
@@ -20,7 +20,7 @@ const Footer = () => {
                 </Link>
               )}
             </div>
-            <div className="col-md-2 pb-2" id="footer-links">
+            <div className="col-md-2 pb-2 pr-0" id="footer-links">
               <h6 className="title">PARTNERS</h6>
               <p className="footer-items">
                 <a href="#">MAKERS</a>
@@ -32,7 +32,7 @@ const Footer = () => {
                 <a href="/distributors">DISTRIBUTORS</a>
               </p>
             </div>
-            <div className="col-md-2 pb-2" id="footer-links">
+            <div className="col-md-2 pb-2 pr-0" id="footer-links">
               <h6 className="title">VETERANS</h6>
               <p className="footer-items">
                 <a href="/veteran-jobs">JOBS</a>
@@ -43,7 +43,7 @@ const Footer = () => {
                 <a href="#">GIVING BACK</a>
               </p>
             </div>
-            <div className="col-md-2 pb-2" id="footer-links">
+            <div className="col-md-2 pb-2 pr-0" id="footer-links">
               <h6 className="title">NEWS</h6>
               <p className="footer-items">
                 <a href="/blogs">MILSERV MEDIA</a>
@@ -56,7 +56,7 @@ const Footer = () => {
                 <a href="#">STAY CONNECTED</a>{" "}
               </p>
             </div>
-            <div className="col-md-1 pb-2" id="footer-links">
+            <div className="col-md-1 pb-2 pr-0" id="footer-links">
               <a href="https://dodskillbridge.usalearning.gov/index.htm">
                 <img
                   width="120px"
@@ -66,7 +66,7 @@ const Footer = () => {
                 ></img>
               </a>
             </div>
-            <div className="col-md-2" id="footer-links">
+            <div className="col-md-2 pr-0" id="footer-links">
               <img
                 width="100px"
                 src={"../static/images/vetownedbiz.png"}
@@ -75,12 +75,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        {/* Incase we want to add a copyright message in the footer */}
-        {/* <div className="footer-copyright text-center py-3">
-                    <MDBContainer fluid>
-                        &copy; {new Date().getFullYear()} Copyright: <a href="*"> COVID-19 Digital Classroom </a>
-                    </MDBContainer>
-                </div> */}
       </footer>
     </div>
   );

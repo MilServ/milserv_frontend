@@ -7,10 +7,10 @@ import LandingCardsFour from "../components/LandingCards/LandingCardsFour";
 
 const Index = () => {
   return (
-    <Layout style={{ width: "100%" }}>
-      <section className="landingTop ml-0 pl-0 m-0">
+    <Layout>
+      <section className="landingTop p-0 m-0">
         <div
-          className="row justify-content-center m-0"
+          className="row justify-content-center m-0 p-0"
           style={{ width: "100%" }}
         >
           <div
@@ -19,10 +19,9 @@ const Index = () => {
               marginTop: 100,
               textAlign: "center",
               paddingTop: 10,
-              borderRadius: 8,
             }}
           >
-            <div className="m-2" style={{ borderRadius: 8 }}>
+            <div>
               <img
                 className="text-center"
                 src={"../static/images/owllogo.jpg"}
@@ -33,21 +32,16 @@ const Index = () => {
             <h1 className="landing-cta" id="landing-cta">
               YOUR SOLUTION FOR ALCOHOL DELIVERIES
             </h1>
-            {/* <a href="/about">
-            <button className="btn learnMoreBtn ml-1">
-              <FontAwesomeIcon icon={faTruck} /> Learn More
-            </button>
-          </a> */}
           </div>
         </div>
       </section>
-      <section style={{ paddingBottom: 20 }}>
-        <div className="row program-your-career pt-3 pb-4">
-          <h2 className="program">
-            <b style={{ color: "#383838", fontWeight: "9" }}>OUR PURPOSE</b>
+      <section style={{ paddingBottom: 20, backgroundColor: "transparent" }}>
+        <div className="program-your-career pt-3 pb-4">
+          <h2 className="program text-center">
+            <b style={{ color: "#383838" }}>OUR PURPOSE</b>
           </h2>
         </div>
-        <div className="row pl-3 pr-3">
+        <div className="row pl-3">
           <div className="col-md-3 col-left">
             <img
               className="text-center"
@@ -81,43 +75,43 @@ const Index = () => {
       </section>
       <section className="landingSectionTwo text-center">
         <div className="row program-your-career pt-3 pb-4">
-          <h2 className="program">
-            <b style={{ color: "#383838", fontWeight: "9" }}>OUR PARTNERS</b>
+          <h2 className="program text-center">
+            <b style={{ color: "#383838" }}>OUR PARTNERS</b>
           </h2>
         </div>
-        <div className="row program-your-career pl-3 pr-3">
-          <div className="col-md-3 mb-2 col-left">
+        <div className="row program-your-career pl-3">
+          <div className="col-md-3 mb-2 col-left p-0">
             <a href="/veteran-jobs">
               <LandingCardsOne />
             </a>
           </div>
-          <div className="col-md-3 mb-2 col-middle">
+          <div className="col-md-3 mb-2 col-middle p-0">
             <a href="/retailers">
               <LandingCardsTwo />
             </a>
           </div>
-          <div className="col-md-3 mb-2 col-right">
+          <div className="col-md-3 mb-2 col-right p-0">
             <a href="/distributors">
               <LandingCardsThree />
             </a>
           </div>
-          <div className="col-md-3 mb-2 col-right" id="partner">
+          <div className="col-md-3 mb-2 col-right p-0" id="partner">
             <LandingCardsFour />
           </div>
         </div>
       </section>
       <section style={{ paddingBottom: 20 }}>
-        <div className="row program-your-career pt-3 pb-4">
-          <h2 className="program">
-            <b style={{ color: "#383838", fontWeight: "9" }}>PARTNER WITH US</b>
+        <div className="program-your-career pt-3 pb-4">
+          <h2 className="program text-center">
+            <b style={{ color: "#383838" }}>PARTNER WITH US</b>
           </h2>
         </div>
-        <div className="row pl-3 pr-3">
+        <div className="row pl-3">
           <div
             className="col-md-8 mb-2 aboutSections"
             style={{
               backgroundColor: "#8d54b5",
-              padding: 30,
+              padding: 20,
             }}
           >
             <p style={{ fontSize: "1.35rem" }}>
@@ -162,7 +156,7 @@ const Index = () => {
               </ul>
             </div>
           </div>
-          <div className="col-md-4 mb-2 col-left">
+          <div className="col-md-4 mb-2 col-left p-0">
             <img
               className="text-center"
               src={"../static/images/servingthose.jpg"}

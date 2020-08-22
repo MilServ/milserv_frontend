@@ -11,7 +11,7 @@ import {
 const Retailers = () => {
   return (
     <Layout>
-      <section className="aboutPage ml-0 pl-0">
+      <section className="aboutPage m-0 p-0">
         <div className="row">
           <div className="col-md-3">
             <a href="/">
