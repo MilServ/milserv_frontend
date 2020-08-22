@@ -1,18 +1,18 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTruck } from "@fortawesome/free-solid-svg-icons";
 import LandingCardsOne from "../components/LandingCards/LandingCardsOne";
 import LandingCardsTwo from "../components/LandingCards/LandingCardsTwo";
 import LandingCardsThree from "../components/LandingCards/LandingCardsThree";
 import LandingCardsFour from "../components/LandingCards/LandingCardsFour";
-import Blogs from "./blogs";
 
 const Index = () => {
   return (
-    <Layout>
-      <section className="landingTop ml-0 pl-0">
-        <div className="row justify-content-center" style={{ width: "100%" }}>
+    <Layout style={{ width: "100%" }}>
+      <section className="landingTop ml-0 pl-0 m-0">
+        <div
+          className="row justify-content-center m-0"
+          style={{ width: "100%" }}
+        >
           <div
             className="col-md-4 centered"
             style={{
@@ -130,28 +130,30 @@ const Index = () => {
               Partner with us today! Learn more by clicking on your partner
               category below.
             </p>
-            <div className="pt-3">
+            <div>
               <ul id="horizontal-list">
-                <li className="pr-2">
+                <li className="p-2">
                   <a href="/veteran-jobs">
                     {" "}
-                    <button className="btn btn-outline-light">Veterans</button>
+                    <button className="btn btn-outline-light m-1">
+                      Veterans
+                    </button>
                   </a>
                 </li>
 
-                <li className="pr-2">
+                <li className="p-2">
                   <a href="/retailers">
                     <button className="btn btn-outline-light">Retailers</button>
                   </a>
                 </li>
-                <li className="pr-2">
+                <li className="p-2">
                   <a href="/distributors">
                     <button className="btn btn-outline-light">
                       Distributors
                     </button>
                   </a>
                 </li>
-                <li className="pr-2">
+                <li className="p-2">
                   <a href="makers">
                     {" "}
                     <button className="btn btn-outline-light">Makers</button>

@@ -19,21 +19,12 @@ const Blogs = ({
   const head = () => (
     <Head>
       <title> MilServ News | {APP_NAME} </title>
-      <meta
-        name="description"
-        content="Blogs for connecting, networking, and learning code"
-      />
+      <meta name="description" content="MILSERV MEDIA" />
 
       <link rel="cannonical" href={`${DOMAIN}${router.pathname}`} />
-      <meta
-        property="og:title"
-        content={`Blogs by and for the up and coming dev community | ${APP_NAME}`}
-      />
+      <meta property="og:title" content={`MILSERV MEDIA | ${APP_NAME}`} />
 
-      <meta
-        property="og:description"
-        content="Blogs for connecting, networking, and learning code"
-      />
+      <meta property="og:description" content="MILSERV MEDIA" />
 
       <meta property="og:type" content="website" />
       <meta property="og:url" content={`${DOMAIN}${router.pathname}`} />
@@ -121,11 +112,12 @@ const Blogs = ({
       {head()}
       <Layout>
         <main>
-          <div className="container-fluid mt-1 pt-4">
+          <div className="container-fluid mt-1 p-0">
             <header
               className="milservMedia container"
               style={{
                 height: 550,
+                margin: 0,
               }}
             >
               <div className="row">

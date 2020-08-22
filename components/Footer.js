@@ -43,7 +43,7 @@ const Footer = () => {
                 <a href="#">GIVING BACK</a>
               </p>
             </div>
-            <div className="col-md-2 pb-2 mr-0 pr-0" id="footer-links">
+            <div className="col-md-2 pb-2" id="footer-links">
               <h6 className="title">NEWS</h6>
               <p className="footer-items">
                 <a href="/blogs">MILSERV MEDIA</a>

@@ -34,9 +34,9 @@ const Header = (props) => {
 
   return (
     <React.Fragment>
-      <Navbar fixed="top" color="light" light expand="md" className="navbar">
+      <Navbar color="light" light expand="md" className="navbar">
         <Link href="/">
-          <NavLink className="font-weight-bold">
+          <NavLink className="font-weight-bold pt-1 pb-0">
             <NavbarBrand className="navBarLogo">
               <img
                 //Try makeStyle classes to ref image within file
@@ -109,14 +109,14 @@ const Header = (props) => {
               <NavItem className="listItems">ABOUT</NavItem>
             </Link>
 
-            {isAuth() && isAuth().role === 0 && (
+            {/* {isAuth() && isAuth().role === 0 && (
               <Link href="/user">
                 <NavItem className="listItems">
                   {" "}
                   {`${isAuth().name}'s Portal`}
                 </NavItem>
               </Link>
-            )}
+            )} */}
 
             {isAuth() && isAuth().role === 1 && (
               <Link href="/admin">

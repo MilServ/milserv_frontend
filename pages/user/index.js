@@ -19,7 +19,7 @@ const UserIndex = () => {
                   }}
                 >
                   <span>
-                    <FontAwesomeIcon icon={faArrowAltCircleLeft} />
+                    {/* <FontAwesomeIcon icon={faArrowAltCircleLeft} /> */}
                   </span>{" "}
                   Back Home
                 </p>

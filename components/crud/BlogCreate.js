@@ -38,6 +38,7 @@ const CreateBlog = ({ router }) => {
     formData: "",
     title: "",
     hidePublishButton: false,
+    loading: false,
   });
 
   const {
@@ -47,6 +48,7 @@ const CreateBlog = ({ router }) => {
     formData,
     title,
     hidePublishButton,
+    loading,
   } = values;
 
   const token = getCookie("token");
@@ -79,15 +81,17 @@ const CreateBlog = ({ router }) => {
 
   // Publish Blog Function
   const publishBlog = (e) => {
+    setValues({ ...values, loading: true });
     e.preventDefault();
     // console.log("ready to publish");
 
     createBlog(formData, token).then((data) => {
       if (data.error) {
-        setValues({ ...values, error: data.error });
+        setValues({ ...values, error: data.error, loading: false });
       } else {
         setValues({
           ...values,
+          loading: false,
           title: "",
           error: "",
           success: `Congrats!  Your blog, "${data.title}" has been successfuly created.`,
@@ -205,6 +209,19 @@ const CreateBlog = ({ router }) => {
     </div>
   );
 
+  const showLoading = () => (
+    <div
+      className="alert alert-info"
+      style={{
+        zIndex: "3",
+        position: "absolute",
+        display: loading ? "" : "none",
+      }}
+    >
+      Loading...
+    </div>
+  );
+
   const createBlogForm = () => {
     return (
       <form onSubmit={publishBlog}>
@@ -244,6 +261,7 @@ const CreateBlog = ({ router }) => {
         <div className="pt-3">
           {showError()}
           {showSuccess()}
+          {showLoading()}
         </div>
         <div className="col-md-4">
           <div className="form-group pb-2">

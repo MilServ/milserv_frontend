@@ -72,7 +72,11 @@ const Search = () => {
   const searchForm = () => (
     <form
       onSubmit={searchSubmit}
-      style={{ paddingTop: 70, backgroundColor: "transparent" }}
+      style={{
+        paddingTop: 70,
+        paddingBottom: 0,
+        backgroundColor: "transparent",
+      }}
     >
       <div
         className="row justify-content-center mb-1"
@@ -95,7 +99,7 @@ const Search = () => {
             style={{
               backgroundColor: "#8d54b5",
               color: "white",
-              marginBottom: 15,
+              marginBottom: 3,
             }}
           >
             Search
@@ -107,7 +111,7 @@ const Search = () => {
 
   return (
     <div className="container-fluid">
-      <div className="pt-3 pb-2">{searchForm()}</div>
+      <div>{searchForm()}</div>
       {searched && (
         <div style={{ marginTop: "-120px", marginBottom: "-80px" }}>
           {searchedBlogs(results)}{" "}

@@ -10,8 +10,8 @@ import {
 const VeteranJobs = () => {
   return (
     <Layout>
-      <section className="aboutPage ml-0 pl-0">
-        <div className="row">
+      <section className="aboutPage m-0 pl-0">
+        <div className="row m-0">
           <div className="col-md-3">
             <a href="/">
               <p

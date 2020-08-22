@@ -16,7 +16,9 @@ class MyDocument extends Document {
           />
           <link rel="stylesheet" href="/static/css/styles.css" />
         </Head>
-        <body>
+        <body
+          style={{ width: "100", margin: 0, padding: 0, overflowX: "hidden" }}
+        >
           <Main />
           <NextScript />
         </body>
