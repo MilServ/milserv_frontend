@@ -226,7 +226,7 @@ const CreateBlog = ({ router }) => {
     return (
       <form onSubmit={publishBlog}>
         <div className="form-group">
-          <label className="text-muted">Title</label>
+          <label className="text-muted">Title of Blog or Press Release</label>
           <input
             type="text"
             className="form-control"

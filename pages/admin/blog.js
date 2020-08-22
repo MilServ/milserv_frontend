@@ -9,12 +9,25 @@ const Blog = () => {
       <Admin>
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-12 pt-5 pb-5 mt-4 pl-4">
-              <h2 style={{ marginTop: 50, color: "#8d54b5" }}>
-                Write new blog or press release
-              </h2>
+            <div
+              className="col-md-12 pb-15 mt-4 pl-4"
+              style={{ backgroundColor: "#8d54b5", color: "white" }}
+            >
+              <p style={{ paddingBottom: 0, marginBottom: 0 }}>
+                <em>American Craft Deliveries</em>
+              </p>
+              <h3
+                style={{
+                  paddingTop: 0,
+                  marginTop: 0,
+                  marginBottom: 0,
+                  paddingBottom: 10,
+                }}
+              >
+                PUBLISHING CENTER
+              </h3>
             </div>
-            <div className="col-md-12">
+            <div className="col-md-12 mt-3">
               <BlogCreate />
             </div>
           </div>
