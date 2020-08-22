@@ -73,7 +73,7 @@ const Search = () => {
     <form
       onSubmit={searchSubmit}
       style={{
-        paddingTop: 70,
+        paddingTop: 0,
         paddingBottom: 0,
         backgroundColor: "transparent",
       }}
