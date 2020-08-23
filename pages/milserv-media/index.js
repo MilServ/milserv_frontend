@@ -96,7 +96,7 @@ const Blogs = ({
   const showAllTags = () => {
     return tags.map((t, i) => (
       <Link href={`/tags/${t.slug}`} key={i}>
-        <a className="btn btn-warning btn-sm mr-1 ml-1 mt-3">{t.name}</a>
+        <a className="btn btn-warning btn-sm mr-1 ml-1 mt-3 ">{t.name}</a>
       </Link>
     ));
   };
@@ -113,14 +113,16 @@ const Blogs = ({
     <React.Fragment>
       {head()}
       {/* <Layout style={{ margin: 0, padding: 0 }}> */}
-      <main style={{ margin: 0, padding: 0 }}>
-        <div className="container m-0 p-0">
+      <main style={{ marginRight: 0, padding: 0 }}>
+        <div className="container mr-0 p-0" style={{ marginRight: 0 }}>
           <header
             className="milservMedia container"
             style={{
               height: 580,
-              margin: 0,
+              marginRight: 0,
+              marginLeft: 0,
               padding: 0,
+              width: "100%",
             }}
           >
             <div className="row">
@@ -186,6 +188,7 @@ const Blogs = ({
                   height: "auto",
                   marginBottom: 20,
                   textAlign: "center",
+                  paddingRight: 8,
                 }}
               >
                 <h5

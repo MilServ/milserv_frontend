@@ -13,7 +13,7 @@ import {
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    maxWidth: 300,
   },
 });
 
@@ -26,8 +26,9 @@ export default function LandingCardsOne() {
       item
       component={Card}
       xs={12}
-      s={6}
+      s={12}
       md={3}
+      lg={3}
       className="card"
       id="makers-color"
     >

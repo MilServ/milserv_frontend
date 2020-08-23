@@ -11,7 +11,7 @@ const Index = () => {
       <section className="landingTop p-0 m-0">
         <div
           className="row justify-content-center m-0 p-0"
-          style={{ width: "100%" }}
+          style={{ width: "100%", overflow: "hidden" }}
         >
           <div
             className="col-md-4 centered"
@@ -35,7 +35,13 @@ const Index = () => {
           </div>
         </div>
       </section>
-      <section style={{ paddingBottom: 20, backgroundColor: "transparent" }}>
+      <section
+        style={{
+          paddingBottom: 20,
+          backgroundColor: "transparent",
+          overflow: "hidden",
+        }}
+      >
         <div className="program-your-career pt-3 pb-4">
           <h2 className="program text-center">
             <b style={{ color: "#383838" }}>OUR PURPOSE</b>
@@ -79,23 +85,23 @@ const Index = () => {
             <b style={{ color: "#383838" }}>OUR PARTNERS</b>
           </h2>
         </div>
-        <div className="row program-your-career pl-3">
-          <div className="col-md-3 mb-2 col-left p-0">
+        <div className="row program-your-career text-center pl-3">
+          <div className="col-md-3 col-sm-10 text-center col-xs-10 mb-2 col-left p-0">
             <a href="/veteran-jobs">
               <LandingCardsOne />
             </a>
           </div>
-          <div className="col-md-3 mb-2 col-middle p-0">
+          <div className="col-md-3 col-sm-10 col-xs-10 mb-2 col-middle p-0">
             <a href="/retailers">
               <LandingCardsTwo />
             </a>
           </div>
-          <div className="col-md-3 mb-2 col-right p-0">
+          <div className="col-md-3 col-sm-10 col-xs-10 mb-2 col-right p-0">
             <a href="/distributors">
               <LandingCardsThree />
             </a>
           </div>
-          <div className="col-md-3 mb-2 col-right p-0" id="partner">
+          <div className="col-md-3 col-sm-10 col-xs-10 mb-2 p-0" id="partner">
             <LandingCardsFour />
           </div>
         </div>
