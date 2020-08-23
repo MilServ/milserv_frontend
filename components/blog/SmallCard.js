@@ -8,7 +8,7 @@ const SmallCard = ({ blog }) => {
     <div>
       <div>
         <section>
-          <Link href={`/blogs/${blog.slug}`}>
+          <Link href={`/milserv-media/${blog.slug}`}>
             <a>
               <img
                 className="img img-fluid"
@@ -22,7 +22,7 @@ const SmallCard = ({ blog }) => {
 
         <div className="card-body">
           <section>
-            <Link href={`/blogs/${blog.slug}`}>
+            <Link href={`/milserv-media/${blog.slug}`}>
               <a>
                 {" "}
                 <h5 className="card-title">{blog.title}</h5>

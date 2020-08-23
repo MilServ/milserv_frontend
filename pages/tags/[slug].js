@@ -14,7 +14,7 @@ const Tag = ({ tag, blogs, query }) => {
       </title>
       <meta name="description" content={`MilServ Media ${tag.name}`} />
 
-      <link rel="cannonical" href={`${DOMAIN}/tagss/${query.slug}`} />
+      <link rel="cannonical" href={`${DOMAIN}/tags/${query.slug}`} />
       <meta property="og:title" content={`${tag.name} | ${APP_NAME}`} />
 
       <meta property="og:description" content={`MilServ Media ${tag.name}`} />

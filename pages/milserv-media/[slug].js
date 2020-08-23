@@ -36,13 +36,16 @@ const SingleBlog = ({ blog, query }) => {
       </title>
       <meta name="description" content={blog.mdesc} />
 
-      <link rel="cannonical" href={`${DOMAIN}/blogs/${query.slug}`} />
+      <link rel="cannonical" href={`${DOMAIN}/milserv-media/${query.slug}`} />
       <meta property="og:title" content={`${blog.title} | ${APP_NAME}`} />
 
       <meta property="og:description" content={blog.mdesc} />
 
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={`${DOMAIN}/blogs/${query.slug}`} />
+      <meta
+        property="og:url"
+        content={`${DOMAIN}/milserv-media/${query.slug}`}
+      />
       <meta property="og:site_name" content={`${APP_NAME}`} />
 
       <meta property="og:image" content={`${API}/blog/photo/${blog.slug}`} />
@@ -61,7 +64,7 @@ const SingleBlog = ({ blog, query }) => {
         <a
           className="mr-1 mt-3"
           style={{
-            backgroundColor: "darkred",
+            backgroundColor: "#383838",
             color: "white",
             padding: 5,
             width: 50,

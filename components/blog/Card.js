@@ -7,7 +7,7 @@ const Card = ({ blog }) => {
   const showBlogCategories = (blog) =>
     blog.categories.map((c, i) => (
       <Link key={i} href={`/categories/${c.slug}`}>
-        <a className="btn btn-outline-info btn-sm mr-1 mt-3">{c.name}</a>
+        <a className="btn btn-secondary btn-sm mr-1 mt-3">{c.name}</a>
       </Link>
     ));
 
@@ -34,7 +34,7 @@ const Card = ({ blog }) => {
         <div className="col-md-8">
           <section>
             <header>
-              <Link href={`/blogs/${blog.slug}`}>
+              <Link href={`/milserv-media/${blog.slug}`}>
                 <a>
                   <h2 className="text-dark">{blog.title}</h2>
                 </a>
@@ -50,7 +50,7 @@ const Card = ({ blog }) => {
               </section>
             </header>
             <div className="excerpt">{renderHTML(blog.excerpt)}</div>
-            <Link href={`/blogs/${blog.slug}`}>
+            <Link href={`/milserv-media/${blog.slug}`}>
               <a
                 className="btn btn-light pt-1 pb-1 mb-1"
                 style={{ fontSize: ".65rem", fontWeight: "600" }}
