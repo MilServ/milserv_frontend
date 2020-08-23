@@ -34,25 +34,24 @@ export default function BlogCard() {
             MILSERV NEWS
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Write a blog or press release to keep customers and stakeholders
-            informed.
+            Publish blog or press release to keep stakeholders informed.
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <a href="/admin/blog">
           <Button size="small" color="primary">
-            Write
+            Publish
           </Button>
         </a>
         <a href="/admin/blogs">
           <Button size="small" color="primary">
-            Update
+            Manage Media
           </Button>
         </a>
         <a href="/admin/crud/category-tag">
           <Button size="small" color="primary">
-            Create
+            Manage Tags
           </Button>
         </a>
       </CardActions>
