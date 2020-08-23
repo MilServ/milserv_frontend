@@ -118,7 +118,7 @@ const Blogs = ({
           <header
             className="milservMedia container"
             style={{
-              height: 550,
+              height: 580,
               margin: 0,
               padding: 0,
             }}
@@ -142,8 +142,8 @@ const Blogs = ({
                 </a>
               </div>
             </div>
-            <div className="row p-0 m-0">
-              <div className="col-md-12 pt-4 mt-4 mb-2 pb-2">
+            <div className="row p-0 m-0 mr-0">
+              <div className="col-md-12">
                 <h1
                   className="text-center landing-cta"
                   style={{ fontSize: "4rem", marginBottom: 35 }}
@@ -152,8 +152,15 @@ const Blogs = ({
                 </h1>
               </div>
             </div>
-            <div className="row justify-content-center">
-              <div
+            <div
+              className="row justify-content-center"
+              style={{
+                height: "auto",
+                marginBottom: 8,
+                paddingBottom: 10,
+              }}
+            >
+              {/* <div
                 className="col-md-4"
                 style={{
                   textAlign: "center",
@@ -171,11 +178,13 @@ const Blogs = ({
                   CATEGORIES
                 </h5>
                 {showAllCategories()}
-              </div>
+              </div> */}
 
               <div
-                className="col-md-4"
+                className="col-md-12 tagsCol"
                 style={{
+                  height: "auto",
+                  marginBottom: 20,
                   textAlign: "center",
                 }}
               >

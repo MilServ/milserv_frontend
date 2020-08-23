@@ -93,7 +93,7 @@ const Header = (props) => {
                 NEWS
               </DropdownToggle>
               <DropdownMenu right>
-                <Link href="/blogs">
+                <Link href="/milserv-media">
                   <DropdownItem>MILSERV MEDIA</DropdownItem>
                 </Link>
                 {/* <DropdownItem>PRESS RELEASES</DropdownItem> */}

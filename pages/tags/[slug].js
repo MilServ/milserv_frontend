@@ -3,8 +3,6 @@ import Link from "next/link";
 import Layout from "../../components/Layout";
 import { singleTag } from "../../actions/tags";
 import { API, DOMAIN, APP_NAME, FB_APP_ID } from "../../config";
-import renderHTML from "react-render-html";
-import moment from "moment";
 import Card from "../../components/blog/Card";
 
 const Tag = ({ tag, blogs, query }) => {
@@ -47,11 +45,10 @@ const Tag = ({ tag, blogs, query }) => {
         <main>
           <div className="container-fluid">
             <header>
-              <div className="col-md-12 pt-3" style={{ marginTop: 100 }}>
-                <h2 className="display-4 font-weight-bold">
-                  Tag Name: {tag.name}
+              <div className="col-md-12 pt-3" style={{ marginTop: 20 }}>
+                <h2 className="btn btn-warning" style={{ marginBottom: 40 }}>
+                  {tag.name}
                 </h2>
-
                 {blogs.map((b, i) => (
                   <div>
                     <Card key={i} blog={b} />
