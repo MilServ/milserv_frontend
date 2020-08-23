@@ -35,8 +35,11 @@ const Header = (props) => {
   return (
     <React.Fragment>
       <Navbar color="light" light expand="md" className="navbar">
-        <Link href="/">
-          <NavLink className="font-weight-bold pt-1 pb-0">
+        <Link href="/" className="pl-8">
+          <NavLink
+            className="font-weight-bold pt-1 pb-0"
+            style={{ paddingLeft: 7 }}
+          >
             <NavbarBrand className="navBarLogo">
               <img
                 //Try makeStyle classes to ref image within file
@@ -44,7 +47,7 @@ const Header = (props) => {
                 width="45px"
                 height="40px"
                 alt="React Bootstrap logo"
-                style={{ paddingRight: 2, borderRadius: 10 }}
+                style={{ paddingRight: 0, borderRadius: 10 }}
               />
               MILSERV
               <span className="bottom-logo-text">
