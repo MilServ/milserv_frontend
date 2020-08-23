@@ -54,17 +54,22 @@ h2.about-header {
 }
 
 /* Landing page background image */
-.landingTop {
-  height: 650px;
+.landingTop { 
+  /* background-image: url("../images/landing-image.jpg"); */
+  display: inline-block;
   width: 100%;
-  background-image: url("../images/landing-image.jpg");
-  background-size: cover;
+  font-size: 0;
+  line-height: 0;
+  vertical-align: middle;
+  background-size: 100%;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-image: url(image.jpg); 
+}
 }
 /* About Page */
 .aboutPage {
-  height: 450px;
+  /* height: 450px; */
   width: 100%;
   margin: 0 !important;
   background-image: url("../images/landing-image.jpg");
@@ -365,9 +370,10 @@ span.navbar-toggler-icon {
   margin: 0.5rem 0.5rem !important;
   font-weight: bold !important;
   height: 285px !important;
-  /* min-height: 165.9px !important; */
+  padding-right: 10;
+  padding-left: 10;
   min-width: 285px !important;
-  /* min-width: 165.9px !important; */
+  max-width: auto !important;
   color: #ffffff !important;
   border-radius: 1px !important;
   position: relative;

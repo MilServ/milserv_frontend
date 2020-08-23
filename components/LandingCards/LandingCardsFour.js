@@ -13,7 +13,7 @@ import {
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 300,
+    maxWidth: 280,
   },
 });
 
@@ -25,11 +25,11 @@ export default function LandingCardsOne() {
     <Grid
       item
       component={Card}
-      xs={12}
-      s={12}
+      xs={11}
+      s={11}
       md={3}
       lg={3}
-      className="card"
+      className="card text-center"
       id="makers-color"
     >
       <CardContent>

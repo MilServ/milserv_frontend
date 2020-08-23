@@ -9,31 +9,20 @@ const Index = () => {
   return (
     <div style={{ overflow: "hidden" }}>
       <Layout>
-        <section className="landingTop p-0 m-0" style={{ overflow: "hidden" }}>
+        <section className="p-0 m-0" style={{ overflow: "hidden" }}>
           <div
             className="row justify-content-center m-0 p-0"
-            style={{ width: "100%", overflow: "hidden" }}
+            style={{ overflow: "hidden" }}
           >
-            <div
-              className="col-md-4 centered"
-              style={{
-                marginTop: 100,
-                textAlign: "center",
-                paddingTop: 10,
-                overflowX: "hidden",
-              }}
-            >
-              <div>
-                <img
-                  className="text-center"
-                  src={"../static/images/owllogo.jpg"}
-                  width="40%"
-                  height="40%"
-                ></img>
-              </div>
-              <h1 className="landing-cta" id="landing-cta">
+            <div className="col-md-12 text-center">
+              <img
+                className="landingTop"
+                src={"../static/images/landing-image.jpg"}
+              ></img>
+
+              {/* <h1 className="landing-cta" id="landing-cta">
                 YOUR SOLUTION FOR ALCOHOL DELIVERIES
-              </h1>
+              </h1> */}
             </div>
           </div>
         </section>
@@ -44,10 +33,10 @@ const Index = () => {
             overflow: "hidden",
           }}
         >
-          <div className="program-your-career pt-3 pb-4">
-            <h2 className="program text-center">
+          <div className="program-your-career pt-5 pb-1">
+            <h3 className="program text-center">
               <b style={{ color: "#383838" }}>OUR PURPOSE</b>
-            </h2>
+            </h3>
           </div>
           <div className="row pl-3">
             <div className="col-md-3 col-left">
@@ -71,8 +60,8 @@ const Index = () => {
                 padding: 30,
               }}
             >
-              <h2>MilServ Supports Those Who Serve</h2>
-              <p style={{ fontSize: "1.35rem" }}>
+              <h3>MilServ Supports Those Who Serve</h3>
+              <p style={{ fontSize: "1.05rem" }}>
                 Our mission is to use the delivery of alcohol products in the US
                 to create business opportunities, jobs, and distributable
                 benefits for veterans, their families, and the non-government
@@ -82,10 +71,10 @@ const Index = () => {
           </div>
         </section>
         <section className="landingSectionTwo text-center">
-          <div className="row program-your-career pt-3 pb-4">
-            <h2 className="program text-center">
+          <div className="row program-your-career pt-1 pb-1">
+            <h3 className="program text-center">
               <b style={{ color: "#383838" }}>OUR PARTNERS</b>
-            </h2>
+            </h3>
           </div>
           <div className="row program-your-career text-center justify-content-center pl-3">
             <div
@@ -122,7 +111,7 @@ const Index = () => {
           </div>
         </section>
         <section style={{ paddingBottom: 20 }}>
-          <div className="program-your-career pt-3 pb-4">
+          <div className="pt-3 pb-4">
             <h2 className="program text-center">
               <b style={{ color: "#383838" }}>PARTNER WITH US</b>
             </h2>
@@ -135,45 +124,47 @@ const Index = () => {
                 padding: 20,
               }}
             >
-              <p style={{ fontSize: "1.35rem" }}>
+              <p style={{ fontSize: "1.05rem" }}>
                 Through a commitment to employ, contract, and benefit military
                 service-members and their families, MilServ ACD adds value to
                 the craft community while sharing the rewards with local
                 service-members in need.
               </p>
-              <p style={{ fontSize: "1.35rem" }}>
+              <p style={{ fontSize: "1.05rem" }}>
                 Partner with us today! Learn more by clicking on your partner
                 category below.
               </p>
               <div>
                 <ul id="horizontal-list">
-                  <li className="p-2">
+                  <li>
                     <a href="/veteran-jobs">
                       {" "}
-                      <button className="btn btn-outline-light m-1">
+                      <button className="btn btn-outline-light mb-1">
                         Veterans
                       </button>
                     </a>
                   </li>
 
-                  <li className="p-2">
+                  <li>
                     <a href="/retailers">
-                      <button className="btn btn-outline-light">
+                      <button className="btn btn-outline-light mb-1 ml-1">
                         Retailers
                       </button>
                     </a>
                   </li>
-                  <li className="p-2">
+                  <li>
                     <a href="/distributors">
-                      <button className="btn btn-outline-light">
+                      <button className="btn btn-outline-light mb-1 ml-1">
                         Distributors
                       </button>
                     </a>
                   </li>
-                  <li className="p-2">
+                  <li>
                     <a href="makers">
                       {" "}
-                      <button className="btn btn-outline-light">Makers</button>
+                      <button className="btn btn-outline-light mb-1">
+                        Makers
+                      </button>
                     </a>
                   </li>
                 </ul>
