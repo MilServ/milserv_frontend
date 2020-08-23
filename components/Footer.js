@@ -46,11 +46,11 @@ const Footer = () => {
             <div className="col-md-2 pb-2 pr-0" id="footer-links">
               <h6 className="title">NEWS</h6>
               <p className="footer-items">
-                <a href="/blogs">MILSERV MEDIA</a>
+                <a href="/milserv-media">MILSERV MEDIA</a>
               </p>
               <p className="footer-items">
                 {" "}
-                <a href="/blogs">PRESS RELEASES</a>{" "}
+                <a href="/milserv-media">PRESS RELEASES</a>{" "}
               </p>
               <p className="footer-items">
                 <a href="#">STAY CONNECTED</a>{" "}
