@@ -14,7 +14,7 @@ const Index = () => {
             className="row justify-content-center m-0 p-0"
             style={{ overflow: "hidden" }}
           >
-            <div className="col-md-12 text-center">
+            <div className="col-md-12 text-center p-0">
               <img
                 className="landingTop"
                 src={"../static/images/landing-image.jpg"}
@@ -33,39 +33,28 @@ const Index = () => {
             overflow: "hidden",
           }}
         >
-          <div className="program-your-career pt-5 pb-1">
-            <h3 className="program text-center">
-              <b style={{ color: "#383838" }}>OUR PURPOSE</b>
-            </h3>
-          </div>
-          <div className="row pl-3">
-            <div className="col-md-3 col-left">
-              <img
-                className="text-center"
-                src={"../static/images/owllogo.jpg"}
-                width="80%"
-                height="80%"
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  msTransform: "translateX(-50%)",
-                  transform: "translateY(-50%)",
-                }}
-              ></img>
-            </div>
+          <div className="row mt-2 pl-0 pr-0">
             <div
-              className="col-md-8 mb-2 aboutSections"
+              className="col-md-12 text-center aboutSections"
               style={{
                 backgroundColor: "#8d54b5",
                 padding: 30,
               }}
             >
-              <h3>MilServ Supports Those Who Serve</h3>
+              <img
+                className="text-center img-thumbnail mb-1"
+                src={"../static/images/owllogo.jpg"}
+                width="90px"
+                // height="20%"
+              ></img>
+              <h5 style={{ marginBottom: 0, paddingBottom: 0 }}>
+                <b>Serving Those Who Serve</b>
+              </h5>
               <p style={{ fontSize: "1.05rem" }}>
-                Our mission is to use the delivery of alcohol products in the US
-                to create business opportunities, jobs, and distributable
-                benefits for veterans, their families, and the non-government
-                organizations (NGOs) that support them.
+                The MilServ mission is to use the delivery of alcohol products
+                in the US to create business opportunities, jobs, and
+                distributable benefits for veterans, their families, and the
+                non-government organizations (NGOs) that support them.
               </p>
             </div>
           </div>
