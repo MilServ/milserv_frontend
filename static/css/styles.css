@@ -305,19 +305,13 @@ Media queries needed to prevent buttons from elongating in collapsible menu */
   font-weight: 600;
   margin: 0.75rem;
   cursor: pointer;
-  transition: all 0.2s ease-in-out !important;
+ 
 }
 .signout {
   color: darkred !important;
   font-weight: 600;
   margin-top: 5px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out !important;
-}
-
-.listItems:hover,
-.signout {
-  transform: scale(1.08) !important;
+  cursor: pointer; 
 }
 
 .landingAuth {
