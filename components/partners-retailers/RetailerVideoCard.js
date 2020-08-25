@@ -5,7 +5,8 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
-// import pic from "../../static/images/mildiscowl.png";
+import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ReactPlayer from "react-player";
 
 const useStyles = makeStyles({
@@ -23,12 +24,34 @@ export default function RetVideoCard() {
 
   return (
     <div className={classes.wrapper}>
+      <a
+        href="/"
+        style={{
+          color: "white",
+          paddingLeft: "4px",
+        }}
+      >
+        <span>
+          <FontAwesomeIcon icon={faArrowAltCircleLeft} />
+        </span>{" "}
+        Back Home
+      </a>
       <br></br>
       <Card className={classes.root}>
         <CardActionArea>
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              WATCH VIDEO FOR RETAILERS
+          <CardContent style={{ textAlign: "center" }}>
+            <Typography
+              style={{ backgroundColor: "#383838", padding: 10 }}
+              gutterBottom
+              variant="h6"
+            >
+              <b
+                style={{
+                  color: "white",
+                }}
+              >
+                Solution for Retailers
+              </b>
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
               Watch video to learn about our E-Commerce platform to order

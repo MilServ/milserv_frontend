@@ -125,30 +125,30 @@ export default function VetSignUpForm(props) {
         <h2>
           <b
             style={{
-              color: "#8d54b5",
+              color: "white",
             }}
           >
             JOIN OUR TEAM!
           </b>
         </h2>
-        <h4>
-          <em
-            style={{
-              color: "black",
-              fontWeight: "600",
-              fontSize: ".96rem",
-            }}
-          >
-            Fill out form to learn more
-          </em>
+        <h4
+          style={{
+            color: "white",
+            fontWeight: "400",
+            fontSize: ".92rem",
+          }}
+        >
+          Fill out form to learn more
         </h4>
-        <div>
+        <hr style={{ backgroundColor: "white" }} />
+        <div style={{ marginTop: 10 }}>
+          <small>Contact Information</small>
+          <br />
           <input
             style={{
               border: "solid #383838 .75px",
               borderRadius: 5,
-              marginLeft: 5,
-              marginRight: 3,
+              marginBottom: 3,
             }}
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
@@ -159,7 +159,11 @@ export default function VetSignUpForm(props) {
           />
 
           <input
-            style={{ border: "solid #383838 .75px", borderRadius: 5 }}
+            style={{
+              border: "solid #383838 .75px",
+              borderRadius: 5,
+              marginBottom: 3,
+            }}
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
             placeholder="Last name"
@@ -167,25 +171,30 @@ export default function VetSignUpForm(props) {
             name="lastName"
             required
           />
-        </div>
-        <br></br>
-        <input
-          style={{ border: "solid #383838 .75px", borderRadius: 5, margin: 5 }}
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email address"
-          type="email"
-          name="email"
-          required
-        />
 
-        <div>
           <input
             style={{
               border: "solid #383838 .75px",
               borderRadius: 5,
-              margin: 5,
+              marginBottom: 10,
+            }}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email address"
+            type="email"
+            name="email"
+            required
+          />
+        </div>
+
+        <div className="mb-4 mt-3">
+          <small>Current Home State/Duty Station</small>
+          <input
+            style={{
+              border: "solid #383838 .75px",
+              borderRadius: 5,
               width: "80%",
+              marginBottom: 5,
             }}
             value={currentLocation}
             onChange={(e) => setCurrentLocation(e.target.value)}
@@ -195,11 +204,13 @@ export default function VetSignUpForm(props) {
             required
           />
           <br></br>
+          <small>Projected Home State (if applicable)</small>
+          <br />
           <input
             style={{
               border: "solid #383838 .75px",
               borderRadius: 5,
-              margin: 5,
+              marginBottom: 5,
             }}
             value={projectedHOR}
             onChange={(e) => setProjHOR(e.target.value)}
@@ -210,17 +221,8 @@ export default function VetSignUpForm(props) {
           />
         </div>
         <div>
-          <label
-            style={{
-              marginTop: "20px",
-              marginRight: 3,
-              color: "black",
-              fontWeight: "600",
-              fontSize: ".90rem",
-            }}
-          >
-            Select Military Affiliation{" "}
-          </label>
+          <small>Select Military Affiliation </small>
+
           <select
             style={{ borderRadius: 5, marginLeft: 3 }}
             className={classes.vetForm}
@@ -233,18 +235,9 @@ export default function VetSignUpForm(props) {
             ))}
           </select>
         </div>
+        <br />
 
-        <label
-          style={{
-            marginTop: "20px",
-            marginRight: 3,
-            color: "black",
-            fontWeight: "600",
-            fontSize: ".90rem",
-          }}
-        >
-          Tell Us What You're Interested In{" "}
-        </label>
+        <small>Tell Us What You're Interested In </small>
         <select
           style={{ borderRadius: 5, marginLeft: 3 }}
           onChange={interestSelectChange}
@@ -256,40 +249,32 @@ export default function VetSignUpForm(props) {
           ))}
         </select>
         <br />
-        <label
-          style={{
-            marginTop: "20px",
-            marginRight: 3,
-            color: "black",
-            fontWeight: "600",
-            fontSize: ".90rem",
-          }}
-        >
-          Tell Us More{" "}
-        </label>
-        <textarea
-          style={{
-            border: "solid #383838 .75px",
-            marginTop: "",
-            width: "100%",
-            height: 200,
-            borderRadius: 5,
-          }}
-          value={additionalInfo}
-          onChange={(e) => setAdditionalInfo(e.target.value)}
-          // placeholder="Tell Us More!"
-          type="text"
-          name="additionalInfo"
-        />
-        <br></br>
-        <button
-          type="submit"
-          style={{ marginTop: 50 }}
-          className="btn btn-warning"
-          onClick={onSubmit}
-        >
-          Submit
-        </button>
+        <div style={{ marginTop: 15 }}>
+          <small>Tell Us More </small>
+          <textarea
+            style={{
+              border: "solid #383838 .75px",
+              marginTop: "",
+              width: "100%",
+              height: 200,
+              borderRadius: 5,
+            }}
+            value={additionalInfo}
+            onChange={(e) => setAdditionalInfo(e.target.value)}
+            // placeholder="Tell Us More!"
+            type="text"
+            name="additionalInfo"
+          />
+          <br></br>
+          <button
+            type="submit"
+            style={{ marginTop: 50 }}
+            className="btn btn-warning"
+            onClick={onSubmit}
+          >
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   );

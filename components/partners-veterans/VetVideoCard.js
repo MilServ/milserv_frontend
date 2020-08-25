@@ -6,11 +6,15 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArrowAltCircleLeft,
+  faFlagUsa,
+} from "@fortawesome/free-solid-svg-icons";
 
 const useStyles = makeStyles({
   root: {
     width: "auto",
-    marginTop: 10,
   },
   wrapper: {
     marginBottom: 10,
@@ -22,39 +26,48 @@ export default function VetVideoCard() {
 
   return (
     <div className={classes.wrapper}>
+      <a
+        href="/"
+        style={{
+          color: "white",
+          paddingLeft: "4px",
+        }}
+      >
+        <span>
+          <FontAwesomeIcon icon={faArrowAltCircleLeft} />
+        </span>{" "}
+        Back Home
+      </a>
+
       <h2>
         <b
           style={{
             color: "whitesmoke",
-            marginBottom: 10,
           }}
         >
           WE'RE HIRING!
         </b>
       </h2>
       <br></br>
-      <section>
-        <p
-          style={{
-            color: "whitesmoke",
-            fontWeight: 600,
-          }}
-        >
-          <em>
-            Contact us today to learn more <br />
-            about opportunities at these locations
-          </em>
-        </p>
-        <div className="btn btn-primary">Maryland</div>{" "}
-        <button className="btn btn-danger">Texas</button>{" "}
-        <button className="btn btn-success">New York</button>
-      </section>
-      <br></br>
+
       <Card className={classes.root}>
         <CardActionArea>
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              WATCH VIDEO TO LEARN MORE
+          <CardContent style={{ textAlign: "center" }}>
+            <Typography
+              style={{ backgroundColor: "#383838", padding: 10 }}
+              gutterBottom
+              variant="h6"
+            >
+              <b
+                style={{
+                  color: "white",
+                }}
+              >
+                Training for Veterans{" "}
+                <span>
+                  <FontAwesomeIcon icon={faFlagUsa} />
+                </span>{" "}
+              </b>
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
               Learn more about our training program for prior service and
@@ -74,6 +87,24 @@ export default function VetVideoCard() {
           />
         </CardActions>
       </Card>
+      <section style={{ textAlign: "center", marginTop: 10 }}>
+        <hr />
+        <p
+          style={{
+            color: "whitesmoke",
+            fontWeight: 400,
+            marginTop: 3,
+            textAlign: "center",
+          }}
+        >
+          Contact us today to learn more <br />
+          about opportunities at these locations
+        </p>
+        <button className="btn btn-outline-light m-1">Maryland</button>
+        <button className="btn btn-outline-light m-1">Texas</button>{" "}
+        <button className="btn btn-outline-light m-1">New York</button>
+      </section>
+      <br></br>
     </div>
   );
 }

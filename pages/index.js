@@ -1,4 +1,6 @@
+import { useState } from "react";
 import Layout from "../components/Layout";
+import Carousel from "react-bootstrap/Carousel";
 import Link from "next/link";
 import LandingCardsOne from "../components/LandingCards/LandingCardsOne";
 import LandingCardsTwo from "../components/LandingCards/LandingCardsTwo";
@@ -6,6 +8,11 @@ import LandingCardsThree from "../components/LandingCards/LandingCardsThree";
 import LandingCardsFour from "../components/LandingCards/LandingCardsFour";
 
 const Index = () => {
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
   return (
     <div style={{ overflow: "hidden" }}>
       <Layout>
@@ -15,10 +22,54 @@ const Index = () => {
             style={{ overflow: "hidden" }}
           >
             <div className="col-md-12 text-center p-0">
-              <img
+              <Carousel activeIndex={index} onSelect={handleSelect}>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src="../static/images/picone.jpg"
+                    alt="First slide"
+                  />
+                  <Carousel.Caption>
+                    {/* <h3>First slide label</h3>
+                    <p>
+                      Nulla vitae elit libero, a pharetra augue mollis interdum.
+                    </p> */}
+                  </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src="../static/images/pictwo.jpg"
+                    alt="Third slide"
+                  />
+
+                  {/* <Carousel.Caption>
+                    <h3>Second slide label</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                  </Carousel.Caption> */}
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src="../static/images/picthree.jpeg"
+                    alt="Third slide"
+                  />
+
+                  {/* <Carousel.Caption>
+                    <h3>Third slide label</h3>
+                    <p>
+                      Praesent commodo cursus magna, vel scelerisque nisl
+                      consectetur.
+                    </p>
+                  </Carousel.Caption> */}
+                </Carousel.Item>
+              </Carousel>
+              {/* <img
                 className="landingTop"
                 src={"../static/images/landing-image.jpg"}
-              ></img>
+              ></img> */}
             </div>
           </div>
         </section>
@@ -56,7 +107,7 @@ const Index = () => {
           </div>
         </section>
         <section className="landingSectionTwo text-center">
-          <div className="row program-your-career pt-1 pb-1">
+          <div className="row program-your-career pt-1">
             <h3 className="program text-center">
               <b style={{ color: "#383838" }}>OUR PARTNERS</b>
             </h3>
@@ -96,12 +147,7 @@ const Index = () => {
           </div>
         </section>
         <section style={{ paddingBottom: 20 }}>
-          <div className="pt-3 pb-4">
-            <h3 className="program text-center">
-              <b style={{ color: "#383838" }}>PARTNER WITH US</b>
-            </h3>
-          </div>
-          <div className="row pl-3">
+          <div className="row pl-2">
             <div
               className="col-md-8 mb-2 aboutSections"
               style={{
@@ -109,6 +155,9 @@ const Index = () => {
                 padding: 20,
               }}
             >
+              <h3 className="program">
+                <b style={{ color: "#white" }}>PARTNER WITH US</b>
+              </h3>
               <p style={{ fontSize: "1.05rem" }}>
                 Through a commitment to employ, contract, and benefit military
                 service-members and their families, MilServ ACD adds value to
