@@ -13,6 +13,8 @@ import {
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    minHeight: 300,
+    margin: 2,
   },
 });
 
@@ -37,12 +39,12 @@ export default function Biz2Biz() {
           Business to Business
         </Typography>
 
-        <button
+        {/* <button
           className="btn btn-warning"
           style={{ position: "absolute", bottom: 25, left: 25 }}
         >
           Read More
-        </button>
+        </button> */}
       </CardContent>
     </Grid>
   );

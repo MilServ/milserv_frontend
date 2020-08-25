@@ -108,49 +108,26 @@ export default function DistSignUpForm(props) {
   return (
     <div>
       <form onSubmit={onSubmit}>
-        <h2>
-          <b
-            style={{
-              color: "#8d54b5",
-            }}
-          >
-            DISTRIBUTOR CONTACT FORM
-          </b>
-        </h2>
-        <div>
-          <img src="../../static/images/mildiscowl.png" width="175px"></img>
-        </div>
-        <h4>
-          <em
-            style={{
-              color: "black",
-              fontWeight: "600",
-              fontSize: ".96rem",
-            }}
-          >
-            Fill out form to learn more
-          </em>
+        <h2>DISTRIBUTOR CONTACT FORM</h2>
+
+        <hr style={{ backgroundColor: "white" }} />
+        <h4
+          style={{
+            color: "white",
+            fontWeight: "400",
+            fontSize: ".92rem",
+          }}
+        >
+          Fill out form to learn more
         </h4>
 
-        <hr></hr>
-        <div>
-          <label
-            style={{
-              marginTop: "20px",
-              marginRight: 3,
-              color: "black",
-              fontWeight: "600",
-              fontSize: ".90rem",
-            }}
-          >
-            Company Name of DBA (if applicable){" "}
-          </label>
+        <div style={{ marginTop: 10 }}>
+          <small>Company Name</small>
+          <br />
           <input
             style={{
               border: "solid #383838 .75px",
               borderRadius: 5,
-              marginLeft: 5,
-              marginRight: 3,
               paddingLeft: 8,
               width: "75%",
             }}
@@ -162,80 +139,58 @@ export default function DistSignUpForm(props) {
             required
           />
         </div>
-        <hr></hr>
-        <div>
-          <label
-            style={{
-              marginTop: "20px",
-              marginRight: 3,
-              color: "black",
-              fontWeight: "600",
-              fontSize: ".90rem",
-              width: "100%",
-            }}
-          >
-            Contact Information{" "}
-          </label>
-          <input
-            style={{
-              border: "solid #383838 .75px",
-              borderRadius: 5,
-              marginLeft: 5,
-              marginRight: 3,
-              paddingLeft: 8,
-            }}
-            value={distFirstName}
-            onChange={(e) => setDistFirstName(e.target.value)}
-            placeholder="First name"
-            type="text"
-            name="First Name"
-            required
-          />
 
-          <input
-            style={{
-              borderRadius: 5,
-              border: "solid #383838 .75px",
-              paddingLeft: 8,
-            }}
-            value={distLastName}
-            onChange={(e) => setDistLastName(e.target.value)}
-            placeholder="Last name"
-            type="text"
-            name="Last Name"
-            required
-          />
+        <div className="mt-4">
+          <small> Contact Information </small>
+          <div className="mb-3">
+            <input
+              style={{
+                border: "solid #383838 .75px",
+                borderRadius: 5,
+                marginBottom: 3,
+              }}
+              value={distFirstName}
+              onChange={(e) => setDistFirstName(e.target.value)}
+              placeholder="First name"
+              type="text"
+              name="First Name"
+              required
+            />
 
+            <input
+              style={{
+                borderRadius: 5,
+                border: "solid #383838 .75px",
+                marginBottom: 3,
+              }}
+              value={distLastName}
+              onChange={(e) => setDistLastName(e.target.value)}
+              placeholder="Last name"
+              type="text"
+              name="Last Name"
+              required
+            />
+
+            <input
+              style={{
+                borderRadius: 5,
+                marginBottom: 3,
+                border: "solid #383838 .75px",
+              }}
+              value={distEmail}
+              onChange={(e) => setDistEmail(e.target.value)}
+              placeholder="Email address"
+              type="email"
+              name="email"
+              required
+            />
+          </div>
+
+          <small> Contact Number </small>
+          <br />
           <input
             style={{
               borderRadius: 5,
-              margin: 5,
-              border: "solid #383838 .75px",
-              paddingLeft: 8,
-            }}
-            value={distEmail}
-            onChange={(e) => setDistEmail(e.target.value)}
-            placeholder="Email address"
-            type="email"
-            name="email"
-            required
-          />
-          <label
-            style={{
-              marginTop: "10px",
-              marginRight: 3,
-              color: "black",
-              fontWeight: "600",
-              fontSize: ".90rem",
-              width: "100%",
-            }}
-          >
-            Contact Number{" "}
-          </label>
-          <input
-            style={{
-              borderRadius: 5,
-              margin: 5,
               border: "solid #383838 .75px",
               paddingLeft: 8,
             }}
@@ -248,21 +203,10 @@ export default function DistSignUpForm(props) {
           />
         </div>
         <br></br>
-        <hr></hr>
+        <hr style={{ backgroundColor: "white" }} />
 
-        <div>
-          <label
-            style={{
-              marginTop: "20px",
-              marginRight: 3,
-              color: "black",
-              fontWeight: "600",
-              fontSize: ".90rem",
-            }}
-          >
-            State(s) Where You Possess Alchohol Licenses{" "}
-          </label>
-          {/* <pre>{JSON.stringify(licState)}</pre> */}
+        <div style={{ marginBottom: "10" }}>
+          <small> State(s) Where You Possess Alchohol Licenses</small>
           <MultiSelect
             options={options}
             value={distLicState}
@@ -270,45 +214,25 @@ export default function DistSignUpForm(props) {
             onChange={setDistLicState}
             labelledBy={"Select"}
           />
-        </div>
+          <br />
+          <small> State License Number </small>
 
-        <label
-          style={{
-            marginTop: "20px",
-            marginRight: 3,
-            color: "black",
-            fontWeight: "600",
-            fontSize: ".90rem",
-          }}
-        >
-          State License Number{" "}
-        </label>
-        <input
-          style={{
-            border: "solid #383838 .75px",
-            borderRadius: 5,
-            margin: 5,
-            paddingLeft: 8,
-          }}
-          value={distStateLicNo}
-          onChange={(e) => setDistStateLicNo(e.target.value)}
-          placeholder="State License Number"
-          type="text"
-          name="stateLicNumber"
-          required
-        />
+          <input
+            style={{
+              border: "solid #383838 .75px",
+              borderRadius: 5,
+            }}
+            value={distStateLicNo}
+            onChange={(e) => setDistStateLicNo(e.target.value)}
+            placeholder="State License Number"
+            type="text"
+            name="stateLicNumber"
+            required
+          />
+        </div>
         <br />
-        <label
-          style={{
-            marginTop: "20px",
-            marginRight: 3,
-            color: "black",
-            fontWeight: "600",
-            fontSize: ".90rem",
-          }}
-        >
-          Comment or Message{" "}
-        </label>
+        <small> Tell us more...</small>
+
         <textarea
           style={{
             border: "solid #383838 .75px",
@@ -326,13 +250,23 @@ export default function DistSignUpForm(props) {
         <br></br>
         <button
           type="submit"
-          style={{ marginTop: 50 }}
+          style={{ marginTop: 30, marginBottom: 30 }}
           className="btn btn-warning"
           onClick={onSubmit}
         >
           Submit
         </button>
       </form>
+      <div className="mb-4">
+        <small>
+          <em>Did You Know?</em>
+        </small>
+        <img
+          src="../../static/images/mildiscowl.png"
+          width="280px"
+          style={{ display: "block", textAlign: "center" }}
+        ></img>
+      </div>
     </div>
   );
 }

@@ -11,7 +11,7 @@ const VeteranJobs = () => {
   return (
     <div style={{ overflow: "hidden" }}>
       <Layout>
-        <section className="aboutSectionTwo ml-0 mt-4">
+        <section className="aboutSectionTwo m-0 mt-4">
           {" "}
           <div className="row">
             <div

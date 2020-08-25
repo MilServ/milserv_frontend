@@ -32,6 +32,12 @@ export default function LandingCardsOne() {
       className="card text-center"
     >
       <img className="landingTop" src={"../static/images/makers.jpeg"}></img>
+      <button
+        className="btn btn-sm btn-outline-light"
+        style={{ position: "absolute", left: 8, bottom: 8 }}
+      >
+        <b>Makers</b>
+      </button>
     </Grid>
     // </Link>
   );

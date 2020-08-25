@@ -30,31 +30,40 @@ export default function VetVideoCard() {
         href="/"
         style={{
           color: "white",
-          paddingLeft: "4px",
+          paddingLeft: "2px",
         }}
       >
-        <span>
-          <FontAwesomeIcon icon={faArrowAltCircleLeft} />
-        </span>{" "}
-        Back Home
+        <small>
+          <span>
+            <FontAwesomeIcon icon={faArrowAltCircleLeft} />
+          </span>{" "}
+          Back Home
+        </small>
       </a>
 
-      <h2>
-        <b
-          style={{
-            color: "whitesmoke",
-          }}
-        >
-          WE'RE HIRING!
-        </b>
-      </h2>
       <br></br>
+      <p
+        className="p-0"
+        style={{
+          fontStyle: "italic",
+          fontWeight: 200,
+          fontSize: "1.2rem",
+          marginTop: 15,
+        }}
+      >
+        Learn more about our training program for prior service and
+        transitioning servicemembers.
+      </p>
 
       <Card className={classes.root}>
         <CardActionArea>
-          <CardContent style={{ textAlign: "center" }}>
+          <CardContent>
             <Typography
-              style={{ backgroundColor: "#383838", padding: 10 }}
+              style={{
+                backgroundColor: "#383838",
+                padding: 5,
+                textAlign: "center",
+              }}
               gutterBottom
               variant="h6"
             >
@@ -63,16 +72,17 @@ export default function VetVideoCard() {
                   color: "white",
                 }}
               >
-                Training for Veterans{" "}
+                WATCH VIDEO{" "}
                 <span>
                   <FontAwesomeIcon icon={faFlagUsa} />
                 </span>{" "}
               </b>
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              Learn more about our training program for prior service and
-              transitioning servicemembers.
-            </Typography>
+            <Typography
+              variant="body2"
+              color="textSecondary"
+              component="p"
+            ></Typography>
           </CardContent>
         </CardActionArea>
         <CardActions>
@@ -89,20 +99,26 @@ export default function VetVideoCard() {
       </Card>
       <section style={{ textAlign: "center", marginTop: 10 }}>
         <hr />
-        <p
+        <h2
           style={{
-            color: "whitesmoke",
-            fontWeight: 400,
-            marginTop: 3,
             textAlign: "center",
           }}
         >
+          <b
+            style={{
+              color: "whitesmoke",
+            }}
+          >
+            WE'RE HIRING!
+          </b>
+        </h2>
+        <p style={{ fontStyle: "italic", fontWeight: 200, fontSize: "1.2rem" }}>
           Contact us today to learn more <br />
           about opportunities at these locations
         </p>
-        <button className="btn btn-outline-light m-1">Maryland</button>
-        <button className="btn btn-outline-light m-1">Texas</button>{" "}
-        <button className="btn btn-outline-light m-1">New York</button>
+        <button className="btn btn-outline-light m-1 p-1">Maryland</button>
+        <button className="btn btn-outline-light m-1 p-1">Texas</button>{" "}
+        <button className="btn btn-outline-light m-1 p-1">New York</button>
       </section>
       <br></br>
     </div>

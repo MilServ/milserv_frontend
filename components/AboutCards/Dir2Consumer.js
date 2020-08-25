@@ -39,12 +39,12 @@ export default function Dir2Consumer() {
           Direct to Consumer
         </Typography>
 
-        <button
+        {/* <button
           className="btn btn-warning"
           style={{ position: "absolute", bottom: 25, left: 25 }}
         >
           Read More
-        </button>
+        </button> */}
       </CardContent>
     </Grid>
     // </Link>

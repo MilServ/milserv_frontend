@@ -28,34 +28,43 @@ export default function RetVideoCard() {
         href="/"
         style={{
           color: "white",
-          paddingLeft: "4px",
+          paddingLeft: "1px",
         }}
       >
-        <span>
-          <FontAwesomeIcon icon={faArrowAltCircleLeft} />
-        </span>{" "}
-        Back Home
+        <small>
+          <span>
+            <FontAwesomeIcon icon={faArrowAltCircleLeft} />
+          </span>{" "}
+          Back Home
+        </small>
       </a>
       <br></br>
+      <p
+        style={{
+          fontStyle: "italic",
+          fontWeight: 200,
+          fontSize: "1.2rem",
+          marginTop: 20,
+        }}
+      >
+        Watch video to learn about our E-Commerce platform to order alcohol.
+        Delivered by military veterans at no cost to you.
+      </p>
       <Card className={classes.root}>
         <CardActionArea>
           <CardContent style={{ textAlign: "center" }}>
             <Typography
               style={{ backgroundColor: "#383838", padding: 10 }}
               gutterBottom
-              variant="h6"
+              variant="h5"
             >
               <b
                 style={{
                   color: "white",
                 }}
               >
-                Solution for Retailers
+                For Retailers
               </b>
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              Watch video to learn about our E-Commerce platform to order
-              alcohol. Delivered by military veterans at no cost to you.
             </Typography>
           </CardContent>
         </CardActionArea>

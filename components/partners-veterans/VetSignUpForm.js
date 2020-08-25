@@ -171,16 +171,16 @@ export default function VetSignUpForm(props) {
             name="lastName"
             required
           />
-
+          <br />
+          <small>Email Address</small>
+          <br />
           <input
             style={{
               border: "solid #383838 .75px",
               borderRadius: 5,
-              marginBottom: 10,
             }}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email address"
             type="email"
             name="email"
             required
@@ -188,7 +188,7 @@ export default function VetSignUpForm(props) {
         </div>
 
         <div className="mb-4 mt-3">
-          <small>Current Home State/Duty Station</small>
+          <small>Current Home State or Duty Station</small>
           <input
             style={{
               border: "solid #383838 .75px",
@@ -198,7 +198,7 @@ export default function VetSignUpForm(props) {
             }}
             value={currentLocation}
             onChange={(e) => setCurrentLocation(e.target.value)}
-            placeholder="Current Home/Duty Station State"
+            // placeholder="Current Home/Duty Station State"
             type="text"
             name="currentLocation"
             required
@@ -214,7 +214,7 @@ export default function VetSignUpForm(props) {
             }}
             value={projectedHOR}
             onChange={(e) => setProjHOR(e.target.value)}
-            placeholder="Projected Home State"
+            // placeholder="Projected Home State"
             type="text"
             name="projectedHOR"
             required
@@ -268,7 +268,7 @@ export default function VetSignUpForm(props) {
           <br></br>
           <button
             type="submit"
-            style={{ marginTop: 50 }}
+            style={{ marginTop: 25, marginBottom: 40 }}
             className="btn btn-warning"
             onClick={onSubmit}
           >

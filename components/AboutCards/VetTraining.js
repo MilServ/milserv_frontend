@@ -43,12 +43,12 @@ export default function VetTraining() {
         <Typography style={{ fontSize: "1.5rem", color: "#383838" }}>
           Veteran Training Program
         </Typography>
-        <button
+        {/* <button
           className="btn btn-warning"
           style={{ position: "absolute", bottom: 25, left: 25 }}
         >
           Read More
-        </button>
+        </button> */}
       </CardContent>
     </Grid>
   );

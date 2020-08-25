@@ -120,14 +120,6 @@ input.form-control.search-form {
   padding-bottom: 20px;
 }
 
-.about-where-btn {
-  border: solid #383838 1px;
-  color: #383838;
-  padding: 8px;
-  border-radius: 8px;
-  background-color: transparent;
-}
-
 .about-header {
   text-align: center !important;
   justify-content: center !important;

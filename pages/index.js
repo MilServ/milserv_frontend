@@ -30,10 +30,19 @@ const Index = () => {
                     alt="First slide"
                   />
                   <Carousel.Caption>
-                    {/* <h3>First slide label</h3>
-                    <p>
-                      Nulla vitae elit libero, a pharetra augue mollis interdum.
-                    </p> */}
+                    <h3
+                      style={{
+                        fontWeight: 800,
+                        borderRadius: 4,
+                        WebkitTextStroke: "1px black",
+                        marginBottom: 0,
+                      }}
+                    >
+                      MILSERV
+                    </h3>
+                    <p style={{ fontSize: ".98rem" }}>
+                      <em>American Craft Deliveries Corporation</em>
+                    </p>
                   </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -43,12 +52,29 @@ const Index = () => {
                     alt="Third slide"
                   />
 
-                  {/* <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                  </Carousel.Caption> */}
+                  <Carousel.Caption>
+                    <div
+                      style={{
+                        backgroundColor: "rgba(0,0,0,.45)",
+                        borderRadius: 8,
+                        padding: 1,
+                      }}
+                    >
+                      <p
+                        style={{
+                          fontWeight: 600,
+                          borderRadius: 4,
+                          fontSize: "1.3rem",
+                          marginBottom: 0,
+                        }}
+                      >
+                        Welcome & Stay tuned!
+                      </p>
+                      <p>
+                        We're officially launching our website on 9/15/2020!
+                      </p>
+                    </div>
+                  </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
@@ -57,13 +83,33 @@ const Index = () => {
                     alt="Third slide"
                   />
 
-                  {/* <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>
-                      Praesent commodo cursus magna, vel scelerisque nisl
-                      consectetur.
-                    </p>
-                  </Carousel.Caption> */}
+                  <Carousel.Caption>
+                    {/* <h3
+                      style={{
+                        fontWeight: 800,
+                        borderRadius: 4,
+                        WebkitTextStroke: "1px black",
+                      }}
+                    >
+                      MILSERV
+                    </h3> */}
+                    <div
+                      style={{
+                        backgroundColor: "rgba(0,0,0,.45)",
+                        borderRadius: 8,
+                        padding: 1,
+                      }}
+                    >
+                      {" "}
+                      <p>
+                        <em>
+                          Supporting the Military Community through partnerships
+                          with Makers, Retailers, and Distributors of Craft
+                          Alcohol
+                        </em>
+                      </p>
+                    </div>
+                  </Carousel.Caption>
                 </Carousel.Item>
               </Carousel>
               {/* <img

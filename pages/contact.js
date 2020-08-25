@@ -18,10 +18,12 @@ const Contact = () => {
                   paddingTop: "100px",
                 }}
               >
-                <span>
-                  <FontAwesomeIcon icon={faArrowAltCircleLeft} />
-                </span>{" "}
-                Back Home
+                <small>
+                  <span>
+                    <FontAwesomeIcon icon={faArrowAltCircleLeft} />
+                  </span>{" "}
+                  Back Home
+                </small>
               </p>
             </a>
           </div>

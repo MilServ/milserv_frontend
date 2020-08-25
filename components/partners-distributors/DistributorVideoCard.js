@@ -5,7 +5,8 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
-// import pic from "../../static/images/mildiscowl.png";
+import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ReactPlayer from "react-player";
 
 const useStyles = makeStyles({
@@ -23,16 +24,47 @@ export default function DistVideoCard() {
 
   return (
     <div className={classes.wrapper}>
+      <a
+        href="/"
+        style={{
+          color: "white",
+          paddingLeft: "1px",
+        }}
+      >
+        <small>
+          <span>
+            <FontAwesomeIcon icon={faArrowAltCircleLeft} />
+          </span>{" "}
+          Back Home
+        </small>
+      </a>
       <br></br>
+      <p
+        style={{
+          fontStyle: "italic",
+          fontWeight: 200,
+          fontSize: "1.2rem",
+          marginTop: 20,
+        }}
+      >
+        From helping you save money to expanding your reach, watch this video to
+        learn how MilServ supports distributors.
+      </p>
       <Card className={classes.root}>
         <CardActionArea>
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              WATCH VIDEO FOR DISTRIBUTORS
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              From helping you save money to expanding your reach, press play to
-              learn how MilServ supports distributors.
+            <Typography
+              style={{ backgroundColor: "#383838", padding: 10 }}
+              gutterBottom
+              variant="h5"
+            >
+              <b
+                style={{
+                  color: "white",
+                }}
+              >
+                For Distributors
+              </b>
             </Typography>
           </CardContent>
         </CardActionArea>
