@@ -114,13 +114,13 @@ const Blogs = ({
       <div style={{ overflowX: "hidden" }}>
         {head()}
         {/* <Layout style={{ margin: 0, padding: 0 }}> */}
-        <main style={{ marginRight: 0, padding: 0, overflowX: "hidden" }}>
+        <main style={{ margin: 0, padding: 0, overflowX: "hidden" }}>
           <div
-            className="container mr-0 p-0"
-            style={{ marginRight: 0, overflowX: "hidden" }}
+            className="container-fluid m-0 p-0"
+            style={{ overflowX: "hidden" }}
           >
             <header
-              className="milservMedia container"
+              className="milservMedia container-fluid"
               style={{
                 height: 580,
                 marginRight: 0,
@@ -193,7 +193,7 @@ const Blogs = ({
                     height: "auto",
                     marginBottom: 20,
                     textAlign: "center",
-                    paddingRight: 8,
+                    padding: 15,
                   }}
                 >
                   <h5

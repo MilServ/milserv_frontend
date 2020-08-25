@@ -35,7 +35,7 @@ const Header = (props) => {
   return (
     <React.Fragment>
       <Navbar color="light" light expand="md" className="navbar">
-        <Link href="/" className="pl-8">
+        <Link href="/">
           <NavLink
             className="font-weight-bold pt-1 pb-0"
             style={{ paddingLeft: 7 }}

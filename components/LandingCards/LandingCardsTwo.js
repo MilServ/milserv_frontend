@@ -1,15 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStoreAlt } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
-import {
-  Card,
-  CardContent,
-  CardMedia,
-  Typography,
-  Grid,
-} from "@material-ui/core";
+import { Card, Grid } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
@@ -30,15 +22,8 @@ export default function LandingCardsOne() {
       md={3}
       lg={3}
       className="card text-center"
-      id="retailers-color"
     >
-      <CardContent>
-        <CardMedia title="Paella dish">
-          <FontAwesomeIcon className="icons" icon={faStoreAlt} />
-        </CardMedia>
-
-        <Typography className="categoryTitle">RETAILERS</Typography>
-      </CardContent>
+      <img className="landingTop" src={"../static/images/retailers.jpg"} />
     </Grid>
     // </Link>
   );

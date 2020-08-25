@@ -30,16 +30,11 @@ export default function LandingCardsOne() {
       md={3}
       lg={3}
       className="card text-center"
-      id="distributors-color"
-      style={{ backgroundColor: "#bb6125" }}
     >
-      <CardContent>
-        <CardMedia title="Distributors Card">
-          <FontAwesomeIcon className="icons" icon={faTruck} />
-        </CardMedia>
-
-        <Typography className="categoryTitle">DISTRIBUTORS</Typography>
-      </CardContent>
+      <img
+        className="landingTop"
+        src={"../static/images/distributors.jpeg"}
+      ></img>
     </Grid>
     // </Link>
   );

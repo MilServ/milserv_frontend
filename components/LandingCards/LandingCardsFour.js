@@ -30,15 +30,8 @@ export default function LandingCardsOne() {
       md={3}
       lg={3}
       className="card text-center"
-      id="makers-color"
     >
-      <CardContent>
-        <CardMedia title="Beer Makers">
-          <FontAwesomeIcon icon={faBeer} className="icons" />
-        </CardMedia>
-
-        <Typography className="categoryTitle">MAKERS</Typography>
-      </CardContent>
+      <img className="landingTop" src={"../static/images/makers.jpeg"}></img>
     </Grid>
     // </Link>
   );

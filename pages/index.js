@@ -19,10 +19,6 @@ const Index = () => {
                 className="landingTop"
                 src={"../static/images/landing-image.jpg"}
               ></img>
-
-              {/* <h1 className="landing-cta" id="landing-cta">
-                YOUR SOLUTION FOR ALCOHOL DELIVERIES
-              </h1> */}
             </div>
           </div>
         </section>
@@ -101,9 +97,9 @@ const Index = () => {
         </section>
         <section style={{ paddingBottom: 20 }}>
           <div className="pt-3 pb-4">
-            <h2 className="program text-center">
+            <h3 className="program text-center">
               <b style={{ color: "#383838" }}>PARTNER WITH US</b>
-            </h2>
+            </h3>
           </div>
           <div className="row pl-3">
             <div

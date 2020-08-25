@@ -29,15 +29,9 @@ export default function LandingCardsOne() {
       md={3}
       lg={3}
       className="card text-center"
-      id="veterans-color"
+      // id="veterans-color"
     >
-      <CardContent>
-        <CardMedia title="Veterans Card">
-          <FontAwesomeIcon icon={faFlagUsa} className="icons" />
-        </CardMedia>
-
-        <Typography className="categoryTitle">VETERANS</Typography>
-      </CardContent>
+      <img className="landingTop" src={"../static/images/servingthose.jpg"} />
     </Grid>
   );
 }
