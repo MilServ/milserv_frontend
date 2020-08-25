@@ -18,10 +18,14 @@ const Index = () => {
       <Layout>
         <section className="p-0 m-0" style={{ overflow: "hidden" }}>
           <div
-            className="row justify-content-center m-0 p-0"
-            style={{ overflow: "hidden" }}
+            className="row justify-content-center mt-2 p-0"
+            style={{
+              overflow: "hidden",
+            }}
           >
-            <div className="col-md-12 text-center p-0">
+            {/* <div className="row mt-2 pl-0 pr-0"> */}
+
+            <div className="col-lg-7 col-md-7 col-sm-12 col-xs-12 text-center p-0">
               <Carousel activeIndex={index} onSelect={handleSelect}>
                 <Carousel.Item>
                   <img
@@ -30,19 +34,25 @@ const Index = () => {
                     alt="First slide"
                   />
                   <Carousel.Caption>
-                    <h3
+                    <div
                       style={{
-                        fontWeight: 800,
-                        borderRadius: 4,
-                        WebkitTextStroke: "1px black",
-                        marginBottom: 0,
+                        backgroundColor: "rgba(141, 84, 181, 0.60)",
+                        padding: 1,
                       }}
                     >
-                      MILSERV
-                    </h3>
-                    <p style={{ fontSize: ".98rem" }}>
-                      <em>American Craft Deliveries Corporation</em>
-                    </p>
+                      <h3
+                        style={{
+                          fontWeight: 800,
+                          WebkitTextStroke: "1px black",
+                          marginBottom: 0,
+                        }}
+                      >
+                        MILSERV
+                      </h3>
+                      <h6 style={{ fontSize: ".98rem" }}>
+                        <em>American Craft Deliveries Corporation</em>
+                      </h6>
+                    </div>
                   </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -55,24 +65,24 @@ const Index = () => {
                   <Carousel.Caption>
                     <div
                       style={{
-                        backgroundColor: "rgba(0,0,0,.45)",
-                        borderRadius: 8,
+                        backgroundColor: "rgba(0,0,0,.60)",
                         padding: 1,
                       }}
                     >
-                      <p
+                      <h6
                         style={{
-                          fontWeight: 600,
                           borderRadius: 4,
-                          fontSize: "1.3rem",
+
                           marginBottom: 0,
                         }}
                       >
                         Welcome & Stay tuned!
-                      </p>
-                      <p>
-                        We're officially launching our website on 9/15/2020!
-                      </p>
+                      </h6>
+                      <h6>
+                        <em>
+                          We're officially launching our website on 9/15/2020!
+                        </em>
+                      </h6>
                     </div>
                   </Carousel.Caption>
                 </Carousel.Item>
@@ -84,30 +94,20 @@ const Index = () => {
                   />
 
                   <Carousel.Caption>
-                    {/* <h3
-                      style={{
-                        fontWeight: 800,
-                        borderRadius: 4,
-                        WebkitTextStroke: "1px black",
-                      }}
-                    >
-                      MILSERV
-                    </h3> */}
                     <div
                       style={{
-                        backgroundColor: "rgba(0,0,0,.45)",
-                        borderRadius: 8,
+                        backgroundColor: "rgba(0,0,0,.60)",
                         padding: 1,
                       }}
                     >
                       {" "}
-                      <p>
+                      <h6>
                         <em>
                           Supporting the Military Community through partnerships
                           with Makers, Retailers, and Distributors of Craft
                           Alcohol
                         </em>
-                      </p>
+                      </h6>
                     </div>
                   </Carousel.Caption>
                 </Carousel.Item>
@@ -117,21 +117,11 @@ const Index = () => {
                 src={"../static/images/landing-image.jpg"}
               ></img> */}
             </div>
-          </div>
-        </section>
-        <section
-          style={{
-            paddingBottom: 20,
-            backgroundColor: "transparent",
-            overflow: "hidden",
-          }}
-        >
-          <div className="row mt-2 pl-0 pr-0">
             <div
-              className="col-md-12 text-center aboutSections"
+              className="col-lg-5 col-md-5 col-sm-12 col-xs-12 text-center aboutSections"
               style={{
                 backgroundColor: "#8d54b5",
-                padding: 30,
+                padding: 40,
               }}
             >
               <img
@@ -149,9 +139,18 @@ const Index = () => {
                 distributable benefits for veterans, their families, and the
                 non-government organizations (NGOs) that support them.
               </p>
+              <div>
+                <a href="/about">
+                  {" "}
+                  <button className="btn btn-outline-light btn-lg">
+                    Learn More
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </section>
+
         <section className="landingSectionTwo text-center">
           <div className="row program-your-career pt-1">
             <h3 className="program text-center">

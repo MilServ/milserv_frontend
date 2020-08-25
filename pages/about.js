@@ -19,7 +19,7 @@ const About = () => {
           <div
             className="row"
             style={{
-              backgroundColor: "#ffc107",
+              backgroundColor: "whitesmoke",
               paddingBottom: 0,
               marginBottom: 0,
             }}
@@ -43,9 +43,16 @@ const About = () => {
               </p>
             </a>
           </div>
-          <div className="row" style={{ backgroundColor: "#ffc107" }}>
+          <div className="row" style={{ backgroundColor: "whitesmoke" }}>
             <div className="col-md-3 pt-0">
-              <h2 style={{ fontWeight: 700, color: "#383838" }}>OUR TEAM</h2>
+              <h2
+                style={{
+                  fontWeight: 700,
+                  color: "#383838",
+                }}
+              >
+                OUR TEAM
+              </h2>
             </div>
           </div>
           <div
@@ -105,7 +112,10 @@ const About = () => {
                 Massachusetts with his wife and dog.
               </p>
               <div className="mb-3">
-                <a style={{ cursor: "pointer" }}>
+                <a
+                  href="https://linkedin.com/in/jeff-slater-36490bb"
+                  style={{ cursor: "pointer" }}
+                >
                   <small>
                     <img
                       className="text-center"
@@ -125,7 +135,7 @@ const About = () => {
               {" "}
               <img
                 className="text-center"
-                src={"../static/images/david.jpg"}
+                src={"../static/images/david.png"}
                 width="70%"
                 className="img-thumbnail"
               ></img>
@@ -137,46 +147,39 @@ const About = () => {
               <h2>David Jones</h2>
               <p>
                 {" "}
-                Jeff is co-founder, ideator, and acting President of MilServ ACD
-                Corp. Jeff comes from a military family where both his parents
-                served proudly and honorably. He ideated and co-founded MilServ
-                ACD in their honor.
+                His love for entrepreneurship started as a child working for his
+                parent’s businesses. He didn’t know it at the time, but it was
+                where the seed for his entrepreneurial journey started to grow.
               </p>
               <p>
                 {" "}
-                Jeff is both a serial entrepreneur and a season global corporate
-                executive. Jeff founded or co- founded Ninkatek ACB LLC (a SaaS
-                software company for the US alcoholic beverage industry),
-                Brewery Innovations LLC (an ideation company for the brewing
-                industry), IS&amp;C Technologies (the owner of Tetricsity.com),
-                and International Strategy &amp; Consulting Inc (a boutique
-                global strategy consulting company).
+                Over the last 20+ years, his life has been focused on four main
+                pillars: family, business, the Army, and school. During this
+                time, he has been blessed with three children, has worked with
+                several small businesses, retired with 20 years in the
+                Army/National Guard, and attained three business degrees
+                (associates/bachelors/MBA).
               </p>
               <p>
                 {" "}
-                His time as a global corporate executive included senior
-                positions with global food and beverage companies including
-                Diageo plc (alc-bev), Allied Domecq plc (alc-bev), PepsiCo,
-                Royal Ahold (now Delhaize SA), and Dunkin Brands.{" "}
+                Now that his Army career is over, he likes to (jokingly) assume
+                that his days of calling in artillery and air strikes on targets
+                are over too. His ideal day now is waking up early, working on
+                the business, taking a break to do something active outside with
+                the family, then back to working or catching a Bruins game on
+                TV.
               </p>
               <p>
-                Jeff started his career with DataGeneral (now part of Dell
-                Technologies) and has consulted with numerous software
-                companies.
+                Over the next 20 years he plans on working in high level
+                business growth and giving back as much as possible, especially
+                to his veteran community.
               </p>{" "}
-              <p>
-                Jeff is focusing his social responsibility time finding ways to
-                give back to our veteran heroes and their families and as a
-                board member for the upcoming commemoration of the 400 th
-                anniversary of the landing of the Mayflower and the formation of
-                Plymouth Colony (Massachusetts) in 2020.
-              </p>
-              <p>
-                Jeff was born in the Hudson Valley of NY and lives in coastal
-                Massachusetts with his wife and dog.
-              </p>
               <div className="mb-4">
-                <a style={{ cursor: "pointer" }}>
+                <a
+                  href="https://linkedin.com/in/davivdjones02719"
+                  target="_blank"
+                  style={{ cursor: "pointer" }}
+                >
                   <small>
                     <img
                       className="text-center"

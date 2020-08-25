@@ -6,16 +6,28 @@ import ContactForm from "../components/form/ContactForm";
 
 const Contact = () => {
   return (
-    <Layout>
-      <section className="aboutPage ml-0 pl-0" style={{ height: "auto" }}>
-        <div className="row">
-          <div className="col-md-3">
-            <a href="/">
+    <div style={{ overflow: "hidden" }}>
+      <Layout>
+        <section
+          className="container-fluid mt-4"
+          style={{ backgroundColor: "#383838" }}
+        >
+          {" "}
+          <div
+            className="row"
+            style={{
+              paddingBottom: 0,
+              marginBottom: 0,
+            }}
+          >
+            <a href="/" style={{ color: "white" }}>
               <p
                 style={{
-                  color: "white",
-                  paddingLeft: "60px",
-                  paddingTop: "100px",
+                  color: "#white",
+                  paddingLeft: "10px",
+                  paddingTop: "20px",
+                  paddingBottom: 0,
+                  marginBottom: 0,
                 }}
               >
                 <small>
@@ -27,38 +39,28 @@ const Contact = () => {
               </p>
             </a>
           </div>
-        </div>
-
-        <div
-          className="row justify-content-center text-center"
-          style={{ height: "50px", paddingTop: "30px" }}
-        >
-          <div className="col-md-12 justify-content-center">
-            <h1 className="landing-cta about-header" id="landing-cta">
-              CONTACT
-            </h1>
-          </div>
-        </div>
-
-        <div
-          className="row justify-content-center"
-          style={{
-            paddingTop: "50px",
-            paddingLeft: "60px",
-            marginBottom: 100,
-            paddingBottom: 50,
-          }}
-        >
           <div
-            className="col-md-6"
-            style={{ backgroundColor: "rgba(255,255,255,0.75" }}
+            className="row text-center justify-content-center"
+            style={{ backgroundColor: "#383838", paddingTop: 25 }}
           >
-            <ContactForm />
+            <div className="col-md-3 mt-3 mb-2">
+              <h2 className="program" style={{ color: "white" }}>
+                <b>CONTACT US</b>
+              </h2>
+            </div>
           </div>
-        </div>
-      </section>
-      <section className="aboutSectionTwo ml-0"></section>
-    </Layout>
+          <div
+            className="row text-center justify-content-center"
+            style={{ paddingBottom: 40 }}
+          >
+            <div className="col-md-10 mt-3 mb-2">
+              {" "}
+              <ContactForm />
+            </div>
+          </div>
+        </section>
+      </Layout>
+    </div>
   );
 };
 

@@ -167,6 +167,10 @@ input.form-control.search-form {
   text-decoration-color: none !important;
 }
 
+/* .nav-link {
+
+} */
+
 .landingSectionTwo {
   height: auto;
   width: 100%;
@@ -372,13 +376,13 @@ span.navbar-toggler-icon {
   position: relative;
   cursor: pointer;
   transition: all 0.2s ease-in-out !important;
-  opacity: 0.75;
+  /* opacity: 0.75; */
 }
 
 .card:hover,
 .staff-card:hover {
   transform: scale(1.03) !important;
-  opacity: 1;
+  /* opacity: 1; */
 }
 
 .icons {
@@ -518,10 +522,10 @@ h6.title {
 /* Sign in and Register pages  */
 
 .auth-box {
-  width: 350px;
+  width: 290px;
   height: 350px;
-  padding: 1rem;
-  margin: 7rem 0.5rem 2rem 0.5rem;
+  padding: 10px;
+  margin: 30px 0px;
   background-color: rgba(255, 255, 255, 0.75);
 }
 

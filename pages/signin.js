@@ -3,15 +3,17 @@ import SigninComponent from "../components/auth/SigninComponent";
 
 const Signin = () => {
   return (
-    <Layout>
-      <div className="signinPage">
-        <div className="row pl-3 pr-3">
-          <div className="col-md-12">
-            <SigninComponent />
+    <div style={{ overflow: "hidden" }}>
+      <Layout>
+        <div className="signinPage container-fluid">
+          <div className="row">
+            <div className="col-md-12">
+              <SigninComponent />
+            </div>
           </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </div>
   );
 };
 

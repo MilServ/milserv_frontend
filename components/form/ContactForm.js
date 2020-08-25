@@ -64,20 +64,16 @@ const ContactForm = ({ authorEmail }) => {
 
   const contactForm = () => {
     return (
-      <div style={{ padding: 30, borderRadius: 10, marginBottom: 20 }}>
+      <div
+        style={{
+          padding: 30,
+          borderRadius: 10,
+          marginBottom: 20,
+          backgroundColor: "383838",
+          color: "white",
+        }}
+      >
         <form onSubmit={clickSubmit}>
-          <div className="form-group">
-            <label className="lead">
-              <b>Message</b>
-            </label>
-            <textarea
-              onChange={handleChange("message")}
-              className="form-control"
-              value={message}
-              required
-              rows="10"
-            ></textarea>
-          </div>
           <div className="form-group">
             <label className="lead">
               {" "}
@@ -103,6 +99,18 @@ const ContactForm = ({ authorEmail }) => {
               value={email}
               required
             />
+          </div>
+          <div className="form-group mb-3">
+            <label className="lead">
+              <b>Message</b>
+            </label>
+            <textarea
+              onChange={handleChange("message")}
+              className="form-control"
+              value={message}
+              required
+              rows="10"
+            ></textarea>
           </div>
 
           <div>

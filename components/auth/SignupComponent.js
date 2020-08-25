@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { signup, isAuth } from "../../actions/auth";
 import Router from "next/router";
+import Link from "next/link";
 
 const SignupComponent = () => {
   const [values, setValues] = useState({
@@ -92,6 +93,9 @@ const SignupComponent = () => {
           <div>
             <button className="btn btn-info authBtns">Sign-up</button>
           </div>
+          <span style={{ fontSize: ".75rem" }}>
+            {!isAuth() && <Link href="/signin">or Sign-in</Link>}
+          </span>
         </form>
       </div>
     );

@@ -13,78 +13,91 @@ import {
 
 const AdminIndex = () => {
   return (
+    // <div style="overflow: hidden">
     <Layout>
-      <Admin>
-        <section className="staffPage ml-0 pl-0">
-          <div className="row" style={{ backgroundColor: "rgba(0,0,0,0.75)" }}>
-            <div className="col-md-3">
-              <a href="/">
-                <p
-                  style={{
-                    color: "white",
-                    paddingLeft: "10px",
-                    paddingTop: "10px",
-                  }}
-                >
-                  <span>
-                    <FontAwesomeIcon icon={faArrowAltCircleLeft} />
-                  </span>{" "}
-                  Back Home
-                </p>
-              </a>
-            </div>
-            <div className="col-md-3">
-              <a href="/admin/update">
-                <p
-                  style={{
-                    color: "white",
-                    paddingLeft: "10px",
-                    paddingTop: "10px",
-                  }}
-                >
-                  <span>
-                    <FontAwesomeIcon icon={faUser} />
-                  </span>{" "}
-                  Update Profile
-                </p>
-              </a>
-            </div>
-          </div>
-          <div
-            className="row justify-content-center"
-            style={{
-              height: "180px",
-              paddingTop: 20,
-              backgroundColor: "rgba(0,0,0,0.65)",
-            }}
+      <div style={{ overflow: "hidden" }}>
+        <Admin>
+          <section
+            className="container-fluid staffPage ml-0 pl-0"
+            style={{ overflow: "hidden" }}
           >
-            <div className="col-md-12 text-center">
-              <h2
-                className="landing-cta about-header"
-                style={{ fontSize: "3.5rem" }}
-                id="landing-cta"
-              >
-                STAFF DASHBOARD
-              </h2>
+            <div
+              className="row"
+              style={{
+                backgroundColor: "rgba(0,0,0,0.75)",
+                overflow: "hidden",
+              }}
+            >
+              <div className="col-md-3">
+                <a href="/">
+                  <p
+                    style={{
+                      color: "white",
+                      paddingLeft: "10px",
+                      paddingTop: "10px",
+                    }}
+                  >
+                    <span>
+                      <FontAwesomeIcon icon={faArrowAltCircleLeft} />
+                    </span>{" "}
+                    Back Home
+                  </p>
+                </a>
+              </div>
+              <div className="col-md-3">
+                <a href="/admin/update">
+                  <p
+                    style={{
+                      color: "white",
+                      paddingLeft: "10px",
+                      paddingTop: "10px",
+                    }}
+                  >
+                    <span>
+                      <FontAwesomeIcon icon={faUser} />
+                    </span>{" "}
+                    Update Profile
+                  </p>
+                </a>
+              </div>
             </div>
-          </div>
+            <div
+              className="row justify-content-center"
+              style={{
+                height: "180px",
+                paddingTop: 20,
+                backgroundColor: "rgba(0,0,0,0.65)",
+              }}
+            >
+              <div className="col-md-12 text-center">
+                <h2
+                  className="landing-cta about-header"
+                  style={{ fontSize: "3.5rem" }}
+                  id="landing-cta"
+                >
+                  STAFF DASHBOARD
+                </h2>
+              </div>
+            </div>
 
-          <div className="row staff-portal-row text-center justify-content-center">
-            <div className="col-md-3 staff-portal-cols mb-3">
-              <ManageCard />
-            </div>
+            <div className="row staff-portal-row text-center justify-content-center">
+              <div className="col-md-3 staff-portal-cols mb-3">
+                <ManageCard />
+              </div>
 
-            <div className="col-md-3 staff-portal-cols mb-3">
-              <BlogCard />
-            </div>
+              <div className="col-md-3 staff-portal-cols mb-3">
+                <BlogCard />
+              </div>
 
-            <div className="col-md-3 staff-portal-cols mb-3">
-              <VeteranCard />
+              <div className="col-md-3 staff-portal-cols mb-3">
+                <VeteranCard />
+              </div>
             </div>
-          </div>
-        </section>
-      </Admin>
+          </section>
+        </Admin>
+      </div>
     </Layout>
+    // </div>
   );
 };
 

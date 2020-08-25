@@ -34,7 +34,7 @@ const Header = (props) => {
 
   return (
     <React.Fragment>
-      <Navbar color="light" light expand="md" className="navbar">
+      <Navbar color="light" light expand="md" className="navbar p-0">
         <Link href="/">
           <NavLink
             className="font-weight-bold pt-1 pb-0"
@@ -122,10 +122,14 @@ const Header = (props) => {
             )} */}
 
             {isAuth() && isAuth().role === 1 && (
-              <Link href="/admin">
+              <Link>
                 <NavItem className="listItems">
-                  <FontAwesomeIcon icon={faLaptopCode} />{" "}
-                  {`${isAuth().name}'s Portal`}
+                  <a href="/admin">
+                    <button className="btn btn-small btn-outline-dark">
+                      <FontAwesomeIcon icon={faLaptopCode} />{" "}
+                      {`${isAuth().name}'s Portal`}
+                    </button>
+                  </a>
                 </NavItem>
               </Link>
             )}
@@ -133,10 +137,13 @@ const Header = (props) => {
             {isAuth() && (
               <NavItem>
                 <NavLink
-                  className="signout"
+                  className="listItems p-0"
                   onClick={() => signout(() => Router.replace("/signin"))}
                 >
-                  <FontAwesomeIcon icon={faDoorOpen} /> Signout
+                  <button className="btn btn-small btn-outline-dark mt-0">
+                    {" "}
+                    <FontAwesomeIcon icon={faDoorOpen} /> Signout
+                  </button>
                 </NavLink>
               </NavItem>
             )}
