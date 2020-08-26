@@ -26,8 +26,8 @@ export default function LandingCardsOne() {
       // id="veterans-color"
     >
       <img className="landingTop" src={"../static/images/servingthose.jpg"} />
-      <button className="btn btn-sm btn-outline-light landing-page-parnterBtns">
-        <b>Veterans</b>
+      <button className="btn btn-sm btn-light landing-page-parnterBtns">
+        <b style={{ fontWeight: 400 }}>VETERANS</b>
       </button>
     </Grid>
   );

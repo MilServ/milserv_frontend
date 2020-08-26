@@ -16,7 +16,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function BlogCard() {
+export default function UserBlogCard() {
   const classes = useStyles();
 
   return (
@@ -34,25 +34,24 @@ export default function BlogCard() {
             MILSERV NEWS
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Write a blog or press release to keep customers and stakeholders
-            informed.
+            Publish blog or press release to keep stakeholders informed.
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <a href="/admin/blog">
+        <a href="/user/blog">
           <Button size="small" color="primary">
-            Write
+            Publish
           </Button>
         </a>
-        <a href="/admin/blogs">
+        <a href="/user/blogs">
           <Button size="small" color="primary">
-            Update
+            Manage Media
           </Button>
         </a>
-        <a href="/admin/crud/category-tag">
+        <a href="/user/crud/category-tag">
           <Button size="small" color="primary">
-            Create
+            Manage Tags
           </Button>
         </a>
       </CardActions>

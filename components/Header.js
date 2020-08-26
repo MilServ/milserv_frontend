@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
 // import { APP_NAME } from "../config";
-
 import { signout, isAuth } from "../actions/auth";
 import Router from "next/router";
 import NProgress from "nprogress";
@@ -112,14 +111,14 @@ const Header = (props) => {
               <NavItem className="listItems">ABOUT</NavItem>
             </Link>
 
-            {/* {isAuth() && isAuth().role === 0 && (
+            {isAuth() && isAuth().role === 0 && (
               <Link href="/user">
                 <NavItem className="listItems">
                   {" "}
                   {`${isAuth().name}'s Portal`}
                 </NavItem>
               </Link>
-            )} */}
+            )}
 
             {isAuth() && isAuth().role === 1 && (
               <Link href="/admin">

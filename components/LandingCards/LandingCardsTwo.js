@@ -24,8 +24,8 @@ export default function LandingCardsOne() {
       className="card text-center"
     >
       <img className="landingTop" src={"../static/images/retailers.jpg"} />
-      <button className="btn btn-sm btn-outline-light landing-page-parnterBtns">
-        <b>Retailers</b>
+      <button className="btn btn-sm btn-light landing-page-parnterBtns">
+        <b style={{ fontWeight: 400 }}>RETAILERS</b>
       </button>
     </Grid>
     // </Link>

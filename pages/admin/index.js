@@ -13,7 +13,6 @@ import {
 
 const AdminIndex = () => {
   return (
-    // <div style="overflow: hidden">
     <Layout>
       <div style={{ overflow: "hidden" }}>
         <Admin>
@@ -97,7 +96,6 @@ const AdminIndex = () => {
         </Admin>
       </div>
     </Layout>
-    // </div>
   );
 };
 

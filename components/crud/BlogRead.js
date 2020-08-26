@@ -47,7 +47,7 @@ const BlogRead = () => {
   const showUpdateButton = (blog) => {
     if (isAuth() && isAuth().role === 0) {
       return (
-        <Link href={`/user/crud/blog/${blog.slug}`}>
+        <Link href={`/user/blog/${blog.slug}`}>
           <a className="btn btn-sm btn-warning">Update</a>
         </Link>
       );

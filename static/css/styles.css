@@ -362,7 +362,7 @@ span.navbar-toggler-icon {
   font-weight: bold !important;
   height: auto !important;
   padding-right: 10;
-  padding-left: 10;
+  padding-left: 10;  
   min-width: 285px !important;
   max-width: auto !important;
   color: #ffffff !important;
@@ -542,16 +542,14 @@ h6.title {
 input > form.vet-form {
   border-radius: 10px;
 }
-
-.landing-page-parnterBtns {
-  margin: 0;
-  position: absolute;
-  display: block;
-  top: 50%;
-  left:35%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
+/* 
+.landing-page-parnterBtns { */
+ /* bottom: 10; 
+ margin:0;
+ left:10;  */
+  /* -ms-transform: translateY(-50%);
+  transform: translateY(-50%); */
+/* } */
 /* Veterans ATS Page */
 
 .vetATSCards {
