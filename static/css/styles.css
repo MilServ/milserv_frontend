@@ -175,8 +175,7 @@ input.form-control.search-form {
   height: auto;
   width: 100%;
   margin: 0;
-  padding-right: 0;
-  padding-bottom: 40px;
+  padding: 20px auto;
   background-color: transparent !important;
 }
 
@@ -189,6 +188,7 @@ input.form-control.search-form {
 
 .program-your-career {
   justify-content: center !important;
+  background-color: whitesmoke;
 }
 .centered {
   background-color: rgba(0, 0, 0, 0.65);
@@ -367,7 +367,7 @@ span.navbar-toggler-icon {
   max-width: auto !important;
   color: #ffffff !important;
   border-radius: 1px !important;
-  position: relative;
+  position: relative !important;
   cursor: pointer;
   transition: all 0.2s ease-in-out !important;
   /* opacity: 0.75; */
@@ -543,6 +543,15 @@ input > form.vet-form {
   border-radius: 10px;
 }
 
+.landing-page-parnterBtns {
+  margin: 0;
+  position: absolute;
+  display: block;
+  top: 50%;
+  left:35%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 /* Veterans ATS Page */
 
 .vetATSCards {

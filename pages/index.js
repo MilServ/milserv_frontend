@@ -152,12 +152,12 @@ const Index = () => {
         </section>
 
         <section className="landingSectionTwo text-center">
-          <div className="row program-your-career pt-1">
+          <div className="row program-your-career pt-4">
             <h3 className="program text-center">
               <b style={{ color: "#383838" }}>OUR PARTNERS</b>
             </h3>
           </div>
-          <div className="row program-your-career text-center justify-content-center pl-3">
+          <div className="row program-your-career text-center justify-content-center pb-4 pl-3">
             <div
               className="col-md-3 col-sm-10 text-center col-xs-10 mb-2 col-left p-0"
               style={{ overflowY: "hidden" }}

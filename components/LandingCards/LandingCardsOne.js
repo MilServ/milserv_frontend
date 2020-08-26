@@ -3,13 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFlagUsa } from "@fortawesome/free-solid-svg-icons";
-import {
-  Card,
-  CardContent,
-  CardMedia,
-  Typography,
-  Grid,
-} from "@material-ui/core";
+import { Card, Grid } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
@@ -32,10 +26,7 @@ export default function LandingCardsOne() {
       // id="veterans-color"
     >
       <img className="landingTop" src={"../static/images/servingthose.jpg"} />
-      <button
-        className="btn btn-sm btn-outline-light"
-        style={{ position: "absolute", left: 8, bottom: 8 }}
-      >
+      <button className="btn btn-sm btn-outline-light landing-page-parnterBtns">
         <b>Veterans</b>
       </button>
     </Grid>

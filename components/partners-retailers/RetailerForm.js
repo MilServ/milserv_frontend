@@ -262,16 +262,6 @@ export default function RetSignUpForm(props) {
           Submit
         </button>
       </form>
-      <div className="mb-4">
-        <small>
-          <em>Did You Know?</em>
-        </small>
-        <img
-          src="../../static/images/mildiscowl.png"
-          width="280px"
-          style={{ display: "block", textAlign: "center" }}
-        ></img>
-      </div>
     </div>
   );
 }
