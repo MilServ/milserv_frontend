@@ -19,7 +19,7 @@ const Card = ({ blog }) => {
     ));
 
   return (
-    <div>
+    <div className="container">
       <div className="row">
         <div className="col-md-2 pt-2">
           <section>
@@ -59,11 +59,18 @@ const Card = ({ blog }) => {
               </a>
             </Link>
           </section>
+          <hr />
+          <div className="row">
+            <div className="col-md-12 text-center">
+              <p style={{ fontWeight: "600", textAlign: "center" }}>TAGS</p>
+            </div>
+          </div>
+
           <div className="row pl-3 pb-3 text-center">
-            <br />
-            <section style={{ display: "inline-block" }}>
+            {/* <section className="text-center"style={{ display: "inline-block" }}>
+          
               {showBlogCategories(blog)}
-            </section>
+            </section> */}
 
             <section style={{ display: "inline-block" }}>
               {showBlogTags(blog)}

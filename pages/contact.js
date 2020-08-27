@@ -53,7 +53,7 @@ const Contact = () => {
             className="row text-center justify-content-center"
             style={{ paddingBottom: 40 }}
           >
-            <div className="col-md-10 mt-3 mb-2">
+            <div className="col-md-8 mt-3 mb-2">
               {" "}
               <ContactForm />
             </div>

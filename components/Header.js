@@ -92,11 +92,14 @@ const Header = (props) => {
             </UncontrolledDropdown>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret className="listItems dropdowns-arrows">
-                NEWS
+                MILSERV MEDIA
               </DropdownToggle>
               <DropdownMenu right>
-                <Link href="/milserv-media">
-                  <DropdownItem>MILSERV MEDIA</DropdownItem>
+                <Link href="/categories/blog">
+                  <DropdownItem>BLOG</DropdownItem>
+                </Link>
+                <Link href="/categories/press-release">
+                  <DropdownItem>PRESS RELEASES</DropdownItem>
                 </Link>
                 {/* <DropdownItem>PRESS RELEASES</DropdownItem> */}
                 <DropdownItem>STAY CONNECTED</DropdownItem>

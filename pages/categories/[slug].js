@@ -50,8 +50,13 @@ const Category = ({ category, blogs, query }) => {
         <main>
           <div className="container-fluid">
             <header>
-              <div className="col-md-12 pt-3" style={{ marginTop: 100 }}>
-                <h2 className="btn btn-secondary">{category.name}</h2>
+              <div className="col-md-12 pt-3" style={{ marginTop: 10 }}>
+                <h3
+                  className="btn btn-outline-secondary btn-lg"
+                  style={{ marginBottom: 30 }}
+                >
+                  MilServ {category.name}s
+                </h3>
 
                 {blogs.map((b, i) => (
                   <div>
