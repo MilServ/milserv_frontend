@@ -107,69 +107,73 @@ const SingleBlog = ({ blog, query }) => {
   return (
     <React.Fragment>
       {head()}
-      <Layout>
-        <main
-          style={{
-            minHeight: "500px",
-            borderTop: "solid rgba(141, 84, 181, 0.85) 1.8px",
-          }}
-        >
-          <article style={{ marginTop: "18px" }}>
-            <div className="container-fluid">
-              <section>
-                <div className="row justify-content-center">
-                  <h1 className="pb-3 pt-3 font-weight-bold text-center">
-                    {blog.title}
-                  </h1>
-                  <br />
-                  <img
-                    src={`${API}/blog/photo/${blog.slug}`}
-                    alt={blog.title}
-                    className="img img-thumbnail"
-                    width="80%"
-                  />
-                </div>
-              </section>
-
-              <section>
-                <div className="container">
-                  <p className="lead mt-3 mark pt-1 pb-1">
-                    {showBlogCategories(blog)}
-                    Written by{" "}
-                    <Link
-                      href={`/profile/${blog.postedBy.username}`}
-                      prefetch={false}
-                    >
-                      <a>
-                        {""}
-                        {blog.postedBy.username}
-                      </a>
-                    </Link>
-                    | Published {moment(blog.updatedAt).fromNow()}
-                  </p>
-                  <div className="pb-3">
-                    {showBlogTags(blog)}
-                    <br></br>
+      <div style={{ overflow: "hidden" }}>
+        <Layout>
+          <main
+            style={{
+              minHeight: "500px",
+              borderTop: "solid rgba(141, 84, 181, 0.85) 1.8px",
+            }}
+          >
+            <article style={{ marginTop: "18px" }}>
+              <div className="container-fluid">
+                <section className="container">
+                  <div className="row text-center">
+                    <div className="col-md-6 col-lg-6 col-sm-6">
+                      <h2 className="pb-1 mb-0 pt-3 font-weight-bold text-center">
+                        {blog.title}
+                      </h2>
+                      <br />
+                      <img
+                        src={`${API}/blog/photo/${blog.slug}`}
+                        alt={blog.title}
+                        className="img img-thumbnail"
+                        width="95%"
+                      />
+                    </div>
                   </div>
-                </div>
-              </section>
-            </div>
+                </section>
 
-            <div className="container">
-              <section>
-                <div className="col-md-12 lead">{renderHTML(blog.body)}</div>
-              </section>
-            </div>
+                <section>
+                  <div className="container">
+                    <p className="lead mt-3 mark pt-1 pb-1">
+                      {showBlogCategories(blog)}
+                      Written by{" "}
+                      <Link
+                        href={`/profile/${blog.postedBy.username}`}
+                        prefetch={false}
+                      >
+                        <a>
+                          {""}
+                          {blog.postedBy.username}
+                        </a>
+                      </Link>
+                      | Published {moment(blog.updatedAt).fromNow()}
+                    </p>
+                    <div className="pb-3">
+                      {showBlogTags(blog)}
+                      <br></br>
+                    </div>
+                  </div>
+                </section>
+              </div>
 
-            <div className="container pb-5">
-              <h4 className="text-center pt-5 pb-5 h2">Related blogs</h4>
-              <div className="row">{showRelatedBlog()}</div>
-            </div>
+              <div className="container">
+                <section>
+                  <div className="col-md-12 lead">{renderHTML(blog.body)}</div>
+                </section>
+              </div>
 
-            <div className="container pb-5">{showComments()}</div>
-          </article>
-        </main>
-      </Layout>
+              <div className="container pb-5">
+                <h4 className="text-center pt-1 mt-0 pb-5 h2">Related blogs</h4>
+                <div className="row">{showRelatedBlog()}</div>
+              </div>
+
+              <div className="container pb-5">{showComments()}</div>
+            </article>
+          </main>
+        </Layout>
+      </div>
     </React.Fragment>
   );
 };

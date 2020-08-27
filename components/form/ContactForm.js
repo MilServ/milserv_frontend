@@ -47,9 +47,9 @@ const ContactForm = ({ authorEmail }) => {
 
   const showSuccessMessage = () =>
     success && (
-      <div className="alert alert-info">
-        "Thank you for contacting us. A MilServ Represntative will respond
-        within 72 hours."
+      <div className="alert alert-warning">
+        Thank you for contacting MilServ. We will contact you in 72 hours or
+        less.
       </div>
     );
 
@@ -107,6 +107,7 @@ const ContactForm = ({ authorEmail }) => {
             <textarea
               onChange={handleChange("message")}
               className="form-control"
+              type="text"
               value={message}
               required
               rows="10"

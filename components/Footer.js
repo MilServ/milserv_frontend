@@ -1,6 +1,8 @@
 import React from "react";
 import { isAuth } from "../actions/auth";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
@@ -9,16 +11,45 @@ const Footer = () => {
         <div className="footer-container">
           <div className="row text-center">
             <div className="col-md-3 pb-2 footerLogo pr-0">
-              <h3 style={{ color: "#8d54b5" }}>MILSERV</h3>
-              <p style={{ color: "#8d54b5" }}>
+              <h3 style={{ color: "#8d54b5", marginBottom: 0 }}>MILSERV</h3>
+              <p style={{ color: "#8d54b5", marginBottom: 1 }}>
                 Copyright <span>&copy;</span>MILSERV <br /> American Craft
                 Deliveries, Corp 2020{" "}
               </p>
+
               {!isAuth() && (
                 <Link href="/signin">
-                  <p className="footer-items staff-signin">Staff Portal</p>
+                  <p
+                    className="footer-items staff-signin"
+                    style={{
+                      padding: 6,
+                      borderRadius: 4,
+                      backgroundColor: "#8d54b5",
+                      color: "white",
+                      display: "inline-block",
+                      marginBottom: 6,
+                    }}
+                  >
+                    Staff Portal
+                  </p>
                 </Link>
               )}
+
+              <p className="footer-items">
+                <a
+                  href="http://juancode.com"
+                  target="_blank"
+                  style={{
+                    marginBottom: 5,
+                    color: "#8d54b5",
+                    textDecoration: "none",
+                  }}
+                >
+                  Site by juan
+                  <FontAwesomeIcon icon={faGlobe} />
+                  Code
+                </a>
+              </p>
             </div>
             <div className="col-md-2 pb-2 pr-0" id="footer-links">
               <h6 className="title">PARTNERS</h6>

@@ -42,13 +42,11 @@ h2.about-header {
   font-weight: 700;
   font-weight: 3rem;
   text-shadow: 1.85px 1.85px 2px darkred;
-
 }
 #landing-cta {
   font-size: 2.8rem;
   font-weight: 700;
   margin: 1rem;
- 
 }
 
 .headers {
@@ -56,7 +54,7 @@ h2.about-header {
 }
 
 /* Landing page background image */
-.landingTop {  
+.landingTop {
   display: inline-block;
   position: relative;
   width: 100%;
@@ -65,9 +63,9 @@ h2.about-header {
   vertical-align: middle;
   background-size: 100%;
   background-position: 50% 50%;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
 }
-}
+
 /* About Page */
 .aboutPage {
   height: 450px;
@@ -305,13 +303,12 @@ Media queries needed to prevent buttons from elongating in collapsible menu */
   font-weight: 600;
   margin: 0.75rem;
   cursor: pointer;
- 
 }
 .signout {
   color: darkred !important;
   font-weight: 600;
   margin-top: 5px;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .landingAuth {
@@ -362,7 +359,7 @@ span.navbar-toggler-icon {
   font-weight: bold !important;
   height: auto !important;
   padding-right: 10;
-  padding-left: 10;  
+  padding-left: 10;
   min-width: 285px !important;
   max-width: auto !important;
   color: #ffffff !important;
@@ -544,10 +541,10 @@ input > form.vet-form {
 }
 /* 
 .landing-page-parnterBtns { */
- /* bottom: 10; 
+/* bottom: 10; 
  margin:0;
  left:10;  */
-  /* -ms-transform: translateY(-50%);
+/* -ms-transform: translateY(-50%);
   transform: translateY(-50%); */
 /* } */
 /* Veterans ATS Page */
@@ -613,9 +610,8 @@ input.formStyles {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-   
   }
   .signout {
-margin-left: 10px;
+    margin-left: 10px;
   }
 }
