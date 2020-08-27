@@ -42,7 +42,10 @@ const Card = ({ blog }) => {
               <section>
                 <p className="pb-2 pl-2" style={{ backgroundColor: "#f7f7f7" }}>
                   Written by{" "}
-                  <Link href={`/profile/${blog.postedBy.username}`}>
+                  <Link
+                    href={`/profile/${blog.postedBy.username}`}
+                    prefetch={false}
+                  >
                     <a>{blog.postedBy.username}</a>
                   </Link>{" "}
                   | Published {moment(blog.updatedAt).fromNow()}
@@ -67,8 +70,10 @@ const Card = ({ blog }) => {
           </div>
 
           <div className="row pl-3 pb-3 text-center">
-            {/* <section className="text-center"style={{ display: "inline-block" }}>
-          
+            {/* <section
+              className="text-center"
+              style={{ display: "inline-block" }}
+            >
               {showBlogCategories(blog)}
             </section> */}
 

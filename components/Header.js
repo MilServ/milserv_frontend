@@ -64,17 +64,17 @@ const Header = (props) => {
                 PARTNERS
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>MAKERS</DropdownItem>
+                {/* <DropdownItem>MAKERS</DropdownItem> */}
                 <Link href="/retailers">
                   <DropdownItem>RETAILERS</DropdownItem>
                 </Link>
                 <Link href="/distributors">
                   <DropdownItem>DISTRIBUTORS</DropdownItem>
                 </Link>
-                <DropdownItem divider />
+                {/* <DropdownItem divider />
                 <Link href="/index#partner">
                   <DropdownItem>PARTNER WITH US</DropdownItem>
-                </Link>
+                </Link> */}
               </DropdownMenu>
             </UncontrolledDropdown>
 
@@ -87,7 +87,7 @@ const Header = (props) => {
                   <DropdownItem>JOBS</DropdownItem>
                 </Link>
                 {/* <DropdownItem>SKILLBRIDGE</DropdownItem> */}
-                <DropdownItem>GIVING BACK</DropdownItem>
+                {/* <DropdownItem>GIVING BACK</DropdownItem> */}
               </DropdownMenu>
             </UncontrolledDropdown>
             <UncontrolledDropdown nav inNavbar>
@@ -101,8 +101,11 @@ const Header = (props) => {
                 <Link href="/categories/press-release">
                   <DropdownItem>PRESS RELEASES</DropdownItem>
                 </Link>
-                {/* <DropdownItem>PRESS RELEASES</DropdownItem> */}
-                <DropdownItem>STAY CONNECTED</DropdownItem>
+                <Link href="/milserv-media">
+                  <DropdownItem>ALL CATEGORIES</DropdownItem>
+                </Link>
+
+                {/* <DropdownItem>STAY CONNECTED</DropdownItem> */}
                 {/* <DropdownItem divider />
                 <DropdownItem>Partner with us</DropdownItem> */}
               </DropdownMenu>
@@ -143,7 +146,6 @@ const Header = (props) => {
               </NavItem>
             )}
           </Nav>
-          {/* <NavbarText>Simple Text</NavbarText> */}
         </Collapse>
       </Navbar>
       <Search />

@@ -113,7 +113,6 @@ const Blogs = ({
     <React.Fragment>
       <div style={{ overflowX: "hidden" }}>
         {head()}
-        {/* <Layout style={{ margin: 0, padding: 0 }}> */}
         <main style={{ margin: 0, padding: 0, overflowX: "hidden" }}>
           <div
             className="container-fluid m-0 p-0"
@@ -144,7 +143,7 @@ const Blogs = ({
                       <span>
                         <FontAwesomeIcon icon={faArrowAltCircleLeft} />
                       </span>{" "}
-                      Back Home
+                      Back to MilServ
                     </p>
                   </a>
                 </div>
@@ -167,26 +166,6 @@ const Blogs = ({
                   paddingBottom: 10,
                 }}
               >
-                {/* <div
-                className="col-md-4"
-                style={{
-                  textAlign: "center",
-                  marginBottom: 25,
-                }}
-              >
-                <h5
-                  style={{
-                    fontWeight: "900",
-                    backgroundColor: "rgba(0,0,0,0.50)",
-                    padding: 5,
-                    color: "white",
-                  }}
-                >
-                  CATEGORIES
-                </h5>
-                {showAllCategories()}
-              </div> */}
-
                 <div
                   className="col-md-12 tagsCol"
                   style={{
@@ -237,7 +216,6 @@ const Blogs = ({
             </div>
           </div>
         </main>
-        {/* </Layout> */}
       </div>
     </React.Fragment>
   );
