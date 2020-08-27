@@ -7,12 +7,13 @@ const SmallCard = ({ blog }) => {
   return (
     <div>
       <div>
-        <section>
+        <hr />
+        <section style={{ textAlign: "center" }}>
           <Link href={`/milserv-media/${blog.slug}`}>
             <a>
               <img
                 className="img img-fluid"
-                style={{ maxHeight: "auto", width: "100%" }}
+                style={{ maxHeight: "auto", width: "60%", textAlign: "center" }}
                 src={`${API}/blog/photo/${blog.slug}`}
                 alt={blog.title}
               />
@@ -28,17 +29,17 @@ const SmallCard = ({ blog }) => {
                 <h5 className="card-title">{blog.title}</h5>
               </a>
             </Link>
-            <p style={{ color: "black", fontWeight: "500" }}>
-              {renderHTML(blog.excerpt)}
-            </p>
+            <p style={{ color: "black" }}>{renderHTML(blog.excerpt)}</p>
           </section>
         </div>
 
         <div className="card-body">
-          Published: {moment(blog.updatedAt).fromNow()}
-          <Link href={`/profile/${blog.postedBy.username}`}>
-            <a>{blog.postedBy.username}</a>
-          </Link>
+          Published {moment(blog.updatedAt).fromNow()} by:{" "}
+          <b>
+            <Link href={`/profile/${blog.postedBy.username}`}>
+              <a>{blog.postedBy.username}</a>
+            </Link>
+          </b>
         </div>
       </div>
     </div>

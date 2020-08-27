@@ -114,7 +114,7 @@ const SingleBlog = ({ blog, query }) => {
             borderTop: "solid rgba(141, 84, 181, 0.85) 1.8px",
           }}
         >
-          <article style={{ marginTop: "100px" }}>
+          <article style={{ marginTop: "30px" }}>
             <div className="container-fluid">
               <section>
                 <div className="row justify-content-center">
