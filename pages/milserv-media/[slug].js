@@ -114,19 +114,19 @@ const SingleBlog = ({ blog, query }) => {
             borderTop: "solid rgba(141, 84, 181, 0.85) 1.8px",
           }}
         >
-          <article style={{ marginTop: "30px" }}>
+          <article style={{ marginTop: "18px" }}>
             <div className="container-fluid">
               <section>
                 <div className="row justify-content-center">
                   <h1 className="pb-3 pt-3 font-weight-bold text-center">
                     {blog.title}
                   </h1>
+                  <br />
                   <img
                     src={`${API}/blog/photo/${blog.slug}`}
                     alt={blog.title}
-                    className="img"
-                    width="300px"
-                    height="300px"
+                    className="img img-thumbnail"
+                    width="80%"
                   />
                 </div>
               </section>

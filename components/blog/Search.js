@@ -52,7 +52,7 @@ const Search = () => {
         {results.map((blog, i) => {
           return (
             <div key={i}>
-              <Link href={`/blogs/${blog.slug}`}>
+              <Link href={`/milserv-media/${blog.slug}`}>
                 <ul>
                   <li>
                     {" "}
