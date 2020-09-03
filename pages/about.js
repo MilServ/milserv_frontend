@@ -80,13 +80,13 @@ const About = () => {
                 ACD in their honor.
               </p>
               <p>
-                Jeff is both a serial entrepreneur and a season global corporate
-                executive. Jeff founded or co- founded Ninkatek ACB LLC (a SaaS
-                software company for the US alcoholic beverage industry),
-                Brewery Innovations LLC (an ideation company for the brewing
-                industry), IS&amp;C Technologies (the owner of Tetricsity.com),
-                and International Strategy &amp; Consulting Inc (a boutique
-                global strategy consulting company).
+                Jeff is both a serial entrepreneur and a seasoned global
+                corporate executive. Jeff founded or co- founded Ninkatek ACB
+                LLC (a SaaS software company for the US alcoholic beverage
+                industry), Brewery Innovations LLC (an ideation company for the
+                brewing industry), IS&amp;C Technologies (the owner of
+                Tetricsity.com), and International Strategy &amp; Consulting Inc
+                (a boutique global strategy consulting company).
               </p>
               <p>
                 His time as a global corporate executive included senior
@@ -102,10 +102,10 @@ const About = () => {
               <p>
                 {" "}
                 Jeff is focusing his social responsibility time finding ways to
-                give back to our veteran heroes and their families and as a
-                board member for the upcoming commemoration of the 400 th
-                anniversary of the landing of the Mayflower and the formation of
-                Plymouth Colony (Massachusetts) in 2020.
+                give back to our veteran heroes and their families, and as a
+                board member for the 2020 commemoration of the 400th anniversary
+                of the landing of the Mayflower and the formation of Plymouth
+                Colony (Massachusetts).
               </p>
               <p>
                 Jeff was born in the Hudson Valley of NY and lives in coastal
