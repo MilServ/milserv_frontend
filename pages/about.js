@@ -135,6 +135,75 @@ const About = () => {
               {" "}
               <img
                 className="text-center"
+                src={"../static/images/don.jpeg"}
+                width="70%"
+                className="img-thumbnail"
+              ></img>
+            </div>
+            <div
+              className="col-md-10 mt-2 mb-2"
+              style={{ fontSize: "1.15rem" }}
+            >
+              <h2>Donald Kochka</h2>
+              <p>
+                {" "}
+                Don is a co-founder, along with his late wife Deborah, of
+                MilServ ACD. She got involved in the project through her
+                relationship with Jeff. She came to him asking for him to get
+                involved and he was happy to join the cause. Don was thrilled to
+                be a part of a company that was so focused on giving back to
+                veterans and their families because he is constantly looking for
+                ways to help and support his fellow veterans.
+              </p>
+              <p>
+                {" "}
+                Don comes from many generations of military men and women. He is
+                a veteran with 36+ years with the USAF (United States Air Force)
+                and ANG (Air National Guard) and still serves today. Don started
+                his career as a mechanic on aircraft, but when the BRAC (Base
+                Realignment and Closure) took away the aircraft, he retrained in
+                the Intelligence career field. Through all of this, his passion
+                has been getting the opportunity to manage and mentor many
+                people from all walks of life, all over the world.
+              </p>
+              <p>
+                {" "}
+                Although Don works full time, as an operations manager, he
+                prefers spending his off time with his two beautiful daughters
+                and their dog Touk. When they are not spending time as a family,
+                Don enjoys scuba diving, he even likes to teach the occasional
+                scuba lesson, being a certified dive instructor himself.
+              </p>
+              <p>
+                Over the next 20 years he plans on working in high level
+                business growth and giving back as much as possible, especially
+                to his veteran community.
+              </p>{" "}
+              <div className="mb-4">
+                <a
+                  href="https://www.linkedin.com/in/donald-kochka-3942b7/"
+                  target="_blank"
+                  style={{ cursor: "pointer" }}
+                >
+                  <small>
+                    <img
+                      className="text-center"
+                      src={"../static/images/li.png"}
+                      width="30px"
+                      style={{ borderRadius: 4, marginRight: 2 }}
+                    ></img>
+                    <em>Connect with Don</em>{" "}
+                  </small>
+                </a>
+              </div>
+              <hr />
+            </div>
+          </div>
+          <div className="row" style={{ backgroundColor: "whitesmoke" }}>
+            <div className="col-md-2 mt-2 mb-2">
+              {" "}
+              <img
+                className="text-center"
                 src={"../static/images/david.png"}
                 width="70%"
                 className="img-thumbnail"
