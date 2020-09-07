@@ -93,7 +93,11 @@ export default function RetSignUpForm(props) {
 
     Axios.post(`${API}/retailer`, formData).then((response) => {
       if (response.data.success) {
-        alert(formData + " Successfully submitted.");
+        alert(
+          "Thank you, " +
+            formData.coName +
+            " Your request for more info has been successfully submitted. \n We will get back to you within 72 hours or less."
+        );
         Router.replace("/");
       } else {
         alert("Sorry.  Failed to submit form");

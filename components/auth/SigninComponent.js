@@ -87,9 +87,9 @@ const SigninComponent = () => {
               Sign-in
             </button>
           </div>
-          <span style={{ fontSize: ".75rem" }}>
+          {/* <span style={{ fontSize: ".75rem" }}>
             {!isAuth() && <Link href="/signup">or Create Account</Link>}
-          </span>
+          </span> */}
         </form>
       </div>
     );

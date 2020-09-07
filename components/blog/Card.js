@@ -41,14 +41,14 @@ const Card = ({ blog }) => {
               </Link>
               <section>
                 <p className="pb-2 pl-2" style={{ backgroundColor: "#f7f7f7" }}>
-                  Written by{" "}
+                  {/* Written by{" "}
                   <Link
                     href={`/profile/${blog.postedBy.username}`}
                     prefetch={false}
                   >
                     <a>{blog.postedBy.username}</a>
-                  </Link>{" "}
-                  | Published {moment(blog.updatedAt).fromNow()}
+                  </Link>{" "} | */}
+                  Published {moment(blog.updatedAt).fromNow()}
                 </p>
               </section>
             </header>

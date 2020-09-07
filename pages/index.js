@@ -80,7 +80,7 @@ const Index = () => {
                       </h6>
                       <h6>
                         <em>
-                          We're officially launching our website on 9/15/2020!
+                          We're officially launching our website on 9/21/2020!
                         </em>
                       </h6>
                     </div>

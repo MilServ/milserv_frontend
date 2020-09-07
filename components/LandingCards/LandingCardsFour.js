@@ -25,7 +25,7 @@ export default function LandingCardsOne() {
       lg={3}
       className="card text-center"
     >
-      <img className="landingTop" src={"../static/images/makers.jpeg"}></img>
+      <img className="landingTop" src={"../static/images/makers2.jpeg"}></img>
       <button className="btn btn-sm btn-light landing-page-parnterBtns">
         <b style={{ fontWeight: 400 }}>MAKERS</b>
       </button>

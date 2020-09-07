@@ -148,12 +148,11 @@ const About = () => {
               <p>
                 {" "}
                 Don is a co-founder, along with his late wife Deborah, of
-                MilServ ACD. She got involved in the project through her
-                relationship with Jeff. She came to him asking for him to get
-                involved and he was happy to join the cause. Don was thrilled to
-                be a part of a company that was so focused on giving back to
-                veterans and their families because he is constantly looking for
-                ways to help and support his fellow veterans.
+                MilServ ACD. She asked Don to get involved and he was happy to
+                join the mission. He is thrilled to be a co-founder of a company
+                that is so focused on giving back to veterans and their families
+                because he is constantly looking for ways to help and support
+                his fellow veterans.
               </p>
               <p>
                 {" "}
@@ -175,9 +174,9 @@ const About = () => {
                 scuba lesson, being a certified dive instructor himself.
               </p>
               <p>
-                Over the next 20 years he plans on working in high level
-                business growth and giving back as much as possible, especially
-                to his veteran community.
+                Although his military career might be coming to a close, he
+                looks forward to the new opportunities he will have to continue
+                to make an impact in the veteran community.
               </p>{" "}
               <div className="mb-4">
                 <a

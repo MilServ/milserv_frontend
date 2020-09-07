@@ -111,7 +111,11 @@ export default function VetSignUpForm(props) {
 
     Axios.post(`${API}/veteran`, formData).then((response) => {
       if (response.data.success) {
-        alert(formData + " Successfully submitted.");
+        alert(
+          "Thank you, " +
+            formData.firstName +
+            " We appreciate your service.\n Your request for more info has been successfully submitted. \n We will get back to you within 72 hours or less."
+        );
         Router.replace("/");
       } else {
         alert("Sorry.  Failed to submit form");
