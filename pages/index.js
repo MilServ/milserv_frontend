@@ -13,6 +13,12 @@ const Index = () => {
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
+
+  const handleAlert = () => {
+    alert(
+      "Thank you for your interest.  Please check back soon for more information on our Makers Partners"
+    );
+  };
   return (
     <div style={{ overflow: "hidden" }}>
       <Layout>
@@ -187,7 +193,9 @@ const Index = () => {
               id="partner"
               style={{ overflowY: "hidden" }}
             >
-              <LandingCardsFour />
+              <a onClick={handleAlert}>
+                <LandingCardsFour />
+              </a>
             </div>
           </div>
         </section>
@@ -239,7 +247,7 @@ const Index = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="makers">
+                    <a onClick={handleAlert}>
                       {" "}
                       <button className="btn btn-outline-light mb-1">
                         Makers
