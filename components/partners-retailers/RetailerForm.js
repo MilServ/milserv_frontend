@@ -261,7 +261,6 @@ export default function RetSignUpForm(props) {
           type="submit"
           style={{ marginTop: 30, marginBottom: 30 }}
           className="btn btn-warning"
-          onClick={onSubmit}
         >
           Submit
         </button>

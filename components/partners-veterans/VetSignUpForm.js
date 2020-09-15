@@ -86,6 +86,7 @@ export default function VetSignUpForm(props) {
   const [additionalInfo, setAdditionalInfo] = useState("");
   const [currentLocation, setCurrentLocation] = useState("");
   const [projectedHOR, setProjHOR] = useState("");
+  // const { register, handleSubmit, errors } = useForm();
 
   const affiliationSelectChange = (event) => {
     setMilAff(event.currentTarget.value);
@@ -221,7 +222,6 @@ export default function VetSignUpForm(props) {
             // placeholder="Projected Home State"
             type="text"
             name="projectedHOR"
-            required
           />
         </div>
         <div>
@@ -274,7 +274,6 @@ export default function VetSignUpForm(props) {
             type="submit"
             style={{ marginTop: 25, marginBottom: 40 }}
             className="btn btn-warning"
-            onClick={onSubmit}
           >
             Submit
           </button>
