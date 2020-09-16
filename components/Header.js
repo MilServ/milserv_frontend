@@ -68,6 +68,9 @@ const Header = (props) => {
                 <Link href="/retailers">
                   <DropdownItem>RETAILERS</DropdownItem>
                 </Link>
+                <Link href="/makers">
+                  <DropdownItem>MAKERS</DropdownItem>
+                </Link>
                 <Link href="/distributors">
                   <DropdownItem>DISTRIBUTORS</DropdownItem>
                 </Link>

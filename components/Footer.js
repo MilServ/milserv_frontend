@@ -54,7 +54,7 @@ const Footer = () => {
             <div className="col-md-2 pb-2 pr-0" id="footer-links">
               <h6 className="title">PARTNERS</h6>
               <p className="footer-items">
-                <a href="#">MAKERS</a>
+                <a href="/makers">MAKERS</a>
               </p>
               <p className="footer-items">
                 <a href="/retailers">RETAILERS</a>
@@ -81,10 +81,10 @@ const Footer = () => {
               </p>
               <p className="footer-items">
                 {" "}
-                <a href="/milserv-media">PRESS RELEASES</a>{" "}
+                <a href="/categories/press-release">PRESS RELEASES</a>{" "}
               </p>
               <p className="footer-items">
-                <a href="#">STAY CONNECTED</a>{" "}
+                <a href="/contact">STAY CONNECTED</a>{" "}
               </p>
             </div>
             <div className="col-md-1 pb-2 pr-0" id="footer-links">

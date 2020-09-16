@@ -5,14 +5,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFlagUsa } from "@fortawesome/free-solid-svg-icons";
 import { Card, Grid } from "@material-ui/core";
 
-const useStyles = makeStyles({
-  root: {
-    maxWidth: 280,
-  },
-});
+// const useStyles = makeStyles({
+//   root: {
+//     maxWidth: 280,
+//   },
+// });
 
 export default function LandingCardsOne() {
-  const classes = useStyles();
+  // const classes = useStyles();
 
   return (
     <Grid

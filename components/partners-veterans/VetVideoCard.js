@@ -11,6 +11,7 @@ import {
   faArrowAltCircleLeft,
   faFlagUsa,
 } from "@fortawesome/free-solid-svg-icons";
+import JobsModalNY from "../Modals/JobsModaNY";
 
 const useStyles = makeStyles({
   root: {
@@ -116,9 +117,13 @@ export default function VetVideoCard() {
           Contact us today to learn more <br />
           about opportunities at these locations
         </p>
-        <button className="btn btn-outline-light m-1 p-1">Maryland</button>
-        <button className="btn btn-outline-light m-1 p-1">Texas</button>{" "}
-        <button className="btn btn-outline-light m-1 p-1">New York</button>
+        <button className="btn btn-outline-light m-1 p-1" disabled>
+          Maryland
+        </button>
+        <button className="btn btn-outline-light m-1 p-1" disabled>
+          Texas
+        </button>{" "}
+        <JobsModalNY />
       </section>
       <br></br>
     </div>

@@ -173,7 +173,7 @@ input.form-control.search-form {
   height: auto;
   width: 100%;
   margin: 0;
-  padding: 20px auto;
+  padding: 40px auto;
   background-color: transparent !important;
 }
 
@@ -186,7 +186,7 @@ input.form-control.search-form {
 
 .program-your-career {
   justify-content: center !important;
-  background-color: whitesmoke;
+  background-color: #383838;
 }
 .centered {
   background-color: rgba(0, 0, 0, 0.65);
@@ -456,7 +456,6 @@ span.navbar-toggler-icon {
 Footer styles */
 
 .footer-wrapper {
-  border-top: solid 1px #c4c4c4 !important;
   position: relative !important;
   left: 0 !important;
   bottom: 0 !important;
@@ -539,15 +538,6 @@ h6.title {
 input > form.vet-form {
   border-radius: 10px;
 }
-/* 
-.landing-page-parnterBtns { */
-/* bottom: 10; 
- margin:0;
- left:10;  */
-/* -ms-transform: translateY(-50%);
-  transform: translateY(-50%); */
-/* } */
-/* Veterans ATS Page */
 
 .vetATSCards {
   margin: 0.75rem 0.25rem !important;
@@ -604,6 +594,26 @@ input.formStyles {
   object-fit: cover;
 }
 
+.jobsHr {
+  width: 30%;
+  background-color: white;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.ny {
+  background-image: url("../images/nytoo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 65%;
+  background-position: 50% 50%;
+}
+
+.jobsModalFeatures {
+  font-weight: 300;
+  margin-bottom: 16px;
+  color: white;
+}
 @media (max-width: 770px) {
   body {
     width: 100%;

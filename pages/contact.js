@@ -43,12 +43,23 @@ const Contact = () => {
             className="row text-center justify-content-center"
             style={{ backgroundColor: "#383838", paddingTop: 25 }}
           >
-            <div className="col-md-3 mt-3 mb-2">
+            <div className="col-md-6 mt-3 mb-2">
+              <img
+                src="../static/images/owllogo.jpg"
+                width="20%"
+                alt="Milserv owl logo"
+                style={{ borderRadius: 8 }}
+              />
               <h2 className="program" style={{ color: "white" }}>
-                <b>CONTACT US</b>
+                <b>Let's Stay Connected!</b>
               </h2>
+              <h5 className="program" style={{ color: "white" }}>
+                We appreciate your feedback and want to learn more about how we
+                can support your mission.
+              </h5>
             </div>
           </div>
+          <hr style={{ backgroundColor: "white" }} />
           <div
             className="row text-center justify-content-center"
             style={{ paddingBottom: 40 }}

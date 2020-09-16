@@ -6,6 +6,7 @@ import LandingCardsOne from "../components/LandingCards/LandingCardsOne";
 import LandingCardsTwo from "../components/LandingCards/LandingCardsTwo";
 import LandingCardsThree from "../components/LandingCards/LandingCardsThree";
 import LandingCardsFour from "../components/LandingCards/LandingCardsFour";
+import LearnMoreModal from "../components/Modals/LearnMoreModal";
 
 const Index = () => {
   const [index, setIndex] = useState(0);
@@ -32,7 +33,11 @@ const Index = () => {
             {/* <div className="row mt-2 pl-0 pr-0"> */}
 
             <div className="col-lg-7 col-md-7 col-sm-12 col-xs-12 text-center p-0">
-              <Carousel activeIndex={index} onSelect={handleSelect}>
+              <Carousel
+                activeIndex={index}
+                onSelect={handleSelect}
+                style={{ zIndex: 0 }}
+              >
                 <Carousel.Item>
                   <img
                     className="d-block w-100"
@@ -146,12 +151,8 @@ const Index = () => {
                 non-government organizations (NGOs) that support them.
               </p>
               <div>
-                <a href="/about">
-                  {" "}
-                  <button className="btn btn-outline-light btn-lg">
-                    Learn More
-                  </button>
-                </a>
+                {" "}
+                <LearnMoreModal />
               </div>
             </div>
           </div>
@@ -159,11 +160,14 @@ const Index = () => {
 
         <section className="landingSectionTwo text-center">
           <div className="row program-your-career pt-4">
-            <h3 className="program text-center">
-              <b style={{ color: "#383838" }}>OUR PARTNERS</b>
+            <h3 className="program text-center" style={{ paddingTop: "40px" }}>
+              <b style={{ color: "white" }}>OUR PARTNERS</b>
             </h3>
           </div>
-          <div className="row program-your-career text-center justify-content-center pb-4 pl-3">
+          <div
+            className="row program-your-career text-center justify-content-center pl-3"
+            style={{ paddingBottom: "50px" }}
+          >
             <div
               className="col-md-3 col-sm-10 text-center col-xs-10 mb-2 col-left p-0"
               style={{ overflowY: "hidden" }}
@@ -193,13 +197,13 @@ const Index = () => {
               id="partner"
               style={{ overflowY: "hidden" }}
             >
-              <a onClick={handleAlert}>
+              <a href="/makers">
                 <LandingCardsFour />
               </a>
             </div>
           </div>
         </section>
-        <section style={{ paddingBottom: 20 }}>
+        <section>
           <div className="row pl-2">
             <div
               className="col-md-8 mb-2 aboutSections"
@@ -247,7 +251,7 @@ const Index = () => {
                     </a>
                   </li>
                   <li>
-                    <a onClick={handleAlert}>
+                    <a href="/makers">
                       {" "}
                       <button className="btn btn-outline-light mb-1">
                         Makers

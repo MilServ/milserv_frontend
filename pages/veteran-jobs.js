@@ -1,11 +1,7 @@
 import Layout from "../components/Layout";
 import VetSignUpForm from "../components/partners-veterans/VetSignUpForm";
 import VetVideoCard from "../components/partners-veterans/VetVideoCard";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowAltCircleLeft,
-  faFlagUsa,
-} from "@fortawesome/free-solid-svg-icons";
+import { Container, Row, Col } from "react-grid-system";
 
 const VeteranJobs = () => {
   return (
@@ -33,7 +29,7 @@ const VeteranJobs = () => {
           {" "}
           <div
             className="row justify-content-center pt-4 pb-4"
-            style={{ backgroundColor: "white", padding: 25 }}
+            style={{ backgroundColor: "whitesmoke", padding: 25 }}
           >
             <div className="col-md-7 aboutSections">
               <img
