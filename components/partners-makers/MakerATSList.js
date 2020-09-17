@@ -144,30 +144,34 @@ export default class MakerList extends Component {
                       <Typography style={{ fontSize: ".85rem" }}>
                         COMPANY NAME
                       </Typography>
-                      {rets.coName.toUpperCase()}
+                      {rets.makerCoName.toUpperCase()}
                       <hr></hr>
                       <Typography style={{ fontSize: ".85rem" }}>
                         CONTACT PERSON
                       </Typography>
-                      {rets.retFirstName.toUpperCase()}{" "}
-                      {rets.retLastName.toUpperCase()}
+                      {rets.makerFirstName.toUpperCase()}{" "}
+                      {rets.makerLastName.toUpperCase()}
                       <hr></hr>
                       <Typography>
                         <EmailIcon style={{ marginRight: 10 }} />
-                        {rets.retEmail}
+                        {rets.makerEmail}
                       </Typography>
                       <Typography>
                         <PhoneIcon style={{ marginRight: 10 }} />
-                        {rets.retPhoneNumber}
+                        {rets.makerPhoneNumber}
                       </Typography>
                       <hr></hr>
                       <Typography style={{ fontSize: ".85rem" }}>
                         STATE(s) LICENSED IN:
-                        {rets.licState.map((states) => (
+                        {rets.makerLicState.map((states) => (
                           <ul>
                             <li>{states.value}</li>
                           </ul>
                         ))}
+                      </Typography>
+                      <Typography style={{ fontSize: ".85rem" }}>
+                        STATE LIC NO:
+                        {rets.makerStateLicNo}
                       </Typography>
                       {/* <Typography variant="body2" component="p">
                       {vets.careerInterest}
