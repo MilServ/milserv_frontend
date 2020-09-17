@@ -3,10 +3,7 @@ import Admin from "../../components/auth/Admin";
 import Link from "next/link";
 import ProfileUpdate from "../../components/auth/ProfileUpdate";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowAltCircleLeft,
-  faUser,
-} from "@fortawesome/free-solid-svg-icons";
+import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
 
 const AdminUpdate = () => {
   return (

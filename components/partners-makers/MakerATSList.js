@@ -22,25 +22,25 @@ import PhoneIcon from "@material-ui/icons/Phone";
 // The ...props means, spread all of the passed props onto this element
 
 // That way we don't have to define them all individually
-export default class MakersList extends Component {
+export default class MakerList extends Component {
   state = {
-    retailers: [],
+    makers: [],
     lastDate: [],
   };
 
   componentDidMount() {
-    this.loadRetsList();
+    this.loadMakersList();
     this.loadLastSubmission();
     // this.displayRecentNo();
   }
 
-  loadRetsList = () => {
-    Axios.get(`${API}/retailers`)
+  loadMakersList = () => {
+    Axios.get(`${API}/makers`)
       .then(
         (res) =>
           this.setState(
             {
-              retailers: res.data,
+              makers: res.data,
             },
             console.log("this is the data " + JSON.stringify(res.data))
           )
@@ -50,7 +50,7 @@ export default class MakersList extends Component {
   };
 
   loadLastSubmission = () => {
-    Axios.get(`${API}/retailers-last-submission`)
+    Axios.get(`${API}/makers-last-submission`)
       .then(
         (res) =>
           this.setState(
@@ -90,11 +90,11 @@ export default class MakersList extends Component {
             >
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h1">
-                  TOTAL RETAILERS
+                  TOTAL MAKERS
                 </Typography>
 
                 <Typography gutterBottom variant="h2" component="h2">
-                  {this.state.retailers.length}
+                  {this.state.makers.length}
                 </Typography>
               </CardContent>
             </Grid>
@@ -123,10 +123,10 @@ export default class MakersList extends Component {
             </Grid>
           </div>
         </div>
-        {this.state.retailers.length ? (
+        {this.state.makers.length ? (
           <div className="row">
             <div className="col-md-4 col-sm-12 col-xs-12">
-              {this.state.retailers
+              {this.state.makers
                 .slice(0)
                 .reverse()
                 .map((rets) => (
@@ -191,7 +191,7 @@ export default class MakersList extends Component {
             </div>
           </div>
         ) : (
-          <h3>No Retailers to Display :(</h3>
+          <h3>No Makers to Display :(</h3>
         )}
       </div>
     );

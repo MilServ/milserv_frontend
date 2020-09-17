@@ -14,14 +14,14 @@ const useStyles = makeStyles({
 
 export default function MakersSignUpForm(props) {
   const classes = useStyles();
-  const [retFirstName, setRetFirstName] = useState("");
-  const [retLastName, setRetLastName] = useState("");
-  const [retEmail, setRetEmail] = useState("");
-  const [licState, setLicState] = useState([]);
-  const [retPhoneNumber, setRetPhoneNumber] = useState("");
-  const [stateLicNo, setStateLicNo] = useState("");
-  const [coName, setCoName] = useState("");
-  const [retAdditionalInfo, setRetAdditionalInfo] = useState("");
+  const [makerFirstName, setMakerFirstName] = useState("");
+  const [makerLastName, setMakerLastName] = useState("");
+  const [makerEmail, setMakerEmail] = useState("");
+  const [makerLicState, setMakerLicState] = useState([]);
+  const [makerPhoneNumber, setMakerPhoneNumber] = useState("");
+  const [makerStateLicNo, setMakerStateLicNo] = useState("");
+  const [makerCoName, setMakerCoName] = useState("");
+  const [makerAdditionalInfo, setMakerAdditionalInfo] = useState("");
 
   const options = [
     { label: "Alabama", value: "AL" },
@@ -81,21 +81,21 @@ export default function MakersSignUpForm(props) {
     event.preventDefault();
 
     const formData = {
-      retFirstName,
-      retLastName,
-      retEmail,
-      retPhoneNumber,
-      licState,
-      stateLicNo,
-      coName,
-      retAdditionalInfo,
+      makerFirstName,
+      makerLastName,
+      makerEmail,
+      makerPhoneNumber,
+      makerLicState,
+      makerStateLicNo,
+      makerCoName,
+      makerAdditionalInfo,
     };
 
-    Axios.post(`${API}/retailer`, formData).then((response) => {
+    Axios.post(`${API}/maker`, formData).then((response) => {
       if (response.data.success) {
         alert(
           "Thank you, " +
-            formData.coName +
+            formData.makerCoName +
             " Your request for more info has been successfully submitted. \n We will get back to you within 72 hours or less."
         );
         Router.replace("/");
@@ -138,8 +138,8 @@ export default function MakersSignUpForm(props) {
               paddingLeft: 8,
               width: "75%",
             }}
-            value={coName}
-            onChange={(e) => setCoName(e.target.value)}
+            value={makerCoName}
+            onChange={(e) => setMakerCoName(e.target.value)}
             placeholder="Company Name"
             type="text"
             name="coName"
@@ -156,8 +156,8 @@ export default function MakersSignUpForm(props) {
                 borderRadius: 5,
                 marginBottom: 3,
               }}
-              value={retFirstName}
-              onChange={(e) => setRetFirstName(e.target.value)}
+              value={makerFirstName}
+              onChange={(e) => setMakerFirstName(e.target.value)}
               placeholder="First name"
               type="text"
               name="First Name"
@@ -170,8 +170,8 @@ export default function MakersSignUpForm(props) {
                 border: "solid #383838 .75px",
                 marginBottom: 3,
               }}
-              value={retLastName}
-              onChange={(e) => setRetLastName(e.target.value)}
+              value={makerLastName}
+              onChange={(e) => setMakerLastName(e.target.value)}
               placeholder="Last name"
               type="text"
               name="Last Name"
@@ -184,8 +184,8 @@ export default function MakersSignUpForm(props) {
                 marginBottom: 3,
                 border: "solid #383838 .75px",
               }}
-              value={retEmail}
-              onChange={(e) => setRetEmail(e.target.value)}
+              value={makerEmail}
+              onChange={(e) => setMakerEmail(e.target.value)}
               placeholder="Email address"
               type="email"
               name="email"
@@ -202,8 +202,8 @@ export default function MakersSignUpForm(props) {
               border: "solid #383838 .75px",
               paddingLeft: 8,
             }}
-            value={retPhoneNumber}
-            onChange={(e) => setRetPhoneNumber(e.target.value)}
+            value={makerPhoneNumber}
+            onChange={(e) => setMakerPhoneNumber(e.target.value)}
             placeholder="ex: 555-555-5555"
             type="text"
             name="Phone Number"
@@ -219,9 +219,9 @@ export default function MakersSignUpForm(props) {
           {/* <pre>{JSON.stringify(licState)}</pre> */}
           <MultiSelect
             options={options}
-            value={licState}
+            value={makerLicState}
             placeholder={"Select all that apply"}
-            onChange={setLicState}
+            onChange={setMakerLicState}
             labelledBy={"Select"}
           />
           <br />
@@ -232,8 +232,8 @@ export default function MakersSignUpForm(props) {
               border: "solid #383838 .75px",
               borderRadius: 5,
             }}
-            value={stateLicNo}
-            onChange={(e) => setStateLicNo(e.target.value)}
+            value={makerStateLicNo}
+            onChange={(e) => setMakerStateLicNo(e.target.value)}
             placeholder="State License Number"
             type="text"
             name="stateLicNumber"
@@ -250,8 +250,8 @@ export default function MakersSignUpForm(props) {
             height: 200,
             borderRadius: 5,
           }}
-          value={retAdditionalInfo}
-          onChange={(e) => setRetAdditionalInfo(e.target.value)}
+          value={makerAdditionalInfo}
+          onChange={(e) => setMakerAdditionalInfo(e.target.value)}
           // placeholder="Tell Us More!"
           type="text"
           name="additionalInfo"

@@ -46,12 +46,12 @@ export default function BlogCard() {
         </a>
         <a href="/admin/blogs">
           <Button size="small" color="primary">
-            Manage Media
+            Manage
           </Button>
         </a>
         <a href="/admin/crud/category-tag">
           <Button size="small" color="primary">
-            Manage Tags
+            Add Tags
           </Button>
         </a>
       </CardActions>

@@ -25,27 +25,21 @@ export default function ManageCard() {
           component="img"
           alt="Array of alcoholic beverages"
           height="140"
-          image="../../static/images/landing-image.jpg"
+          image="../../static/images/analytics.jpg"
           title="Partners"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            PARTNERS
+            Site Analytics
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Track data from Retailer, Maker, and Distributor Partners.
+            Coming Soon...
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          <a href="/admin/retailer-list">Retailers</a>
-        </Button>
-        <Button size="small" color="primary">
-          <a href="/admin/maker-list">Makers</a>
-        </Button>
-        <Button size="small" color="primary">
-          <a href="/admin/distributor-list">Distributors</a>
+          {/* <a href="/admin/site-analytics">View</a> */}
         </Button>
       </CardActions>
     </Card>

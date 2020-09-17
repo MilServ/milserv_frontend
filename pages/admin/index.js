@@ -4,6 +4,7 @@ import Link from "next/link";
 import BlogCard from "../../components/StaffPortal/BlogCard";
 import ManageCard from "../../components/StaffPortal/ManageCard";
 import CreateCard from "../../components/StaffPortal/CreateCard";
+import SiteAnalytics from "../../components/StaffPortal/SiteAnalytics";
 import VeteranCard from "../../components/StaffPortal/VeteranCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -90,6 +91,9 @@ const AdminIndex = () => {
 
               <div className="col-md-3 staff-portal-cols mb-3">
                 <VeteranCard />
+              </div>
+              <div className="col-md-3 staff-portal-cols mb-3">
+                <SiteAnalytics />
               </div>
             </div>
           </section>
