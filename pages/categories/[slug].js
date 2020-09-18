@@ -5,7 +5,7 @@ import { singleCategory } from "../../actions/category";
 import { API, DOMAIN, APP_NAME, FB_APP_ID } from "../../config";
 import renderHTML from "react-render-html";
 import moment from "moment";
-import Card from "../../components/blog/Card";
+import BlogCard from "../../components/blog/BlogCard";
 
 const Category = ({ category, blogs, query }) => {
   const head = () => (
@@ -60,7 +60,7 @@ const Category = ({ category, blogs, query }) => {
 
                 {blogs.map((b, i) => (
                   <div>
-                    <Card key={i} blog={b} />
+                    <BlogCard key={i} blog={b} />
                     <hr />
                   </div>
                 ))}

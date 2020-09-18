@@ -34,26 +34,25 @@ const Header = (props) => {
   return (
     <React.Fragment>
       <Navbar color="light" light expand="md" className="navbar p-0">
-        <Link href="/">
-          <NavLink
-            className="font-weight-bold pt-1 pb-0"
-            style={{ paddingLeft: 7 }}
-          >
-            <NavbarBrand className="navBarLogo">
-              <img
-                //Try makeStyle classes to ref image within file
-                src="../static/images/owllogo.jpg"
-                width="45px"
-                height="40px"
-                alt="React Bootstrap logo"
-                style={{ paddingRight: 0, borderRadius: 10 }}
-              />
-              MILSERV
-              <span className="bottom-logo-text">
-                An American Craft Deliveries Company
-              </span>
-            </NavbarBrand>
-          </NavLink>
+        <Link
+          href="/"
+          className="font-weight-bold pt-1 pb-0"
+          style={{ paddingLeft: 7 }}
+        >
+          <NavbarBrand className="navBarLogo">
+            <img
+              //Try makeStyle classes to ref image within file
+              src="../static/images/owllogo.jpg"
+              width="45px"
+              height="40px"
+              alt="React Bootstrap logo"
+              style={{ paddingRight: 0, borderRadius: 10 }}
+            />
+            MILSERV
+            <span className="bottom-logo-text">
+              An American Craft Deliveries Company
+            </span>
+          </NavbarBrand>
         </Link>
 
         <NavbarToggler onClick={toggle} />
@@ -114,10 +113,14 @@ const Header = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
             <Link href="/contact">
-              <NavItem className="listItems">CONTACT</NavItem>
+              <a>
+                <NavItem className="listItems">CONTACT</NavItem>
+              </a>
             </Link>
             <Link href="/about">
-              <NavItem className="listItems">ABOUT</NavItem>
+              <a>
+                <NavItem className="listItems">ABOUT</NavItem>
+              </a>
             </Link>
 
             {isAuth() && isAuth().role === 0 && (
