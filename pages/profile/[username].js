@@ -106,7 +106,7 @@ const UserProfile = ({ user, blogs, query }) => {
                   </h5>
                   <br />
                   <p style={{ backgroundColor: "#8d54b5" }}>
-                    <ContactForm authorEmail={user.email} />
+                    <ContactForm value={"For" + user.name} />
                   </p>
                 </div>
               </div>

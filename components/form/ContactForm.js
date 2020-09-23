@@ -2,7 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { emailContactForm } from "../../actions/form";
 
-const ContactForm = ({ authorEmail }) => {
+const ContactForm = () => {
   const [values, setValues] = useState({
     message: "",
     name: "",
@@ -18,7 +18,7 @@ const ContactForm = ({ authorEmail }) => {
   const clickSubmit = (e) => {
     e.preventDefault();
     setValues({ ...values, buttonText: "Sending..." });
-    emailContactForm({ authorEmail, name, email, message }).then((data) => {
+    emailContactForm({ name, email, message }).then((data) => {
       if (data.error) {
         setValues({ ...values, error: data.error });
       } else {
@@ -48,8 +48,8 @@ const ContactForm = ({ authorEmail }) => {
   const showSuccessMessage = () =>
     success && (
       <div className="alert alert-warning">
-        Thank you for contacting MilServ. We will contact you in 72 hours or
-        less.
+        Thank you for contacting MilServ. A MilServ representative will contact
+        you within 3 business days.
       </div>
     );
 
