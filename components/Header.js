@@ -36,10 +36,12 @@ const Header = (props) => {
       <Navbar color="light" light expand="md" className="navbar p-0">
         <Link
           href="/"
-          className="font-weight-bold pt-1 pb-0"
-          style={{ paddingLeft: 7 }}
+          // className="font-weight-bold pt-1 pb-0"
         >
-          <NavbarBrand className="navBarLogo">
+          <NavbarBrand
+            className="navBarLogo font-weight-bold pt-1 pb-0"
+            style={{ paddingLeft: 7 }}
+          >
             <img
               //Try makeStyle classes to ref image within file
               src="../static/images/owllogo.jpg"

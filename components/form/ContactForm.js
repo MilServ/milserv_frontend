@@ -47,9 +47,9 @@ const ContactForm = () => {
 
   const showSuccessMessage = () =>
     success && (
-      <div className="alert alert-warning">
-        Thank you for contacting MilServ. A MilServ representative will contact
-        you within 3 business days.
+      <div className="alert alert-info">
+        Thank you for contacting MilServ. We'll get back to you within 3
+        business days.
       </div>
     );
 
@@ -124,9 +124,8 @@ const ContactForm = () => {
 
   return (
     <React.Fragment>
-      {showSuccessMessage()}
+      {contactForm()} {showSuccessMessage()}
       {showErrorMessage()}
-      {contactForm()}{" "}
     </React.Fragment>
   );
 };
