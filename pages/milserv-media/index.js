@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { withRouter } from "next/router";
-// import Layout from "../../components/Layout";
+import Layout from "../../components/Layout";
 import { useState } from "react";
 import { listBlogsWithCategoriesAndTags } from "../../actions/blog";
 import Card from "../../components/blog/Card";
@@ -113,109 +113,111 @@ const Blogs = ({
     <React.Fragment>
       <div style={{ overflowX: "hidden" }}>
         {head()}
-        <main style={{ margin: 0, padding: 0, overflowX: "hidden" }}>
-          <div
-            className="container-fluid m-0 p-0"
-            style={{ overflowX: "hidden" }}
-          >
-            <header
-              className="milservMedia container-fluid"
-              style={{
-                height: 580,
-                marginRight: 0,
-                marginLeft: 0,
-                padding: 0,
-                width: "100%",
-                overflowX: "hidden",
-              }}
+        <Layout>
+          <main style={{ margin: 0, padding: 0, overflowX: "hidden" }}>
+            <div
+              className="container-fluid m-0 p-0"
+              style={{ overflowX: "hidden" }}
             >
-              <div className="row" style={{ overflowX: "hidden" }}>
-                <div className="col-md-3">
-                  <a href="/">
-                    <p
-                      style={{
-                        color: "white",
-                        paddingLeft: "15px",
-                        paddingTop: "10px",
-                        fontSize: ".90rem",
-                      }}
-                    >
-                      <span>
-                        <FontAwesomeIcon icon={faArrowAltCircleLeft} />
-                      </span>{" "}
-                      Back to MilServ
-                    </p>
-                  </a>
-                </div>
-              </div>
-              <div className="row p-0 m-0 mr-0">
-                <div className="col-md-12">
-                  <h1
-                    className="text-center landing-cta"
-                    style={{ fontSize: "4rem", marginBottom: 35 }}
-                  >
-                    MILSERV MEDIA
-                  </h1>
-                </div>
-              </div>
-              <div
-                className="row justify-content-center"
+              <header
+                className="milservMedia container-fluid"
                 style={{
-                  height: "auto",
-                  marginBottom: 8,
-                  paddingBottom: 10,
+                  height: 580,
+                  marginRight: 0,
+                  marginLeft: 0,
+                  padding: 0,
+                  width: "100%",
+                  overflowX: "hidden",
                 }}
               >
+                <div className="row" style={{ overflowX: "hidden" }}>
+                  <div className="col-md-3">
+                    <a href="/">
+                      <p
+                        style={{
+                          color: "white",
+                          paddingLeft: "15px",
+                          paddingTop: "10px",
+                          fontSize: ".90rem",
+                        }}
+                      >
+                        <span>
+                          <FontAwesomeIcon icon={faArrowAltCircleLeft} />
+                        </span>{" "}
+                        Back to MilServ
+                      </p>
+                    </a>
+                  </div>
+                </div>
+                <div className="row p-0 m-0 mr-0">
+                  <div className="col-md-12">
+                    <h1
+                      className="text-center landing-cta"
+                      style={{ fontSize: "4rem", marginBottom: 35 }}
+                    >
+                      MILSERV MEDIA
+                    </h1>
+                  </div>
+                </div>
                 <div
-                  className="col-md-12 tagsCol"
+                  className="row justify-content-center"
                   style={{
                     height: "auto",
-                    marginBottom: 20,
-                    textAlign: "center",
-                    padding: 15,
+                    marginBottom: 8,
+                    paddingBottom: 10,
                   }}
                 >
-                  <h5
+                  <div
+                    className="col-md-12 tagsCol"
                     style={{
-                      fontWeight: "900",
-                      marginBottom: "0px",
-                      backgroundColor: "rgba(0,0,0,0.50)",
-                      padding: 5,
-                      color: "white",
+                      height: "auto",
+                      marginBottom: 20,
+                      textAlign: "center",
+                      padding: 15,
                     }}
                   >
-                    TAGS
-                  </h5>
-                  {showAllTags()}
+                    <h5
+                      style={{
+                        fontWeight: "900",
+                        marginBottom: "0px",
+                        backgroundColor: "rgba(0,0,0,0.50)",
+                        padding: 5,
+                        color: "white",
+                      }}
+                    >
+                      TAGS
+                    </h5>
+                    {showAllTags()}
+                  </div>
+                </div>
+              </header>
+            </div>
+            <div className="container-fluid">
+              <hr />
+
+              <div className="row pl-3">
+                <div
+                  className="col-md-12"
+                  style={{ borderRight: "solid lightgray 1px" }}
+                >
+                  {showAllBlogs()}
+                </div>
+                <div
+                  className="col-md-12"
+                  style={{ borderRight: "solid lightgray 1px" }}
+                >
+                  {showLoadedBlogs()}
+                </div>
+                <div
+                  className="col-md-12 pb-5"
+                  style={{ borderRight: "solid lightgray 1px" }}
+                >
+                  {loadMoreButton()}
                 </div>
               </div>
-            </header>
-          </div>
-          <div className="container-fluid">
-            <hr />
-
-            <div className="row pl-3">
-              <div
-                className="col-md-12"
-                style={{ borderRight: "solid lightgray 1px" }}
-              >
-                {showAllBlogs()}
-              </div>
-              <div
-                className="col-md-12"
-                style={{ borderRight: "solid lightgray 1px" }}
-              >
-                {showLoadedBlogs()}
-              </div>
-              <div
-                className="col-md-12 pb-5"
-                style={{ borderRight: "solid lightgray 1px" }}
-              >
-                {loadMoreButton()}
-              </div>
             </div>
-          </div>
-        </main>
+          </main>
+        </Layout>
       </div>
     </React.Fragment>
   );

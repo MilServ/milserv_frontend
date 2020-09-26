@@ -4,12 +4,12 @@ import renderHTML from "react-render-html";
 import moment from "moment";
 
 const Card = ({ blog }) => {
-  // const showBlogCategories = (blog) =>
-  //   blog.categories.map((c, i) => (
-  //     <Link key={i} href={`/categories/${c.slug}`}>
-  //       <a className="btn btn-secondary btn-sm mr-1 mt-3">{c.name}</a>
-  //     </Link>
-  //   ));
+  const showBlogCategories = (blog) =>
+    blog.categories.map((c, i) => (
+      <Link key={i} href={`/categories/${c.slug}`}>
+        <a className="btn btn-secondary btn-sm mr-1 mt-3">{c.name}</a>
+      </Link>
+    ));
 
   const showBlogTags = (blog) =>
     blog.tags.map((t, i) => (
@@ -55,10 +55,18 @@ const Card = ({ blog }) => {
             <div className="excerpt">{renderHTML(blog.excerpt)}</div>
             <Link href={`/milserv-media/${blog.slug}`}>
               <a
-                className="btn btn-light pt-1 pb-1 mb-1"
+                className="btn btn-outline-dark pt-1 pb-1 mb-1"
                 style={{ fontSize: ".65rem", fontWeight: "600" }}
               >
-                Read more
+                Full Story
+              </a>
+            </Link>
+            <Link href={"/milserv-media"}>
+              <a
+                className="btn btn-dark pt-1 pb-1 mb-1 ml-1"
+                style={{ fontSize: ".65rem", fontWeight: "600" }}
+              >
+                See All Stories
               </a>
             </Link>
           </section>
@@ -70,13 +78,6 @@ const Card = ({ blog }) => {
           </div>
 
           <div className="row pl-3 pb-3 text-center">
-            {/* <section
-              className="text-center"
-              style={{ display: "inline-block" }}
-            >
-              {showBlogCategories(blog)}
-            </section> */}
-
             <section style={{ display: "inline-block" }}>
               {showBlogTags(blog)}
             </section>

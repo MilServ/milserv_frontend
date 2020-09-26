@@ -28,7 +28,7 @@ export default function LandingCardsOne() {
         src={"../static/images/distributors.jpeg"}
       ></img>
       <button className="btn btn-sm btn-light landing-page-parnterBtns">
-        <b style={{ fontWeight: 400 }}>DISTRIBUTORS</b>
+        <b>DISTRIBUTORS</b>
       </button>
     </Grid>
     // </Link>

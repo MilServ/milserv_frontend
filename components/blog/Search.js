@@ -19,8 +19,14 @@ const Search = () => {
         ...values,
         results: data,
         searched: true,
-        message: `${data.length} Article(s) found`,
+        message: ` ${data.length} Article(s) found`,
       });
+    });
+  };
+  const closeSearchResults = () => {
+    setValues({
+      ...values,
+      searched: false,
     });
   };
 
@@ -35,17 +41,37 @@ const Search = () => {
   const searchedBlogs = (results = []) => {
     return (
       <div
-        className="jumbotron bg-white"
         style={{
-          color: "black",
-          marginTop: 30,
+          color: "white",
+          backgroundColor: "rgba(0,0,0,90%)",
+          borderRadius: "10px",
+          // marginTop: 150,
           height: "auto",
           marginBottom: 30,
+          padding: 10,
+          overflow: "auto",
         }}
+        className="searchResults"
       >
         {message && (
-          <p className="text-muted font-italic mt-3" style={{ paddingTop: 15 }}>
+          <p
+            className="text-muted font-italic"
+            style={{ paddingTop: 15, marginTop: "10px" }}
+          >
             {message}
+            <button
+              className="btn btn-sm"
+              type="submit"
+              onClick={closeSearchResults}
+              style={{
+                float: "right",
+                margin: 4,
+                backgroundColor: "#8d54b5",
+                color: "white",
+              }}
+            >
+              X
+            </button>
           </p>
         )}
 
@@ -56,7 +82,13 @@ const Search = () => {
                 <ul>
                   <li>
                     {" "}
-                    <a className="text-primary" style={{ cursor: "pointer" }}>
+                    <a
+                      style={{
+                        cursor: "pointer",
+                        textDecoration: "none",
+                        color: "white",
+                      }}
+                    >
                       {blog.title}
                     </a>
                   </li>
@@ -75,14 +107,15 @@ const Search = () => {
       style={{
         paddingTop: 0,
         paddingBottom: 0,
-        backgroundColor: "transparent",
+        width: "100%",
+        backgroundColor: "white",
       }}
     >
       <div
         className="row justify-content-center mb-1"
         style={{ textAlign: "right", justifyContent: "end" }}
       >
-        <div className="col-md-5 m-1">
+        <div className="col-md-7 pr-0 pl-0 col-lg-7 m-1">
           <input
             type="search"
             style={{ backgroundColor: "#383838", color: "white" }}
@@ -92,7 +125,7 @@ const Search = () => {
           ></input>
         </div>
 
-        <div className="col-md-2 m-1">
+        <div className="col-md-4 pl-0 pr-0 col-lg-4 m-1">
           <button
             className="btn btn-block"
             type="submit"
@@ -110,10 +143,10 @@ const Search = () => {
   );
 
   return (
-    <div className="container-fluid">
-      <div>{searchForm()}</div>
+    <div className="container" style={{ backgroundColor: "white" }}>
+      <div style={{ width: "100%" }}>{searchForm()}</div>
       {searched && (
-        <div style={{ marginTop: "-120px", marginBottom: "-80px" }}>
+        <div style={{ marginTop: "10px", marginBottom: "-80px" }}>
           {searchedBlogs(results)}{" "}
         </div>
       )}

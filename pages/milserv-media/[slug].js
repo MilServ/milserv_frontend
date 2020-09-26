@@ -78,7 +78,7 @@ const SingleBlog = ({ blog, query }) => {
   const showBlogTags = (blog) =>
     blog.tags.map((t, i) => (
       <Link key={i} href={`/tags/${t.slug}`}>
-        <a className="btn btn-warning btn-sm mr-1 ml-1 mt-3">{t.name}</a>
+        <a className="btn btn-warning btn-sm mr-1 ml-1">{t.name}</a>
       </Link>
     ));
 
@@ -112,55 +112,62 @@ const SingleBlog = ({ blog, query }) => {
           <main
             style={{
               minHeight: "500px",
+
               borderTop: "solid rgba(141, 84, 181, 0.85) 1.8px",
             }}
           >
-            <article style={{ marginTop: "18px" }}>
+            <article style={{ marginTop: "100px" }}>
               <div className="container-fluid">
                 <section className="container">
-                  <div className="row text-center">
-                    <div className="col-md-6 col-lg-6 col-sm-6">
-                      <h2 className="pb-1 mb-0 pt-3 font-weight-bold text-center">
-                        {blog.title}
-                      </h2>
-                      <br />
+                  <div className="row">
+                    <div className="col-md-4 col-lg-4 col-sm-12 col-xs-12">
                       <img
                         src={`${API}/blog/photo/${blog.slug}`}
                         alt={blog.title}
                         className="img img-thumbnail"
-                        width="95%"
+                        width="100%"
                       />
+                      <br />
+                      <div className="lead mt-3 mark p-3">
+                        {/* {showBlogCategories(blog)} */}
+                        <small>
+                          Written by{" "}
+                          <Link
+                            href={`/profile/${blog.postedBy.username}`}
+                            prefetch={false}
+                          >
+                            <a>
+                              {""}
+                              {blog.postedBy.username}
+                            </a>
+                          </Link>
+                        </small>
+                        <br />
+                        <small>
+                          Published {moment(blog.updatedAt).fromNow()}
+                        </small>
+                        <br />
+                        <button className="btn-sm btn btn-outline-dark">
+                          TAGS
+                        </button>
+                        {showBlogTags(blog)}
+                      </div>
+                    </div>
+                    <div className="col-md-6 col-lg-6 col-sm-11 col-xs-11 lead">
+                      <h2 className="pb-1 mb-0 font-weight-bold">
+                        {blog.title}
+                      </h2>
+                      {renderHTML(blog.body)}
                     </div>
                   </div>
                 </section>
 
                 <section>
                   <div className="container">
-                    <p className="lead mt-3 mark pt-1 pb-1">
-                      {showBlogCategories(blog)}
-                      Written by{" "}
-                      <Link
-                        href={`/profile/${blog.postedBy.username}`}
-                        prefetch={false}
-                      >
-                        <a>
-                          {""}
-                          {blog.postedBy.username}
-                        </a>
-                      </Link>
-                      | Published {moment(blog.updatedAt).fromNow()}
-                    </p>
                     <div className="pb-3">
-                      {showBlogTags(blog)}
                       <br></br>
                     </div>
                   </div>
-                </section>
-              </div>
-
-              <div className="container">
-                <section>
-                  <div className="col-md-12 lead">{renderHTML(blog.body)}</div>
                 </section>
               </div>
 

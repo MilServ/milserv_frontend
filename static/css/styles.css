@@ -264,10 +264,15 @@ a:hover {
 
 .navbar {
   padding-top: 0 !important;
-  padding-bottom: 1;
+  padding-bottom: 5px !important;
   margin-top: 0 !important;
+  margin-bottom: 100 !important;
   background-color: white !important;
   color: #8d54b5 !important;
+  height: 80px;
+}
+.searchResults {
+  margin-top: 200px;
 }
 
 .navSearch {
@@ -623,5 +628,13 @@ input.formStyles {
   }
   .signout {
     margin-left: 10px;
+  }
+  .searchResults {
+    margin-top: 10px;
+  }
+
+  .navbar {
+    height: auto;
+    min-height: 80px;
   }
 }

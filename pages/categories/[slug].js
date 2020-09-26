@@ -50,7 +50,7 @@ const Category = ({ category, blogs, query }) => {
         <main>
           <div className="container-fluid">
             <header>
-              <div className="col-md-12 pt-3" style={{ marginTop: 10 }}>
+              <div className="col-md-12 pt-3" style={{ marginTop: 80 }}>
                 <h3
                   className="btn btn-outline-secondary btn-lg"
                   style={{ marginBottom: 30 }}

@@ -55,10 +55,18 @@ const Card = ({ blog }) => {
             <div className="excerpt">{renderHTML(blog.excerpt)}</div>
             <Link href={`/milserv-media/${blog.slug}`}>
               <a
-                className="btn btn-light pt-1 pb-1 mb-1"
+                className="btn btn-outline-dark pt-1 pb-1 mb-1"
                 style={{ fontSize: ".65rem", fontWeight: "600" }}
               >
-                Read more
+                Full Story
+              </a>
+            </Link>
+            <Link href={"/milserv-media"}>
+              <a
+                className="btn btn-dark pt-1 pb-1 mb-1 ml-1"
+                style={{ fontSize: ".65rem", fontWeight: "600" }}
+              >
+                See All Stories
               </a>
             </Link>
           </section>
