@@ -60,7 +60,7 @@ const About = () => {
           </div>
           <div
             className="row"
-            style={{ backgroundColor: "whitesmoke", paddingTop: 10 }}
+            style={{ backgroundColor: "whitesmoke", paddingTop: 0 }}
           >
             <div className="col-md-2 mt-4 mb-2">
               <img

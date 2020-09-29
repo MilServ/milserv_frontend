@@ -69,7 +69,7 @@ const Index = () => {
                 <Carousel.Item>
                   <img
                     className="d-block w-100"
-                    src="../static/images/pictwo.jpg"
+                    src="../static/images/fourbeers.jpg"
                     alt="Third slide"
                   />
 

@@ -106,7 +106,7 @@ export default function DistSignUpForm(props) {
   };
 
   return (
-    <div>
+    <div style={{ marginTop: 50 }}>
       <form onSubmit={onSubmit}>
         <h2>DISTRIBUTOR CONTACT FORM</h2>
 

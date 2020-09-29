@@ -26,7 +26,7 @@ export default function VetVideoCard() {
   const classes = useStyles();
 
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} style={{ marginTop: 50 }}>
       <a
         href="/"
         style={{

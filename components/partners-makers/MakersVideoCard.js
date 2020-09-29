@@ -22,7 +22,7 @@ export default function MakersVideoCard() {
   const classes = useStyles();
 
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} style={{ marginTop: 50 }}>
       <a
         href="/"
         style={{

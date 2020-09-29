@@ -103,7 +103,7 @@ const Footer = () => {
               <SocialIcon url="https://www.instagram.com/milserv/" />
               <SocialIcon url="https://www.linkedin.com/company/american-craft-deliveries-milserve/" />
             </div>
-            <div className="col-md-1 pb-2 pr-0" id="footer-links">
+            <div className="col-md-1 pb-2 pr-0 mt-3" id="footer-links">
               <a href="https://dodskillbridge.usalearning.gov/index.htm">
                 <img
                   width="120px"
@@ -113,7 +113,7 @@ const Footer = () => {
                 ></img>
               </a>
             </div>
-            <div className="col-md-2 pr-0" id="footer-links">
+            <div className="col-md-2 pr-0 mt-2" id="footer-links">
               <img
                 width="100px"
                 src={"../static/images/vetownedbiz.png"}

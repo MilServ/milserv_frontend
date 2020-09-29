@@ -130,7 +130,7 @@ const Blogs = ({
                   overflowX: "hidden",
                 }}
               >
-                <div className="row" style={{ overflowX: "hidden" }}>
+                {/* <div className="row" style={{ overflowX: "hidden" }}>
                   <div className="col-md-3">
                     <a href="/">
                       <p
@@ -139,6 +139,7 @@ const Blogs = ({
                           paddingLeft: "15px",
                           paddingTop: "10px",
                           fontSize: ".90rem",
+                          marginTop: 85,
                         }}
                       >
                         <span>
@@ -148,12 +149,16 @@ const Blogs = ({
                       </p>
                     </a>
                   </div>
-                </div>
+                </div> */}
                 <div className="row p-0 m-0 mr-0">
                   <div className="col-md-12">
                     <h1
                       className="text-center landing-cta"
-                      style={{ fontSize: "4rem", marginBottom: 35 }}
+                      style={{
+                        fontSize: "4rem",
+                        marginBottom: 35,
+                        marginTop: 90,
+                      }}
                     >
                       MILSERV MEDIA
                     </h1>
@@ -168,7 +173,7 @@ const Blogs = ({
                   }}
                 >
                   <div
-                    className="col-md-12 tagsCol"
+                    className="col-md-8 col-lg-8 col-sm-12 col-xs-12 tagsCol"
                     style={{
                       height: "auto",
                       marginBottom: 20,
@@ -225,7 +230,7 @@ const Blogs = ({
 
 Blogs.getInitialProps = () => {
   let skip = 0;
-  let limit = 2;
+  let limit = 3;
 
   return listBlogsWithCategoriesAndTags(skip, limit).then((data) => {
     if (data.error) {

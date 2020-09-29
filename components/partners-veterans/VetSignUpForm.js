@@ -125,7 +125,7 @@ export default function VetSignUpForm(props) {
   };
 
   return (
-    <div>
+    <div style={{ marginTop: 50 }}>
       <form onSubmit={onSubmit}>
         <h2>
           <b

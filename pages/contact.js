@@ -27,6 +27,7 @@ const Contact = () => {
                   paddingLeft: "10px",
                   paddingTop: "20px",
                   paddingBottom: 0,
+                  marginTop: 50,
                   marginBottom: 0,
                 }}
               >
