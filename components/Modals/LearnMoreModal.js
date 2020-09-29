@@ -60,7 +60,7 @@ export default function LearMoreModal(props) {
         contentLabel="Example Modal"
       >
         <Container>
-          <Row>
+          <Row style={{ marginTop: 190 }}>
             <Col xs={12} s={12} md={12} lg={12}>
               <FontAwesomeIcon
                 icon={faTimesCircle}
