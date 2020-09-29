@@ -22,6 +22,7 @@ const About = () => {
             style={{
               backgroundColor: "whitesmoke",
               paddingBottom: 0,
+
               marginBottom: 0,
             }}
           >
@@ -32,6 +33,7 @@ const About = () => {
                   paddingLeft: "10px",
                   paddingTop: "20px",
                   paddingBottom: 0,
+                  marginTop: 80,
                   marginBottom: 0,
                 }}
               >
@@ -58,7 +60,7 @@ const About = () => {
           </div>
           <div
             className="row"
-            style={{ backgroundColor: "whitesmoke", paddingTop: 20 }}
+            style={{ backgroundColor: "whitesmoke", paddingTop: 10 }}
           >
             <div className="col-md-2 mt-4 mb-2">
               <img
