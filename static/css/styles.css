@@ -619,6 +619,23 @@ input.formStyles {
   margin-bottom: 16px;
   color: white;
 }
+
+.social-svg {
+  width: 85% !important;
+  height: 85% !important;
+  opacity: 0.75;
+  color: #8d54b5 !important;
+}
+.MA,
+.TX,
+.MD,
+.NY {
+  fill: #8d54b5 !important;
+}
+
+.social-svg:hover {
+  opacity: 1;
+}
 @media (max-width: 770px) {
   body {
     width: 100%;

@@ -3,6 +3,7 @@ import { isAuth } from "../actions/auth";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { SocialIcon } from "react-social-icons";
 
 const Footer = () => {
   return (
@@ -68,24 +69,39 @@ const Footer = () => {
               <p className="footer-items">
                 <a href="/veteran-jobs">JOBS</a>
               </p>
+              <h6 className="title" href="/milserv-media">
+                MILSERV MEDIA
+              </h6>
 
               <p className="footer-items">
                 {" "}
-                <a href="#">GIVING BACK</a>
-              </p>
-            </div>
-            <div className="col-md-2 pb-2 pr-0" id="footer-links">
-              <h6 className="title">NEWS</h6>
-              <p className="footer-items">
-                <a href="/milserv-media">MILSERV MEDIA</a>
+                <a href="/categories/blog">BLOG</a>{" "}
               </p>
               <p className="footer-items">
                 {" "}
                 <a href="/categories/press-release">PRESS RELEASES</a>{" "}
               </p>
               <p className="footer-items">
-                <a href="/contact">STAY CONNECTED</a>{" "}
+                <a href="/contact">CONTACT US</a>{" "}
               </p>
+            </div>
+            <div className="col-md-2 pb-2 pr-0" id="footer-links">
+              <h6 className="title">LEGAL</h6>
+              <p className="footer-items">
+                <a href="/termsofuse" target="_blank">
+                  TERMS OF USE
+                </a>{" "}
+              </p>
+              <p className="footer-items">
+                <a href="/privacy" target="_blank">
+                  PRIVACY POLICY
+                </a>{" "}
+              </p>
+              <br />
+              <h6 className="title">STAY CONNECTED</h6>
+
+              <SocialIcon url="https://www.instagram.com/milserv/" />
+              <SocialIcon url="https://www.linkedin.com/company/american-craft-deliveries-milserve/" />
             </div>
             <div className="col-md-1 pb-2 pr-0" id="footer-links">
               <a href="https://dodskillbridge.usalearning.gov/index.htm">

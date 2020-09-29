@@ -23,9 +23,9 @@ const Index = () => {
   return (
     <div style={{ overflow: "hidden" }}>
       <Layout>
-        <section className="p-0 m-0" style={{ overflow: "hidden" }}>
+        <section className="mt-3" style={{ overflow: "hidden" }}>
           <div
-            className="row justify-content-center mt-2 p-0"
+            className="row justify-content-center pt-4"
             style={{
               overflow: "hidden",
             }}
@@ -91,7 +91,7 @@ const Index = () => {
                       </h6>
                       <h6>
                         <em>
-                          We're officially launching our website on 9/21/2020!
+                          We're officially launching our website on 10/1/2020!
                         </em>
                       </h6>
                     </div>
@@ -100,7 +100,7 @@ const Index = () => {
                 <Carousel.Item>
                   <img
                     className="d-block w-100"
-                    src="../static/images/picthree.jpeg"
+                    src="../static/images/pictest.jpg"
                     alt="Third slide"
                   />
 
@@ -112,13 +112,13 @@ const Index = () => {
                       }}
                     >
                       {" "}
-                      <h6>
+                      <h5 style={{ fontWeight: "400" }}>
                         <em>
                           Supporting the Military Community through partnerships
                           with Makers, Retailers, and Distributors of Craft
                           Alcohol
                         </em>
-                      </h6>
+                      </h5>
                     </div>
                   </Carousel.Caption>
                 </Carousel.Item>

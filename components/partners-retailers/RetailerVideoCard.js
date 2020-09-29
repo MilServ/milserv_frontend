@@ -8,7 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ReactPlayer from "react-player";
-
+import JobsModalNY from "../Modals/JobsModaNY";
 const useStyles = makeStyles({
   root: {
     width: "auto",
@@ -79,7 +79,35 @@ export default function RetVideoCard() {
             controls={true}
           />
         </CardActions>
-      </Card>
+      </Card>{" "}
+      <section style={{ textAlign: "center", marginTop: 10 }}>
+        <hr />
+        <h2
+          style={{
+            textAlign: "center",
+          }}
+        >
+          <b
+            style={{
+              color: "whitesmoke",
+            }}
+          >
+            WE'RE HIRING!
+          </b>
+        </h2>
+        <p style={{ fontStyle: "italic", fontWeight: 200, fontSize: "1.2rem" }}>
+          Contact us today to learn more <br />
+          about opportunities at these locations
+        </p>
+        <button className="btn btn-outline-light m-1 p-1" disabled>
+          Maryland
+        </button>
+        <button className="btn btn-outline-light m-1 p-1" disabled>
+          Texas
+        </button>{" "}
+        <JobsModalNY />
+      </section>
+      <br />
     </div>
   );
 }

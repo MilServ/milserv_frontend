@@ -60,7 +60,7 @@ export default function JobsModalNY(props) {
         contentLabel="Example Modal"
       >
         <Container>
-          <Row style={{ justifyContent: "center" }}>
+          <Row style={{ justifyContent: "center", marginTop: 60 }}>
             <Col xs={12} s={12} md={12} lg={12}>
               <FontAwesomeIcon
                 icon={faTimesCircle}

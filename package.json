@@ -49,6 +49,8 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-simple-maps": "^2.1.2",
+    "react-social-icons": "^4.1.0",
+    "react-usa-map": "^1.5.0",
     "reactstrap": "^8.4.1",
     "url-loader": "^4.1.0"
   },

@@ -123,7 +123,9 @@ export default function VetVideoCard() {
         <button className="btn btn-outline-light m-1 p-1" disabled>
           Texas
         </button>{" "}
-        <JobsModalNY />
+        <button className="btn btn-outline-light m-1 p-1" disabled>
+          New York
+        </button>{" "}
       </section>
       <br></br>
     </div>

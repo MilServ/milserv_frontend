@@ -8,6 +8,8 @@ import renderHTML from "react-render-html";
 import moment from "moment";
 import SmallCard from "../../components/blog/SmallCard";
 import DisqusThread from "../../components/DisqusThreads";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
 
 const SingleBlog = ({ blog, query }) => {
   const [related, setRelated] = useState([]);
@@ -64,13 +66,17 @@ const SingleBlog = ({ blog, query }) => {
         <a
           className="mr-1 mt-3"
           style={{
-            backgroundColor: "#383838",
+            backgroundColor: "#8d54b5",
             color: "white",
-            padding: 5,
+            padding: 10,
             width: 50,
+            borderRadius: "4px",
           }}
         >
-          {c.name}
+          <span>
+            <FontAwesomeIcon icon={faArrowAltCircleLeft} />
+          </span>{" "}
+          More {c.name}s
         </a>
       </Link>
     ));
@@ -120,7 +126,26 @@ const SingleBlog = ({ blog, query }) => {
               <div className="container-fluid">
                 <section className="container">
                   <div className="row">
-                    <div className="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                    <div className="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                      <h2 className="pb-1 mb-0 font-weight-bold">
+                        {blog.title}
+                      </h2>
+                      <small>
+                        Written by{" "}
+                        <Link
+                          href={`/profile/${blog.postedBy.username}`}
+                          prefetch={false}
+                        >
+                          <a>
+                            {""}
+                            {blog.postedBy.username}
+                          </a>
+                        </Link>
+                      </small>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                       <img
                         src={`${API}/blog/photo/${blog.slug}`}
                         alt={blog.title}
@@ -128,51 +153,41 @@ const SingleBlog = ({ blog, query }) => {
                         width="100%"
                       />
                       <br />
-                      <div className="lead mt-3 mark p-3">
-                        {/* {showBlogCategories(blog)} */}
-                        <small>
-                          Written by{" "}
-                          <Link
-                            href={`/profile/${blog.postedBy.username}`}
-                            prefetch={false}
-                          >
-                            <a>
-                              {""}
-                              {blog.postedBy.username}
-                            </a>
-                          </Link>
-                        </small>
-                        <br />
-                        <small>
-                          Published {moment(blog.updatedAt).fromNow()}
-                        </small>
-                        <br />
-                        <button className="btn-sm btn btn-outline-dark">
-                          TAGS
-                        </button>
-                        {showBlogTags(blog)}
-                      </div>
+                      <small>
+                        Published {moment(blog.updatedAt).fromNow()}
+                      </small>
+
+                      <br />
                     </div>
-                    <div className="col-md-6 col-lg-6 col-sm-11 col-xs-11 lead">
-                      <h2 className="pb-1 mb-0 font-weight-bold">
-                        {blog.title}
-                      </h2>
+                  </div>
+                  <div className="row">
+                    <div className="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                       {renderHTML(blog.body)}
+                    </div>
+                  </div>
+                  <div className="row center text-center">
+                    <div
+                      className="col-md-12 col-lg-12 col-sm-12 col-xs-12"
+                      style={{ boder: "solid gray 2px" }}
+                    >
+                      <h6>TAGS </h6>
+                      <p> {showBlogTags(blog)}</p>
                     </div>
                   </div>
                 </section>
 
                 <section>
-                  <div className="container">
-                    <div className="pb-3">
-                      <br></br>
-                    </div>
+                  <div className="container mt-3 mb-3">
+                    <div className="pb-3">{showBlogCategories(blog)}</div>
                   </div>
                 </section>
               </div>
 
-              <div className="container pb-5">
-                <h4 className="text-center pt-1 mt-0 pb-5 h2">Related blogs</h4>
+              <div
+                className="container pb-5"
+                style={{ backgroundColor: "whitesmoke", borderRadius: "8px" }}
+              >
+                <h5 className="text-center pt-3 mt-0 pb-5">RELATED ARTICLES</h5>
                 <div className="row">{showRelatedBlog()}</div>
               </div>
 

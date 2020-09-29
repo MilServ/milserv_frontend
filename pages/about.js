@@ -6,6 +6,7 @@ import Biz2Biz from "../components/AboutCards/Biz2Bix";
 import Dir2Consumer from "../components/AboutCards/Dir2Consumer";
 // import OurTeam from "../components/AboutCards/OurTeam";
 import VetTraining from "../components/AboutCards/VetTraining";
+import GeographyModal from "../components/Modals/GeographyModal";
 
 const About = () => {
   return (
@@ -330,9 +331,7 @@ const About = () => {
                 of all the deliveries.
               </p>
               <br></br>
-              <button className="btn btn-sm btn-outline-light mb-5">
-                Check if we're in your neck of the woods!
-              </button>
+              <GeographyModal />
             </div>
           </div>
         </section>
