@@ -115,7 +115,7 @@ const Search = () => {
         className="row justify-content-center mb-1"
         style={{ textAlign: "right", justifyContent: "end" }}
       >
-        <div className="col-md-7 pr-0 pl-0 col-lg-7 m-1">
+        <div className="col-md-7 pr-0 pl-0 col-lg-7 col-sm-12 col-xs-12 m-1">
           <input
             type="search"
             style={{ backgroundColor: "#383838", color: "white" }}
@@ -125,7 +125,7 @@ const Search = () => {
           ></input>
         </div>
 
-        <div className="col-md-4 pl-0 pr-0 col-lg-4 m-1">
+        <div className="col-md-4 pl-0 pr-0 col-lg-4   col-sm-12 col-xs-12 m-1">
           <button
             className="btn btn-block"
             type="submit"

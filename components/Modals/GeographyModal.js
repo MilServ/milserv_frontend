@@ -80,7 +80,7 @@ export default function LearMoreModal(props) {
       >
         <Container>
           <Row>
-            <Col xs={12} s={12} md={12} lg={12} style={{ marginTop: 60 }}>
+            <Col xs={12} s={12} md={12} lg={12} style={{ marginTop: 150 }}>
               <FontAwesomeIcon
                 icon={faTimesCircle}
                 onClick={closeModal}
@@ -93,9 +93,16 @@ export default function LearMoreModal(props) {
             className="LearMoreModal App"
           >
             <Col xs={12} s={12} md={12} lg={12}>
-              <h2 style={{ color: "white" }}>MILSERV LOCATIONS</h2>
-              <small>Map best viewed on desktop computers</small>
+              <h3 style={{ color: "white" }}>MILSERV LOCATIONS</h3>
+              <small>
+                Best viewed on desktop computers or portrait mode on mobile
+                devices.
+              </small>
               {/* <USAMap customize={statesCustomConfig} onClick={mapHandler} /> */}
+            </Col>
+          </Row>
+          <Row style={{ overflowX: "visible" }}>
+            <Col xs={12} s={12} md={12} lg={12} style={{ marginTop: 0 }}>
               <USAMap onClick={mapHandler} />
             </Col>
           </Row>

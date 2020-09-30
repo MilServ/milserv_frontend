@@ -649,9 +649,20 @@ input.formStyles {
   .searchResults {
     margin-top: 10px;
   }
+  .us-state-map {
+    width: 100% !important;
+    height: 100% !important;
+  }
 
   .navbar {
     height: auto;
     min-height: 80px;
+  }
+}
+
+/* To prevent toggler from bisecting milserv brand and search bar */
+@media (min-width: 700px) {
+  .navbar-toggler {
+    margin-left: 100px !important;
   }
 }

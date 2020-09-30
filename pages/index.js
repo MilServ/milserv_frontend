@@ -264,7 +264,7 @@ const Index = () => {
             <div className="col-md-4 mb-2 col-left p-0">
               <img
                 className="text-center"
-                src={"../static/images/servingthose.jpg"}
+                src={"../static/images/overlay.jpg"}
                 width="100%"
                 height="100%"
               ></img>
