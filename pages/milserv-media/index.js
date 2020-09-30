@@ -34,11 +34,11 @@ const Blogs = ({
 
       <meta
         property="og:image"
-        content={`${DOMAIN}/static/images/landing-image.jpg`}
+        content={`${DOMAIN}/static/images/overlay.jpg`}
       />
       <meta
         property="og:image:secure_url"
-        content={`${DOMAIN}/static/images/landing-image.jpg`}
+        content={`${DOMAIN}/static/images/overlay.jpg`}
       />
       <meta property="og:image:type" content="image/jpg" />
       <meta property="fb:app_id" content={`${FB_APP_ID}`} />
