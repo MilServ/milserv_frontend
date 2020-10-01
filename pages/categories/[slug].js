@@ -58,12 +58,15 @@ const Category = ({ category, blogs, query }) => {
                   MilServ {category.name}s
                 </h3>
 
-                {blogs.map((b, i) => (
-                  <div>
-                    <BlogCard key={i} blog={b} />
-                    <hr />
-                  </div>
-                ))}
+                {blogs
+                  .slice(0)
+                  .reverse()
+                  .map((b, i) => (
+                    <div>
+                      <BlogCard key={i} blog={b} />
+                      <hr />
+                    </div>
+                  ))}
 
                 <div></div>
               </div>
