@@ -119,88 +119,39 @@ const Blogs = ({
               className="container-fluid m-0 p-0"
               style={{ overflowX: "hidden" }}
             >
-              <header
-                className="milservMedia container-fluid"
-                style={{
-                  height: 580,
-                  marginRight: 0,
-                  marginLeft: 0,
-                  padding: 0,
-                  width: "100%",
-                  overflowX: "hidden",
-                }}
-              >
-                {/* <div className="row" style={{ overflowX: "hidden" }}>
-                  <div className="col-md-3">
-                    <a href="/">
-                      <p
-                        style={{
-                          color: "white",
-                          paddingLeft: "15px",
-                          paddingTop: "10px",
-                          fontSize: ".90rem",
-                          marginTop: 85,
-                        }}
-                      >
-                        <span>
-                          <FontAwesomeIcon icon={faArrowAltCircleLeft} />
-                        </span>{" "}
-                        Back to MilServ
-                      </p>
-                    </a>
-                  </div>
-                </div> */}
-                <div className="row p-0 m-0 mr-0">
-                  <div className="col-md-12">
-                    <h1
-                      className="text-center landing-cta"
-                      style={{
-                        fontSize: "4rem",
-                        marginBottom: 35,
-                        marginTop: 90,
-                      }}
-                    >
-                      MILSERV MEDIA
-                    </h1>
-                  </div>
-                </div>
-                <div
-                  className="row justify-content-center"
+              <div className="milservMedia" style={{ overflowY: "hidden" }}>
+                <header
+                  className="container-fluid"
                   style={{
-                    height: "auto",
-                    marginBottom: 8,
-                    paddingBottom: 10,
+                    height: 300,
+                    marginRight: 0,
+                    marginLeft: 0,
+                    padding: 0,
+                    width: "100%",
+                    overflowX: "hidden",
+                    backgroundColor: "rgba(0,0,0,50%)",
                   }}
                 >
-                  <div
-                    className="col-md-8 col-lg-8 col-sm-12 col-xs-12 tagsCol"
-                    style={{
-                      height: "auto",
-                      marginBottom: 20,
-                      textAlign: "center",
-                      padding: 15,
-                    }}
-                  >
-                    <h5
-                      style={{
-                        fontWeight: "900",
-                        marginBottom: "0px",
-                        backgroundColor: "rgba(0,0,0,0.50)",
-                        padding: 5,
-                        color: "white",
-                      }}
-                    >
-                      TAGS
-                    </h5>
-                    {showAllTags()}
+                  <div className="row p-0 m-0 mr-0">
+                    <div className="col-md-12">
+                      <h1
+                        className="text-center landing-cta"
+                        style={{
+                          fontSize: "4rem",
+                          marginTop: 110,
+                        }}
+                      >
+                        MILSERV MEDIA
+                      </h1>
+                    </div>
                   </div>
-                </div>
-              </header>
+                </header>
+              </div>
             </div>
             <div className="container-fluid">
               <hr />
 
-              <div className="row pl-3">
+              <div className="row p-2">
                 <div
                   className="col-md-12"
                   style={{ borderRight: "solid lightgray 1px" }}
@@ -218,6 +169,18 @@ const Blogs = ({
                   style={{ borderRight: "solid lightgray 1px" }}
                 >
                   {loadMoreButton()}
+                </div>
+                <div
+                  className="col-md-12 text-center"
+                  style={{
+                    border: "solid lightgray 1px",
+                    padding: 10,
+                    borderRadius: "8px",
+                  }}
+                >
+                  <h5>ALL TAGS</h5>
+                  <hr className="m-0 p-0" />
+                  {showAllTags()}
                 </div>
               </div>
             </div>
