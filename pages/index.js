@@ -79,7 +79,7 @@ const Index = () => {
                   /> */}
 
                   <Carousel.Caption>
-                    <div
+                    {/* <div
                       style={{
                         backgroundColor: "rgba(141, 84, 181, 0.60)",
                         padding: 1,
@@ -98,7 +98,7 @@ const Index = () => {
                         Labor for our commitment to recruit, hire, and retain
                         Veterans.
                       </h6>
-                    </div>
+                    </div> */}
                   </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>

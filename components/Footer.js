@@ -104,14 +104,14 @@ const Footer = () => {
               <SocialIcon url="https://www.linkedin.com/company/american-craft-deliveries-milserve/" />
             </div>
             <div className="col-md-1 p-0 mt-3" id="footer-links">
-              <a href="  https://www.hirevets.gov/" target="_blank">
+              {/* <a href="  https://www.hirevets.gov/" target="_blank">
                 <img
                   width="70px"
                   style={{ borderRadius: "50%" }}
                   src={"../static/images/hirevets.jpg"}
                   alt="HIRE Vets Platinum Award logo"
                 />
-              </a>
+              </a> */}
             </div>
             <div className="col-md-1 p-0 mt-2" id="footer-links">
               <a
