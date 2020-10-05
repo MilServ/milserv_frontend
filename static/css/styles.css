@@ -362,11 +362,11 @@ span.navbar-toggler-icon {
 .card {
   margin: 0.5rem 0.5rem !important;
   font-weight: bold !important;
-  height: auto !important;
+  height: 202px !important;
   padding-right: 10;
   padding-left: 10;
-  min-width: 285px !important;
-  max-width: auto !important;
+  min-width: 265px !important;
+  max-width: 300px !important;
   color: #ffffff !important;
   border-radius: 1px !important;
   position: relative !important;

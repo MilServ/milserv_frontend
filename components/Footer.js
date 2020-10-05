@@ -10,7 +10,7 @@ const Footer = () => {
     <div className="footer-wrapper">
       <footer color="blue" className="font-small pt-4 mt-4 pb-4">
         <div className="footer-container">
-          <div className="row text-center">
+          <div className="row text-center p-2">
             <div className="col-md-3 pb-2 footerLogo pr-0">
               <h3 style={{ color: "#8d54b5", marginBottom: 0 }}>MILSERV</h3>
               <p style={{ color: "#8d54b5", marginBottom: 1 }}>
@@ -103,22 +103,35 @@ const Footer = () => {
               <SocialIcon url="https://www.instagram.com/milserv/" />
               <SocialIcon url="https://www.linkedin.com/company/american-craft-deliveries-milserve/" />
             </div>
-            <div className="col-md-1 pb-2 pr-0 mt-3" id="footer-links">
-              <a href="https://dodskillbridge.usalearning.gov/index.htm">
+            <div className="col-md-1 p-0 mt-3" id="footer-links">
+              <a href="  https://www.hirevets.gov/" target="_blank">
                 <img
-                  width="120px"
-                  height="74px"
-                  src={"../static/images/skillbridge.png"}
-                  alt="Veteran Owned Business logo"
-                ></img>
+                  width="70px"
+                  style={{ borderRadius: "50%" }}
+                  src={"../static/images/hirevets.jpg"}
+                  alt="HIRE Vets Platinum Award logo"
+                />
               </a>
             </div>
-            <div className="col-md-2 pr-0 mt-2" id="footer-links">
+            <div className="col-md-1 p-0 mt-2" id="footer-links">
+              <a
+                href="https://dodskillbridge.usalearning.gov/index.htm"
+                target="_blank"
+              >
+                <img
+                  width="100px"
+                  height="60px"
+                  src={"../static/images/skillbridge.png"}
+                  alt="Veteran Owned Business logo"
+                />
+              </a>
+            </div>
+            <div className="col-md-1 p-0 mt-2" id="footer-links">
               <img
-                width="100px"
+                width="75px"
                 src={"../static/images/vetownedbiz.png"}
                 alt="Veteran Owned Business logo"
-              ></img>
+              />
             </div>
           </div>
         </div>

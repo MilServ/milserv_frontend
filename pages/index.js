@@ -72,11 +72,16 @@ const Index = () => {
                     src="../static/images/fourbeers.jpg"
                     alt="Third slide"
                   />
+                  {/* <img
+                    className="d-block w-100"
+                    src="../static/images/hirevetsbig.png"
+                    alt="Third slide"
+                  /> */}
 
                   <Carousel.Caption>
                     <div
                       style={{
-                        backgroundColor: "rgba(0,0,0,.60)",
+                        backgroundColor: "rgba(141, 84, 181, 0.60)",
                         padding: 1,
                       }}
                     >
@@ -86,13 +91,12 @@ const Index = () => {
 
                           marginBottom: 0,
                         }}
-                      >
-                        Welcome & Stay tuned!
-                      </h6>
+                      ></h6>
                       <h6>
-                        <em>
-                          We're officially launching our website on 10/1/2020!
-                        </em>
+                        IN THE NEWS: OCT 2020 - MilServ ACD Corp. receives
+                        HIREVets Platinum Medallion Award from US Departnment of
+                        Labor for our commitment to recruit, hire, and retain
+                        Veterans.
                       </h6>
                     </div>
                   </Carousel.Caption>
@@ -165,8 +169,8 @@ const Index = () => {
             </h3>
           </div>
           <div
-            className="row program-your-career text-center justify-content-center pl-3"
-            style={{ paddingBottom: "50px" }}
+            className="row program-your-career text-center justify-content-center pl-3 pr-3"
+            style={{ paddingBottom: "60px" }}
           >
             <div
               className="col-md-3 col-sm-10 text-center col-xs-10 mb-2 col-left p-0"

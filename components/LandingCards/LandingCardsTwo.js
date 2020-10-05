@@ -24,7 +24,10 @@ export default function LandingCardsOne() {
       className="card text-center"
     >
       <img className="landingTop" src={"../static/images/retailers.jpg"} />
-      <button className="btn btn-sm btn-light landing-page-parnterBtns">
+      <button
+        className="btn btn-sm btn-light landing-page-parnterBtns"
+        style={{ paddingTop: ".10rem" }}
+      >
         <b>RETAILERS</b>
       </button>
     </Grid>
