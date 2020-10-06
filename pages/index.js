@@ -173,7 +173,7 @@ const Index = () => {
             style={{ paddingBottom: "60px" }}
           >
             <div
-              className="col-md-3 col-lg-3 col-sm-12  col-xs-12 text-center  justify-content-center mb-2 p-0"
+              className="col-md-3 col-lg-3 col-sm-10 col-xs-10 text-center mb-2 p-0"
               style={{ overflowY: "hidden" }}
             >
               <a href="/veteran-jobs">
@@ -189,7 +189,7 @@ const Index = () => {
               </a>
             </div>
             <div
-              className="col-md-3 col-sm-10 col-xs-10 mb-2 col-right p-0"
+              className="col-md-3 col-lg-3 col-sm-10 col-xs-10 mb-2 col-right p-0"
               style={{ overflowY: "hidden" }}
             >
               <a href="/distributors">
@@ -197,7 +197,7 @@ const Index = () => {
               </a>
             </div>
             <div
-              className="col-md-3 col-sm-10 col-xs-10 mb-2 p-0"
+              className="col-md-3 col-lg-3 col-sm-10 col-xs-10 mb-2 p-0"
               id="partner"
               style={{ overflowY: "hidden" }}
             >
