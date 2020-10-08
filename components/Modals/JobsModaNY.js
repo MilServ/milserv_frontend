@@ -17,7 +17,7 @@ const customStyles = {
     overflowY: "scroll",
     maxHeight: "calc(100vh - 5px)",
     color: "white",
-    backgroundColor: "rgba(255,255,255,.80)",
+    backgroundColor: "white",
     transform: "translate(-50%, -50%)",
     zIndex: 3,
   },
@@ -65,12 +65,12 @@ export default function JobsModalNY(props) {
         contentLabel="Example Modal"
       >
         <Container>
-          <Row style={{ justifyContent: "center", marginTop: 60 }}>
+          <Row style={{ justifyContent: "center", marginTop: 130 }}>
             <Col xs={12} s={12} md={12} lg={12}>
               <FontAwesomeIcon
                 icon={faTimesCircle}
                 onClick={closeModal}
-                style={{ cursor: "pointer", color: "#383838" }}
+                style={{ cursor: "pointer", color: "#383838", marginTop: 10 }}
               />
             </Col>
           </Row>
@@ -236,6 +236,13 @@ export default function JobsModalNY(props) {
                   Fill Out Form For More Info
                 </button>
               </a>
+              <Col xs={12} s={12} md={12} lg={12}>
+                <FontAwesomeIcon
+                  icon={faTimesCircle}
+                  onClick={closeModal}
+                  style={{ cursor: "pointer", color: "white", marginTop: 10 }}
+                />
+              </Col>
             </Col>
           </Row>
         </Container>
