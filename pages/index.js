@@ -7,6 +7,7 @@ import LandingCardsTwo from "../components/LandingCards/LandingCardsTwo";
 import LandingCardsThree from "../components/LandingCards/LandingCardsThree";
 import LandingCardsFour from "../components/LandingCards/LandingCardsFour";
 import LearnMoreModal from "../components/Modals/LearnMoreModal";
+import OurLocationsModal from "../components/Modals/GeographyModal";
 
 const Index = () => {
   const [index, setIndex] = useState(0);
@@ -196,6 +197,7 @@ const Index = () => {
                 <LandingCardsThree />
               </a>
             </div>
+
             <div
               className="col-md-3 col-lg-3 col-sm-10 col-xs-10 mb-2 p-0"
               id="partner"
@@ -205,12 +207,14 @@ const Index = () => {
                 <LandingCardsFour />
               </a>
             </div>
+            <OurLocationsModal />
           </div>
         </section>
+
         <section>
           <div className="row pl-2">
             <div
-              className="col-md-8 mb-2 aboutSections"
+              className="col-md-8 aboutSections"
               style={{
                 backgroundColor: "#8d54b5",
                 padding: 20,
@@ -265,7 +269,7 @@ const Index = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-md-4 mb-2 col-left p-0">
+            <div className="col-md-4 col-left p-0">
               <img
                 className="text-center"
                 src={"../static/images/overlay.jpg"}

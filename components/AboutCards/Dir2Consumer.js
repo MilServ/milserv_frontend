@@ -35,16 +35,17 @@ export default function Dir2Consumer() {
           <PeopleIcon style={{ fontSize: 100, color: "#383838" }} />
         </CardMedia>
 
-        <Typography style={{ fontSize: "1.5rem", color: "#383838" }}>
+        <Typography style={{ fontSize: "1.2rem", color: "#383838" }}>
           Direct to Consumer
         </Typography>
-
-        {/* <button
-          className="btn btn-warning"
-          style={{ position: "absolute", bottom: 25, left: 25 }}
-        >
-          Read More
-        </button> */}
+        <a href="/veteran-jobs">
+          <button
+            className="btn btn-warning btn-sm"
+            style={{ position: "absolute", bottom: 10, left: 10 }}
+          >
+            Learn More
+          </button>
+        </a>
       </CardContent>
     </Grid>
     // </Link>

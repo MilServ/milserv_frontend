@@ -6,7 +6,7 @@ import Biz2Biz from "../components/AboutCards/Biz2Bix";
 import Dir2Consumer from "../components/AboutCards/Dir2Consumer";
 // import OurTeam from "../components/AboutCards/OurTeam";
 import VetTraining from "../components/AboutCards/VetTraining";
-import GeographyModal from "../components/Modals/GeographyModal";
+import OurLocationsModal from "../components/Modals/GeographyModal";
 
 const About = () => {
   return (
@@ -296,6 +296,7 @@ const About = () => {
               backgroundColor: "#383838",
               color: "white",
               paddingTop: 15,
+              paddingBottom: 30,
             }}
           >
             <div
@@ -332,8 +333,9 @@ const About = () => {
                 platform and let the orders start rolling in while we take care
                 of all the deliveries.
               </p>
-              <br></br>
-              <GeographyModal />
+
+              <OurLocationsModal />
+              <br />
             </div>
           </div>
         </section>

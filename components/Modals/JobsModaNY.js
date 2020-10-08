@@ -4,6 +4,7 @@ import { withStyles, makeStyles } from "@material-ui/core/styles";
 import Modal from "react-modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
+import Button from "@material-ui/core/Button";
 
 //customStyles is props for Modal
 const customStyles = {
@@ -48,9 +49,13 @@ export default function JobsModalNY(props) {
 
   return (
     <>
-      <button className="btn btn-outline-light btn-md" onClick={openModal}>
-        New York
-      </button>
+      <Button
+        variant="contained"
+        onClick={openModal}
+        style={{ marginTop: "20px" }}
+      >
+        <b>Our Services</b>
+      </Button>
 
       <Modal
         isOpen={modalIsOpen}
@@ -80,7 +85,6 @@ export default function JobsModalNY(props) {
                 textAlign: "left",
                 padding: "20px",
               }}
-              className="ny"
             >
               <div style={{ backgroundColor: "rgba(255,255,255,.90)" }}>
                 <img src={"../../static/images/owllogo.jpg"} width="30%" />
@@ -177,9 +181,6 @@ export default function JobsModalNY(props) {
                   }}
                 >
                   <em>Deliveries 6 / 7 days a week!</em>
-                </p>
-                <p style={{ color: "#383838" }}>
-                  <em>WE'RE NEW YORK'S SOLUTION TO MORE BUSINESS!</em>
                 </p>
               </div>
             </Col>

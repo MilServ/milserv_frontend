@@ -5,10 +5,15 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
-import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowAltCircleLeft,
+  faTruck,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ReactPlayer from "react-player";
 import JobsModalNY from "../Modals/JobsModaNY";
+import OurLocationsModal from "../../components/Modals/GeographyModal";
+
 const useStyles = makeStyles({
   root: {
     width: "auto",
@@ -82,29 +87,14 @@ export default function RetVideoCard() {
       </Card>{" "}
       <section style={{ textAlign: "center", marginTop: 10 }}>
         <hr />
-        <h2
-          style={{
-            textAlign: "center",
-          }}
-        >
-          <b
-            style={{
-              color: "whitesmoke",
-            }}
-          >
-            WE'RE HIRING!
-          </b>
-        </h2>
         <p style={{ fontStyle: "italic", fontWeight: 200, fontSize: "1.2rem" }}>
-          Contact us today to learn more <br />
-          about opportunities at these locations
+          <FontAwesomeIcon icon={faTruck} /> Contact us today to learn how{" "}
+          <br />
+          we can help you drive more business.
         </p>
-        <button className="btn btn-outline-light m-1 p-1" disabled>
-          Maryland
-        </button>
-        <button className="btn btn-outline-light m-1 p-1" disabled>
-          Texas
-        </button>{" "}
+
+        <OurLocationsModal />
+        {"  "}
         <JobsModalNY />
       </section>
       <br />

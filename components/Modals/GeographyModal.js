@@ -3,8 +3,9 @@ import { Container, Row, Col } from "react-grid-system";
 import { withStyles, makeStyles } from "@material-ui/core/styles";
 import Modal from "react-modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
+import { faTimesCircle, faFlagUsa } from "@fortawesome/free-solid-svg-icons";
 import USAMap from "react-usa-map";
+import Button from "@material-ui/core/Button";
 
 //customStyles is props for Modal
 const customStyles = {
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function LearMoreModal(props) {
+export default function OurLocationsModal(props) {
   const classes = useStyles();
   const [modalIsOpen, setIsOpen] = useState(false);
   function openModal() {
@@ -66,9 +67,14 @@ export default function LearMoreModal(props) {
 
   return (
     <>
-      <button className="btn btn-outline-light btn-md" onClick={openModal}>
-        Check if we're in your neck of the woods!
-      </button>
+      <Button
+        variant="contained"
+        onClick={openModal}
+        style={{ marginTop: "20px" }}
+      >
+        <FontAwesomeIcon icon={faFlagUsa} />{" "}
+        <b style={{ paddingLeft: 2 }}> OUR LOCATIONS</b>
+      </Button>
 
       <Modal
         isOpen={modalIsOpen}
@@ -80,7 +86,14 @@ export default function LearMoreModal(props) {
       >
         <Container>
           <Row>
-            <Col xs={12} s={12} md={12} lg={12} style={{ marginTop: 150 }}>
+            <Col
+              className="geoModal"
+              xs={12}
+              s={12}
+              md={12}
+              lg={12}
+              style={{ marginTop: 90 }}
+            >
               <FontAwesomeIcon
                 icon={faTimesCircle}
                 onClick={closeModal}
@@ -92,12 +105,48 @@ export default function LearMoreModal(props) {
             style={{ justifyContent: "center" }}
             className="LearMoreModal App"
           >
-            <Col xs={12} s={12} md={12} lg={12}>
-              <h3 style={{ color: "white" }}>MILSERV LOCATIONS</h3>
-              <small>
-                Best viewed on desktop computers or portrait mode on mobile
-                devices.
-              </small>
+            <Col
+              xs={12}
+              s={12}
+              md={12}
+              lg={12}
+              style={{
+                margin: "0",
+                textAlign: "center",
+              }}
+            >
+              <img
+                src={"../../static/images/owllogo.jpg"}
+                width="50px"
+                style={{ textAlign: "center", borderRadius: "6px" }}
+              />
+            </Col>
+          </Row>
+          <Row
+            style={{ justifyContent: "center" }}
+            className="LearMoreModal App"
+          >
+            <Col
+              xs={12}
+              s={12}
+              md={12}
+              lg={12}
+              style={{
+                margin: "0",
+                textAlign: "center",
+              }}
+            >
+              <h3
+                style={{
+                  color: "white",
+                  marginBottom: "0px",
+                  paddingBottom: "0px",
+                  fontWeight: "700",
+                }}
+              >
+                MILSERV LOCATIONS
+              </h3>
+              <small style={{ lineHeight: "-1" }}>milserv.com</small>
               {/* <USAMap customize={statesCustomConfig} onClick={mapHandler} /> */}
             </Col>
           </Row>

@@ -650,6 +650,10 @@ input.formStyles {
   .searchResults {
     margin-top: 10px;
   }
+
+  .geoModal {
+    margin-top: 150px !important;
+  }
   .us-state-map {
     width: 100% !important;
     height: 100% !important;
