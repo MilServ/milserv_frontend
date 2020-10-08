@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function JobsModalNY(props) {
+export default function JobsModal(props) {
   const classes = useStyles();
   const [modalIsOpen, setIsOpen] = useState(false);
   function openModal() {
@@ -49,13 +49,13 @@ export default function JobsModalNY(props) {
 
   return (
     <>
-      <Button
-        variant="contained"
+      <button
+        className="btn btn-warning btn-sm"
         onClick={openModal}
-        style={{ marginTop: "20px" }}
+        style={{ position: "absolute", bottom: 10, left: 10 }}
       >
-        <b>Our Services</b>
-      </Button>
+        Learn More
+      </button>
 
       <Modal
         isOpen={modalIsOpen}

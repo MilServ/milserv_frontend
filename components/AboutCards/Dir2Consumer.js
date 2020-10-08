@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Link from "next/link";
 import PeopleIcon from "@material-ui/icons/People";
+import JobsModal from "../../components/Modals/JobsModal";
 import {
   Card,
   CardContent,
@@ -38,14 +39,7 @@ export default function Dir2Consumer() {
         <Typography style={{ fontSize: "1.2rem", color: "#383838" }}>
           Direct to Consumer
         </Typography>
-        <a href="/veteran-jobs">
-          <button
-            className="btn btn-warning btn-sm"
-            style={{ position: "absolute", bottom: 10, left: 10 }}
-          >
-            Learn More
-          </button>
-        </a>
+        <JobsModal />
       </CardContent>
     </Grid>
     // </Link>
