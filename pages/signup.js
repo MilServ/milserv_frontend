@@ -1,6 +1,9 @@
 import Layout from "../components/Layout";
 import SignupComponent from "../components/auth/SignupComponent";
 
+// Signup Component commented out to prevent public access
+
+
 const Signup = () => {
   return (
     <div style={{ overflow: "hidden" }}>
@@ -8,7 +11,7 @@ const Signup = () => {
         <div className="signinPage container-fluid">
           <div className="row">
             <div className="col-md-12">
-              <SignupComponent />
+              {/* <SignupComponent /> */}
             </div>
           </div>
         </div>
