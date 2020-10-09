@@ -5,14 +5,7 @@ import { API } from "../../config";
 import Moment from "react-moment";
 import Axios from "axios";
 import moment from "moment";
-import {
-  Card,
-  CardContent,
-  CardActions,
-  Typography,
-  Grid,
-  Button,
-} from "@material-ui/core";
+import Collapsible from "react-collapsible";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import EmailIcon from "@material-ui/icons/EmailOutlined";
 import PhoneIcon from "@material-ui/icons/Phone";
@@ -77,119 +70,129 @@ export default class DistList extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="row" style={{ marginBottom: 50 }}>
-          <div className="col-md-4">
-            <Grid
-              item
-              component={Card}
-              id="distributors-color"
-              style={{ color: "white", marginBottom: "10px" }}
+      <div
+        className="container"
+        style={{
+          backgroundColor: "lightgray",
+          color: "black",
+          padding: 15,
+          overflowY: "visible",
+          borderRadius: "8px",
+        }}
+      >
+        <div className="row" style={{ marginBottom: 20 }}>
+          <div className="col-md-6">
+            <h4>TOTAL DISTRIBUTORS:</h4>
+            <h2
+              style={{
+                backgroundColor: "#383838",
+                margin: 0,
+                color:"white",
+                padding: 10,
+                display: "inline-block",
+                borderRadius: "4px",
+              }}
             >
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h1">
-                  TOTAL DISTRIBUTORS
-                </Typography>
-
-                <Typography gutterBottom variant="h2" component="h2">
-                  {this.state.distributors.length}
-                </Typography>
-              </CardContent>
-            </Grid>
+              {this.state.distributors.length}
+              {/* {this.state.buyers.length} */}
+              {/* {this.state.buyers.length || <p> No Applicants to Display </p>} */}
+            </h2>
           </div>
           <hr></hr>
+          <div className="col-md-6">
+            <h4>LAST SUBMISSION</h4>
 
-          <div className="col-md-4">
-            <Grid
-              item
-              component={Card}
-              xs={12}
-              s={12}
-              md={12}
-              style={{ color: "white", marginTop: 2 }}
-              id="distributors-color"
+            <h3
+              style={{
+                backgroundColor: "#383838",
+                margin: 0,
+                color:"white",
+                padding: 10,
+                display: "inline-block",
+                borderRadius: "4px",
+              }}
             >
-              <CardContent>
-
-              <Typography gutterBottom variant="h5" component="h1">
-              <p>LAST SUBMISSION</p>
-                </Typography>
-<hr style={{backgroundColor:"white"}}/>
-                <Typography gutterBottom variant="h4" component="h2">              
-                  {moment(this.state.lastDate).format("L")}
-                </Typography>
-              </CardContent>
-            </Grid>
+              {moment(this.state.lastDate).format("L")}
+            </h3>
           </div>
+          <hr />
         </div>
+
         {this.state.distributors.length ? (
-          <div className="row">
-            <div className="col-md-4 col-sm-12 col-xs-12">
+          <div className="row" style={{ padding: 10 }}>
+           <hr/>
+            <div className="col-md-12 col-sm-12 col-xs-12">
               {this.state.distributors
                 .slice(0)
                 .reverse()
                 .map((dists) => (
-                  <Grid
-                    item
-                    key={dists._id}
-                    component={Card}
-                    className="vetATSCards"
-                    style={{ borderTop: "solid goldenrod 15px" }}
+                  <Collapsible
+                    trigger={
+                      <h5
+                        style={{
+                          cursor: "pointer",
+                          padding: 5,
+                          border: "solid white 1px",
+                          borderRadius: "4px",
+                        }}
+                      >
+                           <AccountCircleIcon style={{ marginRight: "4px" }} />
+                        {dists.distCoName}
+                      </h5>
+                    }
+                    style={{ color: "white", cursor: "pointer" }}
                   >
-                    <CardContent>
-                      <Typography style={{ fontSize: ".85rem" }}>
-                        COMPANY NAME
-                      </Typography>
-                      {dists.distCoName.toUpperCase()}
-                      <hr></hr>
-                      <Typography style={{ fontSize: ".85rem" }}>
-                        CONTACT PERSON
-                      </Typography>
-                      {dists.distFirstName.toUpperCase()}{" "}
-                      {dists.distLastName.toUpperCase()}
-                      <hr></hr>
-                      <Typography>
-                        <EmailIcon style={{ marginRight: 10 }} />
-                        {dists.distEmail}
-                      </Typography>
-                      <Typography>
-                        <PhoneIcon style={{ marginRight: 10 }} />
-                        {dists.distPhoneNumber}
-                      </Typography>
-                      <hr></hr>
-                      <Typography style={{ fontSize: ".85rem" }}>
-                        STATE(s) LICENSED IN:
-                        {dists.distLicState.map((states) => (
+                    <section
+                      style={{ backgroundColor: "#whitesmoke", padding: 10 }}
+                    >
+                      <p>
+                        <b>Contact Person: </b>
+                        {dists.distLastName.toUpperCase()}, {" "}
+                        {dists.distFirstName.toUpperCase()}
+                     
+                      </p>
+                      <p>
+                      <EmailIcon/>:{" "}
+                      {dists.distEmail}           
+                      </p>
+                      <p>
+                      <PhoneIcon/>:{" "}
+                      {dists.distPhoneNumber}  
+                      </p>
+                      <p>
+                      State(s) Licensed in:
+                      {dists.distLicState.map((states) => (
                           <ul>
                             <li>{states.value}</li>
                           </ul>
                         ))}
-                      </Typography>
-                      {/* <Typography variant="body2" component="p">
-                      {vets.careerInterest}
-                    </Typography> */}
-                      <hr></hr>
-                      <Typography style={{ fontSize: ".85rem" }}>
-                        DATE OF SUBMISSION
-                      </Typography>
-                      <Moment format="MM/DD/YYYY, h:mm a">{dists.date}</Moment>
-                      {/* <button onClick={() => this.deleteNumber(vets._id)} /> */}
-                    </CardContent>
-                    <CardActions>
-                      <Button size="small">
-                        {"  "}
-                        <AccountCircleIcon style={{ marginRight: "4px" }} />
-                        {"  "} MORE INFO
-                      </Button>
-                    </CardActions>
-                  </Grid>
+                      </p>
+                      <p>
+                        <b>State Alcohol Lic No: </b>
+                        {dists.distStateLicNo}
+                      </p>
+                      <p>
+                        <b>Date:</b>{" "}
+                        <Moment format="MM/DD/YYYY, h:mm a">
+                          {dists.date}
+                        </Moment>
+                      </p>
+                      <p>
+                        <b>Remarks:</b>{" "}
+                       {dists.distAdditionalInfo}
+                      </p>
+                    </section>
+                  </Collapsible>
                 ))}
             </div>
           </div>
         ) : (
-          <h3>No Distributors to Display :(</h3>
+          <h3>No Applicants to Display :(</h3>
         )}
       </div>
     );
   }
 }
+
+
+

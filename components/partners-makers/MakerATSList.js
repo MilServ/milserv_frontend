@@ -5,19 +5,10 @@ import { API } from "../../config";
 import Moment from "react-moment";
 import Axios from "axios";
 import moment from "moment";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faBeer } from "@fortawesome/free-solid-svg-icons";
-import {
-  Card,
-  CardContent,
-  CardActions,
-  Typography,
-  Grid,
-  Button,
-} from "@material-ui/core";
 import AccountCircleIcon from "@material-ui/icons/AccountCircleOutlined";
 import EmailIcon from "@material-ui/icons/EmailOutlined";
 import PhoneIcon from "@material-ui/icons/Phone";
+import Collapsible from "react-collapsible";
 
 // The ...props means, spread all of the passed props onto this element
 
@@ -79,128 +70,126 @@ export default class MakerList extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="row" style={{ marginBottom: 50 }}>
-          <div className="col-md-4">
-            <Grid
-              item
-              component={Card}
-              id="retailers-color"
-              style={{ color: "white", marginBottom: "10px" }}
+      <div
+        className="container"
+        style={{
+          backgroundColor: "lightgray",
+          color: "black",
+          padding: 15,
+          overflowY: "visible",
+          borderRadius: "8px",
+        }}
+      >
+        <div className="row" style={{ marginBottom: 20 }}>
+          <div className="col-md-6">
+            <h4>TOTAL MAKERS:</h4>
+            <h2
+              style={{
+                backgroundColor: "#383838",
+                color:"white",
+                margin: 0,
+                padding: 10,
+                display: "inline-block",
+                borderRadius: "4px",
+              }}
             >
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h1">
-                  TOTAL MAKERS
-                </Typography>
-
-                <Typography gutterBottom variant="h2" component="h2">
-                  {this.state.makers.length}
-                </Typography>
-              </CardContent>
-            </Grid>
+              {this.state.makers.length}
+              {/* {this.state.buyers.length} */}
+              {/* {this.state.buyers.length || <p> No Applicants to Display </p>} */}
+            </h2>
           </div>
           <hr></hr>
+          <div className="col-md-6">
+            <h4>LAST SUBMISSION</h4>
 
-          <div className="col-md-4">
-            <Grid
-              item
-              component={Card}
-              // xs={12}
-              // s={12}
-              // md={12}
-              style={{ color: "white", marginTop: 2 }}
-              id="retailers-color"
+            <h3
+              style={{
+                backgroundColor: "#383838",
+                margin: 0,
+                padding: 10,
+                color:"white",
+                display: "inline-block",
+                borderRadius: "4px",
+              }}
             >
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h1">
-                    
-                <p>LAST SUBMISSION</p>
-                </Typography>
-<hr style={{backgroundColor:"white"}}/>
-                <Typography gutterBottom variant="h4" component="h2">  
-
-                
-                  {moment(this.state.lastDate).format("L")}
-                </Typography>
-              </CardContent>
-            </Grid>
+              {moment(this.state.lastDate).format("L")}
+            </h3>
           </div>
+          <hr />
         </div>
+
         {this.state.makers.length ? (
-          <div className="row">
-            <div className="col-md-4 col-sm-12 col-xs-12">
+          <div className="row" style={{ padding: 10 }}>
+            <h3>MAKERS LEADS</h3>
+            <div className="col-md-12 col-sm-12 col-xs-12">
               {this.state.makers
                 .slice(0)
                 .reverse()
-                .map((rets) => (
-                  <Grid
-                    item
-                    key={rets._id}
-                    component={Card}
-                    // xs={12}
-                    // s={6}
-                    // md={3}
-                    className="vetATSCards"
-                    style={{ borderTop: "solid darkred 15px" }}
+                .map((maker) => (
+                  <Collapsible
+                    trigger={
+                      <h4
+                        style={{
+                          cursor: "pointer",
+                          padding: 5,
+                          border: "solid white 1px",
+                          borderRadius: "4px",
+                        }}
+                      >
+                          <AccountCircleIcon style={{ marginRight: "4px" }} />
+                        {maker.makerCoName}
+                      </h4>
+                    }
+                    style={{ color: "white", cursor: "pointer" }}
                   >
-                    <CardContent>
-                      <Typography style={{ fontSize: ".85rem" }}>
-                        COMPANY NAME
-                      </Typography>
-                      {rets.makerCoName.toUpperCase()}
-                      <hr></hr>
-                      <Typography style={{ fontSize: ".85rem" }}>
-                        CONTACT PERSON
-                      </Typography>
-                      {rets.makerFirstName.toUpperCase()}{" "}
-                      {rets.makerLastName.toUpperCase()}
-                      <hr></hr>
-                      <Typography>
-                        <EmailIcon style={{ marginRight: 10 }} />
-                        {rets.makerEmail}
-                      </Typography>
-                      <Typography>
-                        <PhoneIcon style={{ marginRight: 10 }} />
-                        {rets.makerPhoneNumber}
-                      </Typography>
-                      <hr></hr>
-                      <Typography style={{ fontSize: ".85rem" }}>
-                        STATE(s) LICENSED IN:
-                        {rets.makerLicState.map((states) => (
+                    <section
+                      style={{ backgroundColor: "#383838", padding: 10 }}
+                    >
+                      <p>
+                        <b>Contact Person: </b>
+                        {maker.makerLastName.toUpperCase()},{" "}
+                        {maker.makerFirstName.toUpperCase()}
+                      </p>
+                      <p>
+                      <EmailIcon style={{ marginRight: 10 }} />
+                        {maker.makerEmail}                     
+                      </p>
+                      <p>
+                      <PhoneIcon style={{ marginRight: 10 }} />
+                        {maker.makerPhoneNumber}            
+                      </p>
+                      <p>
+                      State(s) Licensed in:
+                        {maker.makerLicState.map((states) => (
                           <ul>
                             <li>{states.value}</li>
                           </ul>
                         ))}
-                      </Typography>
-                      <Typography style={{ fontSize: ".85rem" }}>
-                        STATE LIC NO:
-                        {rets.makerStateLicNo}
-                      </Typography>
-                      {/* <Typography variant="body2" component="p">
-                      {vets.careerInterest}
-                    </Typography> */}
-                      <hr></hr>
-                      <Typography style={{ fontSize: ".85rem" }}>
-                        DATE OF SUBMISSION
-                      </Typography>
-                      <Moment format="MM/DD/YYYY, h:mm a">{rets.date}</Moment>
-                      {/* <button onClick={() => this.deleteNumber(vets._id)} /> */}
-                    </CardContent>
-                    <CardActions>
-                      <Button size="small">
-                        {"  "}
-                        <AccountCircleIcon style={{ marginRight: "4px" }} />
-                        {"  "} MORE INFO
-                      </Button>
-                    </CardActions>
-                  </Grid>
+                      </p>
+                      <p>
+                        <b>State Alcohol Lic No: </b>
+                        {maker.makerStateLicNo}
+                      </p>
+                      <p>
+                        <b>Date:</b>{" "}
+                        <Moment format="MM/DD/YYYY, h:mm a">
+                          {maker.date}
+                        </Moment>
+                      </p>
+                      <p>
+                        <b>Remarks:</b>{" "}
+                       {maker.makerAdditionalInfo}
+                      </p>
+                    </section>
+                  </Collapsible>
                 ))}
             </div>
           </div>
         ) : (
-          <h3>No Makers to Display :(</h3>
+          <h3>No Applicants to Display :(</h3>
         )}
       </div>
     );
   }
 }
+

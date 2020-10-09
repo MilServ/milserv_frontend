@@ -5,16 +5,7 @@ import { API } from "../../config";
 import Moment from "react-moment";
 import Axios from "axios";
 import moment from "moment";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faBeer } from "@fortawesome/free-solid-svg-icons";
-import {
-  Card,
-  CardContent,
-  CardActions,
-  Typography,
-  Grid,
-  Button,
-} from "@material-ui/core";
+import Collapsible from "react-collapsible";
 import AccountCircleIcon from "@material-ui/icons/AccountCircleOutlined";
 import EmailIcon from "@material-ui/icons/EmailOutlined";
 import PhoneIcon from "@material-ui/icons/Phone";
@@ -77,123 +68,129 @@ export default class RetailerList extends Component {
   //       .catch((err) => console.log(err));
   //   };
 
-  render() {
-    return (
-      <div className="container">
-        <div className="row" style={{ marginBottom: 50 }}>
-          <div className="col-md-4">
-            <Grid
-              item
-              component={Card}
-              id="retailers-color"
-              style={{ color: "white", marginBottom: "10px" }}
-            >
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h1">
-                  TOTAL RETAILERS
-                </Typography>
-
-                <Typography gutterBottom variant="h2" component="h2">
+      
+      render() {
+        return (
+          <div
+            className="container"
+            style={{
+              backgroundColor: "lightgray",
+              color: "black",
+              padding: 15,
+              overflowY: "visible",
+              borderRadius: "8px",
+            }}
+          >
+            <div className="row" style={{ marginBottom: 20 }}>
+              <div className="col-md-6">
+                <h4>TOTAL RETAILERS:</h4>
+                <h2
+                  style={{
+                    backgroundColor: "#383838",
+                    color:"white",
+                    margin: 0,
+                    padding: 10,
+                    display: "inline-block",
+                    borderRadius: "4px",
+                  }}
+                >
                   {this.state.retailers.length}
-                </Typography>
-              </CardContent>
-            </Grid>
-          </div>
-          <hr></hr>
-
-          <div className="col-md-4">
-            <Grid
-              item
-              component={Card}
-              // xs={12}
-              // s={12}
-              // md={12}
-              style={{ color: "white", marginTop: 2 }}
-              id="retailers-color"
-            >
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="h1">
-                  <p>LAST SUBMISSION</p>
-                </Typography>
-<hr style={{backgroundColor:"white"}}/>
-                <Typography gutterBottom variant="h4" component="h2">
+                  {/* {this.state.buyers.length} */}
+                  {/* {this.state.buyers.length || <p> No Applicants to Display </p>} */}
+                </h2>
+              </div>
+              <hr></hr>
+              <div className="col-md-4">
+                <h4>LAST SUBMISSION</h4>
+    
+                <h3
+                  style={{
+                    backgroundColor: "#383838",
+                  color:"white",
+                    margin: 0,
+                    padding: 10,
+                    display: "inline-block",
+                    borderRadius: "4px",
+                  }}
+                >
                   {moment(this.state.lastDate).format("L")}
-                </Typography>
-              </CardContent>
-            </Grid>
-          </div>
-        </div>
-        {this.state.retailers.length ? (
-          <div className="row">
-            <div className="col-md-4 col-sm-12 col-xs-12">
-              {this.state.retailers
-                .slice(0)
-                .reverse()
-                .map((rets) => (
-                  <Grid
-                    item
-                    key={rets._id}
-                    component={Card}
-                    // xs={12}
-                    // s={6}
-                    // md={3}
-                    className="vetATSCards"
-                    style={{ borderTop: "solid darkred 15px" }}
-                  >
-                    <CardContent>
-                      <Typography style={{ fontSize: ".85rem" }}>
-                        COMPANY NAME
-                      </Typography>
-                      {rets.coName.toUpperCase()}
-                      <hr></hr>
-                      <Typography style={{ fontSize: ".85rem" }}>
-                        CONTACT PERSON
-                      </Typography>
-                      {rets.retFirstName.toUpperCase()}{" "}
-                      {rets.retLastName.toUpperCase()}
-                      <hr></hr>
-                      <Typography>
-                        <EmailIcon style={{ marginRight: 10 }} />
-                        {rets.retEmail}
-                      </Typography>
-                      <Typography>
-                        <PhoneIcon style={{ marginRight: 10 }} />
-                        {rets.retPhoneNumber}
-                      </Typography>
-                      <hr></hr>
-                      <Typography style={{ fontSize: ".85rem" }}>
-                        STATE(s) LICENSED IN:
-                        {rets.licState.map((states) => (
-                          <ul>
-                            <li>{states.value}</li>
-                          </ul>
-                        ))}
-                      </Typography>
-                      {/* <Typography variant="body2" component="p">
-                      {vets.careerInterest}
-                    </Typography> */}
-                      <hr></hr>
-                      <Typography style={{ fontSize: ".85rem" }}>
-                        DATE OF SUBMISSION
-                      </Typography>
-                      <Moment format="MM/DD/YYYY, h:mm a">{rets.date}</Moment>
-                      {/* <button onClick={() => this.deleteNumber(vets._id)} /> */}
-                    </CardContent>
-                    <CardActions>
-                      <Button size="small">
-                        {"  "}
-                        <AccountCircleIcon style={{ marginRight: "4px" }} />
-                        {"  "} MORE INFO
-                      </Button>
-                    </CardActions>
-                  </Grid>
-                ))}
+                </h3>
+              </div>
+              <hr />
             </div>
+    
+            {this.state.retailers.length ? (
+              <div className="row" style={{ padding: 10 }}>
+                <h3>RETAILER LEADS</h3>
+                <div className="col-md-4 col-sm-12 col-xs-12">
+                  {this.state.retailers
+                    .slice(0)
+                    .reverse()
+                    .map((retailer) => (
+                      <Collapsible
+                        trigger={
+                          <h4
+                            style={{
+                              cursor: "pointer",
+                              padding: 5,
+                              border: "solid white 1px",
+                              borderRadius: "4px",
+                            }}
+                          >
+                              <AccountCircleIcon style={{ marginRight: "4px" }} />
+                            {retailer.coName}
+                          </h4>
+                        }
+                        style={{ color: "white", cursor: "pointer" }}
+                      >
+                        <section
+                          style={{ backgroundColor: "#383838", padding: 10 }}
+                        >
+                          <p>
+                            <b>Contact Person: </b>
+                            {retailer.retLastName.toUpperCase()},{" "}
+                            {retailer.retFirstName.toUpperCase()}
+                          </p>
+                          <p>
+                            {" "}
+                            <EmailIcon style={{ marginRight: 10 }} />
+                           {retailer.retEmail}
+                          
+                          </p>
+                          <p>
+                            {" "}
+                            <PhoneIcon style={{ marginRight: 10 }} />
+                          
+                            {retailer.retPhoneNumber}
+                          </p>
+                          <p>
+                            {" "}
+                            <b>Retailer State: </b>
+                         {retailer.licState}
+                          </p>
+                          <p>
+                            <b>State Alcohol Lic No: </b>
+                            {retailer.stateLicNo}
+                          </p>
+                          <p>
+                            <b>Date:</b>{" "}
+                            <Moment format="MM/DD/YYYY, h:mm a">
+                              {retailer.date}
+                            </Moment>
+                          </p>
+                          <p>
+                            <b>Remarks:</b>{" "}
+                           {retailer.retAdditionalInfo}
+                          </p>
+                        </section>
+                      </Collapsible>
+                    ))}
+                </div>
+              </div>
+            ) : (
+              <h3>No Applicants to Display :(</h3>
+            )}
           </div>
-        ) : (
-          <h3>No Retailers to Display :(</h3>
-        )}
-      </div>
-    );
-  }
-}
+        );
+      }
+    }

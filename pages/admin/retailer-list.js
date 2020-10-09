@@ -3,7 +3,8 @@ import Admin from "../../components/auth/Admin";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
-import RetailerList from "../../components/partners-retailers/RetailerATSList";
+import TabbedData from "./tabbeddata";
+
 
 const RetailerATS = () => {
   return (
@@ -33,21 +34,17 @@ const RetailerATS = () => {
             <div
               className="row"
               style={{
-                height: "180px",
+                height: "auto",
                 paddingTop: "30px",
                 paddingLeft: "30px",
               }}
             >
-              <div className="col-md-5">
-                <h2 style={{color:"white", fontWeight:"700", backgroundColor:"rgba(0,0,0,50%)", padding:"5px"}}>
-                  RETAILER SUBMISSIONS
-                </h2>
+              <div className="col-md-9 col-sm-12 col-xs-12 col-lg-10 col-xl-6">
+                <TabbedData/>
               </div>
             </div>
 
-            <div className="row staff-portal-row justify-content-center">
-              <RetailerList />
-            </div>
+           
           </section>
         </Admin>
       </Layout>

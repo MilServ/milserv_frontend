@@ -68,7 +68,7 @@ const AdminIndex = () => {
             <div
               className="row justify-content-center"
               style={{
-                height: "180px",
+                height: "150px",
                 paddingTop: 20,
                 backgroundColor: "rgba(0,0,0,0.65)",
               }}
