@@ -110,11 +110,12 @@ export default class DistList extends Component {
               id="distributors-color"
             >
               <CardContent>
-                <Typography gutterBottom variant="h5" component="h1">
-                  LAST SUBMISSION
-                </Typography>
 
-                <Typography gutterBottom variant="h2" component="h2">
+              <Typography gutterBottom variant="h5" component="h1">
+              <p>LAST SUBMISSION</p>
+                </Typography>
+<hr style={{backgroundColor:"white"}}/>
+                <Typography gutterBottom variant="h4" component="h2">              
                   {moment(this.state.lastDate).format("L")}
                 </Typography>
               </CardContent>

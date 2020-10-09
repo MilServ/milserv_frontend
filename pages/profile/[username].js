@@ -49,17 +49,17 @@ const UserProfile = ({ user, blogs, query }) => {
     <React.Fragment>
       {head()}
       <Layout>
-        <div className="container">
-          <div className="row">
+        <div className="container" style={{backgroundColor:"#383838"}}>
+          <div className="row" style={{marginTop:"110px"}}>
             <div className="col-md-12">
               <div className="card">
                 <div className="card-body">
-                  <div className="row">
-                    <div className="col-md-8">
+                  <div className="row text-center">
+                    <div className="col-md-12">
                       <img
                         src={`${API}/user/photo/${user.username}`}
                         className="img img-fluid img-thumbnail mb-3"
-                        style={{ maxHeight: "100px", maxWidth: "100%" }}
+                        style={{ maxHeight: "120px", maxWidth: "100%" }}
                         alt="user profile"
                       />
                       <h5 style={{ color: "black" }}>{user.name}</h5>

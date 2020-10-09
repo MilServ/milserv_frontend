@@ -9,23 +9,26 @@ import VeteranCard from "../../components/StaffPortal/VeteranCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowAltCircleLeft,
-  faUser,
+  faUser, faChartLine
 } from "@fortawesome/free-solid-svg-icons";
 
 const AdminIndex = () => {
   return (
+    <div style={{ overflow: "hidden" }}>
     <Layout>
-      <div style={{ overflow: "hidden" }}>
+    
         <Admin>
           <section
-            className="container-fluid staffPage ml-0 pl-0"
-            style={{ overflow: "hidden" }}
+            className="container-fluid staffPage ml-0 pl-0 pr-0"
+            style={{ overflow: "hidden"}}
           >
+            <div style={{backgroundColor: "rgba(0,0,0,0.75)", paddingTop:"90px", maxWidth:"100%"}}>
             <div
               className="row"
               style={{
-                backgroundColor: "rgba(0,0,0,0.75)",
-                overflow: "hidden",
+              
+                overflow: "hidden"
+                
               }}
             >
               <div className="col-md-3">
@@ -61,6 +64,7 @@ const AdminIndex = () => {
                 </a>
               </div>
             </div>
+            </div>
             <div
               className="row justify-content-center"
               style={{
@@ -71,10 +75,11 @@ const AdminIndex = () => {
             >
               <div className="col-md-12 text-center">
                 <h2
-                  className="landing-cta about-header"
-                  style={{ fontSize: "3.5rem" }}
+                 
+                  style={{ fontSize: "2rem", color:"white" }}
                   id="landing-cta"
                 >
+                  <FontAwesomeIcon icon={faChartLine}/>{" "}
                   STAFF DASHBOARD
                 </h2>
               </div>
@@ -98,8 +103,9 @@ const AdminIndex = () => {
             </div>
           </section>
         </Admin>
-      </div>
+     
     </Layout>
+    </div>
   );
 };
 

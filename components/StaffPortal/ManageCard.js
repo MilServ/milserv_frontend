@@ -39,13 +39,13 @@ export default function ManageCard() {
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          <a href="/admin/retailer-list">Retailers</a>
+          <a href="/admin/retailer-list"><small>Retailers</small></a>
         </Button>
         <Button size="small" color="primary">
-          <a href="/admin/maker-list">Makers</a>
+          <a href="/admin/maker-list"><small>Makers</small></a>
         </Button>
         <Button size="small" color="primary">
-          <a href="/admin/distributor-list">Distributors</a>
+          <a href="/admin/distributor-list"><small>Distributors</small></a>
         </Button>
       </CardActions>
     </Card>

@@ -42,7 +42,7 @@ export default class RetailerList extends Component {
             {
               retailers: res.data,
             },
-            console.log("this is the data " + JSON.stringify(res.data))
+            // console.log("this is the data " + JSON.stringify(res.data))
           )
         // this.setState({ ...this.state, numbers: res.data })
       )
@@ -112,11 +112,11 @@ export default class RetailerList extends Component {
               id="retailers-color"
             >
               <CardContent>
-                <Typography gutterBottom variant="h5" component="h1">
-                  LAST SUBMISSION
+                <Typography gutterBottom variant="h6" component="h1">
+                  <p>LAST SUBMISSION</p>
                 </Typography>
-
-                <Typography gutterBottom variant="h2" component="h2">
+<hr style={{backgroundColor:"white"}}/>
+                <Typography gutterBottom variant="h4" component="h2">
                   {moment(this.state.lastDate).format("L")}
                 </Typography>
               </CardContent>

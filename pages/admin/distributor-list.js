@@ -7,6 +7,7 @@ import DistList from "../../components/partners-distributors/DistributorATSList"
 
 const DistributorATS = () => {
   return (
+    <div style={{overflowX:"hidden"}}>
     <React.Fragment>
       <Layout>
         <Admin>
@@ -17,7 +18,7 @@ const DistributorATS = () => {
                   <p
                     style={{
                       color: "white",
-                      paddingLeft: "60px",
+                      paddingLeft: "30px",
                       paddingTop: "100px",
                     }}
                   >
@@ -34,11 +35,11 @@ const DistributorATS = () => {
               style={{
                 height: "180px",
                 paddingTop: "30px",
-                paddingLeft: "60px",
+                paddingLeft: "30px",
               }}
             >
               <div className="col-md-5">
-                <h2 className="landing-cta about-header" id="landing-cta">
+              <h2 style={{color:"white", fontWeight:"700", backgroundColor:"rgba(0,0,0,50%)", padding:"5px"}}>
                   DISTRIBUTOR SUBMISSIONS
                 </h2>
               </div>
@@ -51,6 +52,7 @@ const DistributorATS = () => {
         </Admin>
       </Layout>
     </React.Fragment>
+    </div>
   );
 };
 

@@ -113,10 +113,13 @@ export default class MakerList extends Component {
             >
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h1">
-                  LAST SUBMISSION
+                    
+                <p>LAST SUBMISSION</p>
                 </Typography>
+<hr style={{backgroundColor:"white"}}/>
+                <Typography gutterBottom variant="h4" component="h2">  
 
-                <Typography gutterBottom variant="h2" component="h2">
+                
                   {moment(this.state.lastDate).format("L")}
                 </Typography>
               </CardContent>

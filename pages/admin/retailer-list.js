@@ -7,17 +7,18 @@ import RetailerList from "../../components/partners-retailers/RetailerATSList";
 
 const RetailerATS = () => {
   return (
+    <div style={{overflowX:"hidden"}}>
     <React.Fragment>
       <Layout>
         <Admin>
-          <section className="staffPage ml-0 pl-0">
-            <div className="row">
+          <section className="staffPage m-0 p-0" style={{overflowX:"hidden"}}>
+            <div className="row" style={{overflowX:"hidden"}}>
               <div className="col-md-3">
                 <a href="/admin">
                   <p
                     style={{
                       color: "white",
-                      paddingLeft: "60px",
+                      paddingLeft: "30px",
                       paddingTop: "100px",
                     }}
                   >
@@ -34,11 +35,11 @@ const RetailerATS = () => {
               style={{
                 height: "180px",
                 paddingTop: "30px",
-                paddingLeft: "60px",
+                paddingLeft: "30px",
               }}
             >
               <div className="col-md-5">
-                <h2 className="landing-cta about-header" id="landing-cta">
+                <h2 style={{color:"white", fontWeight:"700", backgroundColor:"rgba(0,0,0,50%)", padding:"5px"}}>
                   RETAILER SUBMISSIONS
                 </h2>
               </div>
@@ -51,6 +52,7 @@ const RetailerATS = () => {
         </Admin>
       </Layout>
     </React.Fragment>
+    </div>
   );
 };
 

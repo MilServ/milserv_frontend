@@ -39,10 +39,10 @@ export default function VeteranCard() {
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          <a href="/admin/veteran-list">View</a>
+          <a href="/admin/veteran-list"><small>View</small></a>
         </Button>
         <Button size="small" color="primary">
-          Manage
+        <small>Manage</small>
         </Button>
       </CardActions>
     </Card>
