@@ -74,7 +74,7 @@ export default class RetailerList extends Component {
           <div
             className="container"
             style={{
-              backgroundColor: "lightgray",
+              backgroundColor: "whitesmoke",
               color: "black",
               padding: 15,
               overflowY: "visible",
@@ -100,7 +100,7 @@ export default class RetailerList extends Component {
                 </h2>
               </div>
               <hr></hr>
-              <div className="col-md-4">
+              <div className="col-md-6" style={{borderLeft:"solid lightgray 1px"}}>
                 <h4>LAST SUBMISSION</h4>
     
                 <h3
@@ -133,7 +133,7 @@ export default class RetailerList extends Component {
                             style={{
                               cursor: "pointer",
                               padding: 5,
-                              border: "solid white 1px",
+                              border: "solid #383838 1px",
                               borderRadius: "4px",
                             }}
                           >
@@ -144,24 +144,23 @@ export default class RetailerList extends Component {
                         style={{ color: "white", cursor: "pointer" }}
                       >
                         <section
-                          style={{ backgroundColor: "#383838", padding: 10 }}
+                          style={{ backgroundColor: "whitesmoke", padding: 10, border:"solid #383838 1px" }}
                         >
+                          <p>
+                            <b>Date:</b>{" "}
+                            <Moment format="MM/DD/YYYY, h:mm a">
+                              {retailer.date}
+                            </Moment>
+                          </p>
                           <p>
                             <b>Contact Person: </b>
                             {retailer.retLastName.toUpperCase()},{" "}
                             {retailer.retFirstName.toUpperCase()}
                           </p>
                           <p>
-                            {" "}
-                            <EmailIcon style={{ marginRight: 10 }} />
-                           {retailer.retEmail}
-                          
-                          </p>
-                          <p>
-                            {" "}
-                            <PhoneIcon style={{ marginRight: 10 }} />
-                          
-                            {retailer.retPhoneNumber}
+                          <b>Contact Method: </b>
+                            <EmailIcon />:{" "}{retailer.retEmail}{" "}|{" "}
+                            <PhoneIcon />:{" "}{retailer.retPhoneNumber}
                           </p>
                           <p>
                             {" "}
@@ -172,12 +171,7 @@ export default class RetailerList extends Component {
                             <b>State Alcohol Lic No: </b>
                             {retailer.stateLicNo}
                           </p>
-                          <p>
-                            <b>Date:</b>{" "}
-                            <Moment format="MM/DD/YYYY, h:mm a">
-                              {retailer.date}
-                            </Moment>
-                          </p>
+                          
                           <p>
                             <b>Remarks:</b>{" "}
                            {retailer.retAdditionalInfo}

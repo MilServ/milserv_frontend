@@ -7,6 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import AccountCircleIcon from "@material-ui/icons/AccountCircleOutlined";
 
 const useStyles = makeStyles({
   root: {
@@ -30,23 +31,30 @@ export default function ManageCard() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            PARTNERS
+        
+         MANAGE LEADS
+          
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Track data from Retailer, Maker, and Distributor Partners.
+            Track and manage leads from Retailer, Maker, and Distributor prospects.
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          <a href="/admin/retailer-list"><small>Retailers</small></a>
-        </Button>
-        <Button size="small" color="primary">
+      {/* <Button size="small">
+          <a href="/admin/retailer-list">
+            <small style={{backgroundColor:"yellow", padding:"4px", borderRadius:"4px", color:"black"}}>ALL</small></a>
+        </Button> */}
+      
+          <a href="/admin/retailer-list">  <AccountCircleIcon style={{ marginRight: "4px" }} /> <small>ALL LEADS</small></a>
+       
+        {/* <Button size="small" color="primary">
           <a href="/admin/maker-list"><small>Makers</small></a>
         </Button>
         <Button size="small" color="primary">
           <a href="/admin/distributor-list"><small>Distributors</small></a>
-        </Button>
+        </Button> */}
+      
       </CardActions>
     </Card>
   );

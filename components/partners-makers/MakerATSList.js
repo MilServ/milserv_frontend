@@ -73,7 +73,7 @@ export default class MakerList extends Component {
       <div
         className="container"
         style={{
-          backgroundColor: "lightgray",
+          backgroundColor: "whitesmoke",
           color: "black",
           padding: 15,
           overflowY: "visible",
@@ -99,7 +99,7 @@ export default class MakerList extends Component {
             </h2>
           </div>
           <hr></hr>
-          <div className="col-md-6">
+          <div className="col-md-6" style={{borderLeft:"solid lightgray 1px"}}>
             <h4>LAST SUBMISSION</h4>
 
             <h3
@@ -132,7 +132,7 @@ export default class MakerList extends Component {
                         style={{
                           cursor: "pointer",
                           padding: 5,
-                          border: "solid white 1px",
+                          border: "solid #383838 1px",
                           borderRadius: "4px",
                         }}
                       >
@@ -146,17 +146,21 @@ export default class MakerList extends Component {
                       style={{ backgroundColor: "#383838", padding: 10 }}
                     >
                       <p>
+                        <b>Date:</b>{" "}
+                        <Moment format="MM/DD/YYYY, h:mm a">
+                          {maker.date}
+                        </Moment>
+                      </p>
+                      <p>
                         <b>Contact Person: </b>
                         {maker.makerLastName.toUpperCase()},{" "}
                         {maker.makerFirstName.toUpperCase()}
                       </p>
                       <p>
-                      <EmailIcon style={{ marginRight: 10 }} />
-                        {maker.makerEmail}                     
-                      </p>
-                      <p>
-                      <PhoneIcon style={{ marginRight: 10 }} />
-                        {maker.makerPhoneNumber}            
+                      <b>Contact Method: </b>
+                      <EmailIcon/>:{" "}{maker.makerEmail}{" "}|{" "}   
+                     
+                      <PhoneIcon/>:{" "}{maker.makerPhoneNumber}            
                       </p>
                       <p>
                       State(s) Licensed in:
@@ -170,12 +174,7 @@ export default class MakerList extends Component {
                         <b>State Alcohol Lic No: </b>
                         {maker.makerStateLicNo}
                       </p>
-                      <p>
-                        <b>Date:</b>{" "}
-                        <Moment format="MM/DD/YYYY, h:mm a">
-                          {maker.date}
-                        </Moment>
-                      </p>
+                      
                       <p>
                         <b>Remarks:</b>{" "}
                        {maker.makerAdditionalInfo}

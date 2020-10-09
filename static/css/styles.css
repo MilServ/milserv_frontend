@@ -366,8 +366,8 @@ span.navbar-toggler-icon {
   max-height: auto !important;
   padding-right: 10;
   padding-left: 10;
-  min-width: 300px !important;
-  max-width: auto !important;
+  min-width: auto !important;
+  max-width: 300px !important;
   color: #ffffff !important;
   border-radius: 1px !important;
   position: relative !important;

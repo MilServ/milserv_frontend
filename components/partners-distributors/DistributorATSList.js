@@ -73,7 +73,7 @@ export default class DistList extends Component {
       <div
         className="container"
         style={{
-          backgroundColor: "lightgray",
+          backgroundColor: "whitesmoke",
           color: "black",
           padding: 15,
           overflowY: "visible",
@@ -82,7 +82,7 @@ export default class DistList extends Component {
       >
         <div className="row" style={{ marginBottom: 20 }}>
           <div className="col-md-6">
-            <h4>TOTAL DISTRIBUTORS:</h4>
+            <h4>TOTAL DIST's:</h4>
             <h2
               style={{
                 backgroundColor: "#383838",
@@ -99,7 +99,7 @@ export default class DistList extends Component {
             </h2>
           </div>
           <hr></hr>
-          <div className="col-md-6">
+          <div className="col-md-6" style={{borderLeft:"solid lightgray 1px"}}>
             <h4>LAST SUBMISSION</h4>
 
             <h3
@@ -132,7 +132,7 @@ export default class DistList extends Component {
                         style={{
                           cursor: "pointer",
                           padding: 5,
-                          border: "solid white 1px",
+                          border: "solid #383838 1px",
                           borderRadius: "4px",
                         }}
                       >
@@ -143,8 +143,14 @@ export default class DistList extends Component {
                     style={{ color: "white", cursor: "pointer" }}
                   >
                     <section
-                      style={{ backgroundColor: "#whitesmoke", padding: 10 }}
+                      style={{ backgroundColor: "#whitesmoke", padding: 10, border:"solid #383838 1px" }}
                     >
+                      <p>
+                        <b>Date:</b>{" "}
+                        <Moment format="MM/DD/YYYY, h:mm a">
+                          {dists.date}
+                        </Moment>
+                      </p>
                       <p>
                         <b>Contact Person: </b>
                         {dists.distLastName.toUpperCase()}, {" "}
@@ -152,15 +158,16 @@ export default class DistList extends Component {
                      
                       </p>
                       <p>
+                      <b>Contact Method: </b>
                       <EmailIcon/>:{" "}
-                      {dists.distEmail}           
+                      {dists.distEmail}{" "}|{" "} <PhoneIcon/>:{" "}
+                      {dists.distPhoneNumber}           
                       </p>
                       <p>
-                      <PhoneIcon/>:{" "}
-                      {dists.distPhoneNumber}  
+                   
                       </p>
                       <p>
-                      State(s) Licensed in:
+                      <b>State(s) Licensed in:</b>
                       {dists.distLicState.map((states) => (
                           <ul>
                             <li>{states.value}</li>
@@ -171,12 +178,7 @@ export default class DistList extends Component {
                         <b>State Alcohol Lic No: </b>
                         {dists.distStateLicNo}
                       </p>
-                      <p>
-                        <b>Date:</b>{" "}
-                        <Moment format="MM/DD/YYYY, h:mm a">
-                          {dists.date}
-                        </Moment>
-                      </p>
+                      
                       <p>
                         <b>Remarks:</b>{" "}
                        {dists.distAdditionalInfo}

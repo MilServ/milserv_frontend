@@ -3,17 +3,16 @@ import Admin from "../../components/auth/Admin";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowAltCircleLeft } from "@fortawesome/free-solid-svg-icons";
-import TabbedData from "./tabbeddata";
+import RetailerList from "../../components/partners-retailers/RetailerATSList";
 
-
-const RetailerATS = () => {
+const DistributorATS = () => {
   return (
     <div style={{overflowX:"hidden"}}>
     <React.Fragment>
       <Layout>
         <Admin>
-          <section className="staffPage m-0 p-0" style={{overflowX:"hidden"}}>
-            <div className="row" style={{overflowX:"hidden"}}>
+          <section className="staffPage ml-0 pl-0">
+            <div className="row">
               <div className="col-md-3">
                 <a href="/admin">
                   <p
@@ -34,17 +33,21 @@ const RetailerATS = () => {
             <div
               className="row"
               style={{
-                height: "auto",
+                height: "180px",
                 paddingTop: "30px",
-                paddingLeft: "20px",
+                paddingLeft: "30px",
               }}
             >
-              <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 col-xl-10">
-                <TabbedData/>
+              <div className="col-md-5">
+              <h2 style={{color:"white", fontWeight:"700", backgroundColor:"rgba(0,0,0,50%)", padding:"5px"}}>
+                 RETAILERS SUBMISSIONS
+                </h2>
               </div>
             </div>
 
-           
+            <div className="row staff-portal-row justify-content-center">
+              <RetailerList />
+            </div>
           </section>
         </Admin>
       </Layout>
@@ -53,4 +56,4 @@ const RetailerATS = () => {
   );
 };
 
-export default RetailerATS;
+export default DistributorATS;
