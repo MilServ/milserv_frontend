@@ -78,11 +78,13 @@ export default class RetailerList extends Component {
               color: "black",
               padding: 15,
               overflowY: "visible",
-              borderRadius: "8px",
+              borderBottomLeftRadius: "8px",
+              borderBottomRightRadius:"8px",
+              margin:0
             }}
           >
             <div className="row" style={{ marginBottom: 20 }}>
-              <div className="col-md-6">
+              <div className="col-md-3">
                 <h4>TOTAL RETAILERS:</h4>
                 <h2
                   style={{

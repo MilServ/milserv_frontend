@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-grid-system";
 import { withStyles, makeStyles } from "@material-ui/core/styles";
 import Modal from "react-modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
+import { faTimesCircle, faTruck } from "@fortawesome/free-solid-svg-icons";
 import Button from "@material-ui/core/Button";
 
 //customStyles is props for Modal
@@ -49,12 +49,13 @@ export default function JobsModalNY(props) {
 
   return (
     <>
-      <Button
+        <Button
         variant="contained"
         onClick={openModal}
-        style={{ marginTop: "20px" }}
+        style={{ marginTop: "20px", width:"188px", height:"50px", fontSize:"1rem" }}
       >
-        <b>Our Services</b>
+        <FontAwesomeIcon icon={faTruck} />{" "}
+        <b style={{ paddingLeft: 2 }}> OUR SERVICES</b>
       </Button>
 
       <Modal

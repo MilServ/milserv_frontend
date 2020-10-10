@@ -360,14 +360,14 @@ span.navbar-toggler-icon {
 }
 
 .card {
-  margin: 0.5rem 0.5rem !important;
+  margin: 0.5rem 0.7rem !important;
   font-weight: bold !important;
   min-height: 202px !important;
   max-height: auto !important;
   padding-right: 10;
   padding-left: 10;
   min-width: auto !important;
-  max-width: 300px !important;
+  max-width: 95% !important;
   color: #ffffff !important;
   border-radius: 1px !important;
   position: relative !important;
@@ -621,6 +621,19 @@ input.formStyles {
   color: white;
 }
 
+header.MuiTabs-flexContainer,
+header.MuiAppBar-root {
+  width: 100% !important;
+  border-top-left-radius: 8px !important;
+  border-top-right-radius: 8px !important;
+  margin-right: 10px;
+}
+
+.MuiBox-root,
+.MuiBox-root-14 {
+  padding: 0 !important;
+}
+
 .social-svg {
   width: 85% !important;
   height: 85% !important;
@@ -652,7 +665,7 @@ input.formStyles {
   }
 
   .geoModal {
-    margin-top: 150px !important;
+    margin-top: 100px !important;
   }
   .us-state-map {
     width: 100% !important;

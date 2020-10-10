@@ -19,7 +19,7 @@ const RetailerATS = () => {
                   <p
                     style={{
                       color: "white",
-                      paddingLeft: "30px",
+                      paddingLeft: "10px",
                       paddingTop: "100px",
                     }}
                   >
@@ -36,7 +36,8 @@ const RetailerATS = () => {
               style={{
                 height: "auto",
                 paddingTop: "30px",
-                paddingLeft: "20px",
+                paddingLeft: "10px",
+                paddingRight: "10px",
               }}
             >
               <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 col-xl-10">

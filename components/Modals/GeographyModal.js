@@ -70,7 +70,7 @@ export default function OurLocationsModal(props) {
       <Button
         variant="contained"
         onClick={openModal}
-        style={{ marginTop: "20px" }}
+        style={{ marginTop: "20px", height:"50px", fontSize:"1rem" }}
       >
         <FontAwesomeIcon icon={faFlagUsa} />{" "}
         <b style={{ paddingLeft: 2 }}> OUR LOCATIONS</b>
@@ -84,7 +84,7 @@ export default function OurLocationsModal(props) {
         contentLabel="Example Modal"
         ariaHideApp={false}
       >
-        <Container>
+        <Container  onClick={closeModal}>
           <Row>
             <Col
               className="geoModal"
