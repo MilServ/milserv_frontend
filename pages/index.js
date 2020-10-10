@@ -43,7 +43,7 @@ const Index = () => {
                   <img
                     className="d-block w-100"
                     src="../static/images/picone.jpg"
-                    alt="First slide"
+                    alt="MilServ Logo"
                   />
                   <Carousel.Caption>
                     <div
@@ -70,8 +70,33 @@ const Index = () => {
                 <Carousel.Item>
                   <img
                     className="d-block w-100"
+                    src={"../static/images/salute.jpg"}               
+                    alt="Servicemembers saluting"
+                  />
+
+                  <Carousel.Caption>
+                    <div
+                      style={{
+                        backgroundColor: "rgba(0,0,0,.60)",
+                        padding: 3,
+                      }}
+                    >
+                      {" "}
+                      <h6 style={{ fontWeight: "500" }}>
+                        
+                          Supporting the Military Community through partnerships
+                          with Makers, Retailers, and Distributors of Craft
+                          Alcohol
+                        
+                      </h6>
+                    </div>
+                  </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
                     src="../static/images/fourbeers.jpg"
-                    alt="Third slide"
+                    alt="Four hands holding beers"
                   />
                   {/* <img
                     className="d-block w-100"
@@ -106,10 +131,10 @@ const Index = () => {
                   <img
                     className="d-block w-100"
                     src="../static/images/pictest.jpg"
-                    alt="Third slide"
+                    alt="Assorted spirits at bar"
                   />
 
-                  <Carousel.Caption>
+                  {/* <Carousel.Caption>
                     <div
                       style={{
                         backgroundColor: "rgba(0,0,0,.60)",
@@ -125,7 +150,7 @@ const Index = () => {
                         </em>
                       </h5>
                     </div>
-                  </Carousel.Caption>
+                  </Carousel.Caption> */}
                 </Carousel.Item>
               </Carousel>
               {/* <img

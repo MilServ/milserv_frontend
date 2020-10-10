@@ -59,17 +59,28 @@ export default function LearMoreModal(props) {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <Container>
-          <Row style={{ marginTop: 190 }}>
+        <Container >
+          <Row style={{ marginTop: 190 }} onClick={closeModal}>
             <Col xs={12} s={12} md={12} lg={12}>
               <FontAwesomeIcon
                 icon={faTimesCircle}
                 onClick={closeModal}
                 style={{ cursor: "pointer" }}
               />
+            
             </Col>
           </Row>
-          <Row style={{ justifyContent: "center" }}>
+          <Row style={{ marginTop: 0, textAlign:"center" }} justify={"center"} onClick={closeModal}>
+            <Col xs={12} s={12} md={12} lg={12}>
+              
+               <img
+                src={"../../static/images/owllogo.jpg"}
+                width="50px"
+                style={{ textAlign: "center", borderRadius: "6px" }}
+              />
+            </Col>
+          </Row>
+          <Row style={{textAlign: "center" }}>
             <Col xs={12} s={12} md={12} lg={12}>
               <p>
                 MilServ ACD Corp. is a veteran owned, veteran-employing, and
