@@ -156,12 +156,16 @@ export default class RetailerList extends Component {
                           </p>
                           <p>
                             <b>Contact Person: </b>
-                            {retailer.retLastName.toUpperCase()},{" "}
-                            {retailer.retFirstName.toUpperCase()}
+                            {retailer.retLastName},{" "}
+                            {retailer.retFirstName}
                           </p>
+                                                
+                         
                           <p>
-                          <b>Contact Method: </b>
-                            <EmailIcon />:{" "}{retailer.retEmail}{" "}|{" "}
+                          <b style={{marginBottom:0}}>Contact Methods</b>  
+                      <hr style={{margin:0}}/>  
+                            <EmailIcon />:{" "}{retailer.retEmail}
+                            <br/>
                             <PhoneIcon />:{" "}{retailer.retPhoneNumber}
                           </p>
                           <p>

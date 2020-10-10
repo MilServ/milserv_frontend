@@ -155,12 +155,14 @@ export default class MakerList extends Component {
                       </p>
                       <p>
                         <b>Contact Person: </b>
-                        {maker.makerLastName.toUpperCase()},{" "}
-                        {maker.makerFirstName.toUpperCase()}
+                        {maker.makerLastName},{" "}
+                        {maker.makerFirstName}
                       </p>
                       <p>
-                      <b>Contact Method: </b>
-                      <EmailIcon/>:{" "}{maker.makerEmail}{" "}|{" "}   
+                      <b style={{marginBottom:0}}>Contact Methods</b>  
+                      <hr style={{margin:0}}/>  
+                      <EmailIcon/>:{" "}{maker.makerEmail}{" "}
+                      <br/>
                      
                       <PhoneIcon/>:{" "}{maker.makerPhoneNumber}            
                       </p>

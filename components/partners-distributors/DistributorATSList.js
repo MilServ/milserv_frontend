@@ -154,15 +154,20 @@ export default class DistList extends Component {
                         </Moment>
                       </p>
                       <p>
-                        <b>Contact Person: </b>
-                        {dists.distLastName.toUpperCase()}, {" "}
-                        {dists.distFirstName.toUpperCase()}
+                        <b>Contact Name: </b>
+                        {dists.distLastName}, {" "}
+                        {dists.distFirstName}
                      
                       </p>
+                      
                       <p>
-                      <b>Contact Method: </b>
+                    
+                      <b style={{marginBottom:0}}>Contact Methods</b>  
+                      <hr style={{margin:0}}/>                    
                       <EmailIcon/>:{" "}
-                      {dists.distEmail}{" "}|{" "} <PhoneIcon/>:{" "}
+                      {dists.distEmail}{" "}
+                      <br/>
+                      <PhoneIcon/>:{" "}
                       {dists.distPhoneNumber}           
                       </p>
                       <p>
