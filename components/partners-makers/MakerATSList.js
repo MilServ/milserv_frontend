@@ -79,11 +79,12 @@ export default class MakerList extends Component {
           overflowY: "visible",
           borderBottomLeftRadius: "8px",
           borderBottomRightRadius:"8px",
-          margin:0
+          margin:0,
+          
         }}
       >
         <div className="row" style={{ marginBottom: 20 }}>
-          <div className="col-md-3">
+          <div className="col-md-6">
             <h4>TOTAL MAKERS:</h4>
             <h2
               style={{
@@ -161,10 +162,10 @@ export default class MakerList extends Component {
                       <p>
                       <b style={{marginBottom:0}}>Contact Methods</b>  
                       <hr style={{margin:0}}/>  
-                      <EmailIcon/>:{" "}{maker.makerEmail}{" "}
+                      <EmailIcon/>:{" "}<small>{maker.makerEmail}</small>
                       <br/>
                      
-                      <PhoneIcon/>:{" "}{maker.makerPhoneNumber}            
+                      <PhoneIcon/>:{" "}<small>{maker.makerPhoneNumber}</small>         
                       </p>
                       <p>
                       State(s) Licensed in:

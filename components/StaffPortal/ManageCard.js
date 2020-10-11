@@ -46,7 +46,7 @@ export default function ManageCard() {
             <small style={{backgroundColor:"yellow", padding:"4px", borderRadius:"4px", color:"black"}}>ALL</small></a>
         </Button> */}
       
-          <a href="/admin/retailer-list">  <AccountCircleIcon style={{ marginRight: "4px" }} /> <small>ALL LEADS</small></a>
+          <a href="/admin/all-leads">  <AccountCircleIcon style={{ marginRight: "4px" }} /> <small>ALL LEADS</small></a>
        
         {/* <Button size="small" color="primary">
           <a href="/admin/maker-list"><small>Makers</small></a>

@@ -84,7 +84,7 @@ export default class RetailerList extends Component {
             }}
           >
             <div className="row" style={{ marginBottom: 20 }}>
-              <div className="col-md-3">
+              <div className="col-md-6">
                 <h4>TOTAL RETAILERS:</h4>
                 <h2
                   style={{
@@ -164,9 +164,9 @@ export default class RetailerList extends Component {
                           <p>
                           <b style={{marginBottom:0}}>Contact Methods</b>  
                       <hr style={{margin:0}}/>  
-                            <EmailIcon />:{" "}{retailer.retEmail}
+                            <EmailIcon />:{" "}<small>{retailer.retEmail}</small>
                             <br/>
-                            <PhoneIcon />:{" "}{retailer.retPhoneNumber}
+                            <PhoneIcon />:{" "}<small>{retailer.retPhoneNumber}</small>
                           </p>
                           <p>
                             {" "}

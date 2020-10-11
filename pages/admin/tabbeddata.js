@@ -62,8 +62,8 @@ export default function TabbedData() {
   };
 
   return (
-    <div style={{backgroundColor:"whitesmoke"}} style={{width:"100%"}}>
-      <AppBar position="sticky" style={{ backgroundColor: "#8d54b5", zIndex:1, width:"100%" }} >
+    <div style={{backgroundColor:"whitesmoke"}}>
+      <AppBar position="sticky" style={{ backgroundColor: "#8d54b5", zIndex:1 }} >
         <Tabs
           value={value}
           onChange={handleChange}

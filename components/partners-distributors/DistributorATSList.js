@@ -83,7 +83,7 @@ export default class DistList extends Component {
         }}
       >
         <div className="row" style={{ marginBottom: 20 }}>
-          <div className="col-md-3">
+          <div className="col-md-6 col-lg-6 col-sm-12 col-xs-12">
             <h4>TOTAL DIST's:</h4>
             <h2
               style={{
@@ -101,7 +101,7 @@ export default class DistList extends Component {
             </h2>
           </div>
           <hr></hr>
-          <div className="col-md-6" style={{borderLeft:"solid lightgray 1px"}}>
+          <div className="col-md-6 col-lg-6 col-sm-12 col-xs-12" style={{borderLeft:"solid lightgray 1px"}}>
             <h4>LAST SUBMISSION</h4>
 
             <h3
@@ -165,10 +165,10 @@ export default class DistList extends Component {
                       <b style={{marginBottom:0}}>Contact Methods</b>  
                       <hr style={{margin:0}}/>                    
                       <EmailIcon/>:{" "}
-                      {dists.distEmail}{" "}
+                      <small>{dists.distEmail}</small>{" "}
                       <br/>
                       <PhoneIcon/>:{" "}
-                      {dists.distPhoneNumber}           
+                      <small>{dists.distPhoneNumber}   </small>        
                       </p>
                       <p>
                    
